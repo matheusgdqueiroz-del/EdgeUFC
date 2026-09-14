@@ -1,0 +1,260 @@
+<title>UFC Edge Audit</title>
+<meta name="description" content="Walk-forward audit of a UFC fight predictor against the betting market.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+<style>
+:root {
+  --ground: #edf0f3;
+  --surface: #ffffff;
+  --ink: #111820;
+  --ink-2: #4f5b69;
+  --rule: #cfd6de;
+  --band-dev: #e3e7ec;
+  --band-val: #dfe7f1;
+  --band-hold: #d6e2f0;
+  --blue: #1b5aa6;
+  --blue-soft: #d9e6f5;
+  --red: #b0372b;
+  --red-soft: #f3dcd8;
+  --market: #8a95a3;
+  --display: "Barlow Condensed", "Arial Narrow", "Roboto Condensed", sans-serif;
+  --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --mono: "IBM Plex Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --ground: #0d1116; --surface: #151b22; --ink: #e6ebf1; --ink-2: #9aa6b4; --rule: #2a333e;
+    --band-dev: #161c23; --band-val: #172230; --band-hold: #1a2a3d;
+    --blue: #71a8ee; --blue-soft: #1c2c40; --red: #e67a6c; --red-soft: #3a2220; --market: #7d8896;
+  }
+}
+:root[data-theme="dark"] {
+  --ground: #0d1116; --surface: #151b22; --ink: #e6ebf1; --ink-2: #9aa6b4; --rule: #2a333e;
+  --band-dev: #161c23; --band-val: #172230; --band-hold: #1a2a3d;
+  --blue: #71a8ee; --blue-soft: #1c2c40; --red: #e67a6c; --red-soft: #3a2220; --market: #7d8896;
+}
+* { box-sizing: border-box; }
+body { background: var(--ground); color: var(--ink); font: 400 17px/1.62 var(--serif); margin: 0; padding-inline: 20px; padding-block: 0 80px; }
+main { max-width: 1040px; margin: 0 auto; }
+.prose { max-width: 68ch; }
+h1, h2, h3 { font-family: var(--display); text-wrap: balance; letter-spacing: .01em; margin: 0; }
+h1 { font-size: clamp(44px, 7vw, 76px); font-weight: 700; line-height: .95; text-transform: uppercase; }
+h2 { font-size: clamp(30px, 4vw, 40px); font-weight: 600; line-height: 1.05; margin-bottom: 14px; }
+h3 { font-size: 22px; font-weight: 600; margin-bottom: 8px; }
+p { margin: 0 0 14px; }
+.eyebrow { font: 500 12px/1 var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--ink-2); margin-bottom: 12px; display: block; }
+header { padding-block: 56px 28px; border-bottom: 3px solid var(--ink); display: grid; gap: 18px; }
+.dek { font-size: 20px; line-height: 1.5; max-width: 62ch; color: var(--ink); }
+.corners { display: flex; flex-wrap: wrap; gap: 10px 24px; font: 500 13px/1.3 var(--mono); color: var(--ink-2); }
+.chip { display: inline-flex; align-items: center; gap: 8px; }
+.chip::before { content: ""; width: 14px; height: 14px; border-radius: 2px; background: var(--c); }
+section { padding-block: 44px 8px; border-bottom: 1px solid var(--rule); }
+section:last-of-type { border-bottom: 0; }
+.verdict { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 0; border: 1px solid var(--rule); background: var(--surface); margin-block: 22px 8px; }
+.verdict div { padding: 18px 20px; border-right: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+.verdict dt { font: 500 12px/1.3 var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--ink-2); margin-bottom: 8px; }
+.verdict dd { margin: 0; font-size: 16px; line-height: 1.45; }
+.verdict b { font-family: var(--display); font-size: 30px; font-weight: 600; line-height: 1; display: block; margin-bottom: 4px; font-variant-numeric: tabular-nums; }
+.figure { background: var(--surface); border: 1px solid var(--rule); padding: 18px 18px 10px; margin-block: 18px 22px; }
+.figure svg { width: 100%; height: auto; display: block; }
+.caption { font: 400 13px/1.5 var(--mono); color: var(--ink-2); margin-top: 8px; }
+.twocol { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 28px; align-items: start; }
+@media (max-width: 760px) { .twocol { grid-template-columns: 1fr; } }
+.table-wrap { overflow-x: auto; margin-block: 14px 24px; background: var(--surface); border: 1px solid var(--rule); }
+table { border-collapse: collapse; width: 100%; font: 400 14px/1.35 var(--mono); font-variant-numeric: tabular-nums; }
+th, td { padding: 10px 12px; text-align: right; border-bottom: 1px solid var(--rule); vertical-align: top; white-space: nowrap; }
+thead th { font: 500 11px/1.25 var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--ink-2); border-bottom: 2px solid var(--ink); white-space: normal; }
+tbody th { text-align: left; font-weight: 500; white-space: normal; min-width: 180px; }
+tbody tr:last-child th, tbody tr:last-child td { border-bottom: 0; }
+.sub { display: block; font-size: 11px; color: var(--ink-2); font-weight: 400; margin-top: 3px; white-space: normal; }
+.blue { color: var(--blue); font-weight: 500; }
+.red { color: var(--red); font-weight: 500; }
+.units { font-weight: 500; }
+td.units { color: var(--blue); }
+svg text { font-family: var(--mono); }
+.grid { stroke: var(--rule); stroke-width: 1; }
+.tick { fill: var(--ink-2); font-size: 12px; }
+.rowlab { fill: var(--ink); font-size: 13px; }
+.val { fill: var(--ink); font-size: 12px; }
+.band-dev { fill: var(--band-dev); } .band-val { fill: var(--band-val); } .band-hold { fill: var(--band-hold); }
+.band-label { fill: var(--ink-2); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; }
+.line-blue { fill: none; stroke: var(--blue); stroke-width: 2.4; stroke-linejoin: round; }
+.line-red { fill: none; stroke: var(--red); stroke-width: 2.4; stroke-linejoin: round; }
+.dot-line-blue { fill: var(--blue); } .dot-line-red { fill: var(--red); fill-opacity: .8; }
+.line-blue-text { fill: var(--blue); } .line-red-text { fill: var(--red); }
+.end-label { font-size: 13px; font-weight: 500; }
+.bar-blue { fill: var(--blue); } .bar-market { fill: var(--market); }
+.diag { stroke: var(--ink-2); stroke-dasharray: 4 4; stroke-width: 1; }
+.legend { display: flex; flex-wrap: wrap; gap: 8px 22px; font: 400 13px/1.3 var(--mono); color: var(--ink-2); margin-bottom: 8px; }
+.callout { border-left: 3px solid var(--red); padding: 4px 0 4px 16px; margin-block: 18px; max-width: 68ch; }
+code, .cmd { font-family: var(--mono); font-size: 14px; background: var(--surface); border: 1px solid var(--rule); padding: 1px 6px; }
+pre.cmd { display: block; padding: 12px 14px; overflow-x: auto; margin: 10px 0 16px; max-width: 68ch; }
+ul.tight { padding-left: 20px; margin: 0 0 14px; max-width: 68ch; }
+ul.tight li { margin-bottom: 6px; }
+a { color: var(--blue); }
+:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+footer { padding-block: 30px 0; font: 400 13px/1.6 var(--mono); color: var(--ink-2); max-width: 80ch; }
+</style>
+
+<main>
+<header>
+  <span class="eyebrow">Walk-forward audit · {{N_FIGHTS}} UFC bouts 1994–Sep 2026 · {{N_ODDS}} with betting lines</span>
+  <h1>UFC Edge Audit</h1>
+  <p class="dek">Could a model built only from information available before each fight have out-priced the betting market? We rebuilt every prediction as if it were made on the day, froze the design, and then scored years it had never seen.</p>
+  <div class="corners">
+    <span class="chip" style="--c: var(--blue)">Blue corner: the engine</span>
+    <span class="chip" style="--c: var(--red)">Red corner: the betting market</span>
+  </div>
+</header>
+
+<section aria-labelledby="verdict">
+  <span class="eyebrow">The short answer</span>
+  <h2 id="verdict">A small, repeatable edge — biggest when lines first open</h2>
+  <div class="prose">
+    <p>On the locked holdout (Jan 2025 to Sep 2026, {{HOLD_N}} fights) the engine’s probabilities beat the closing line by {{HOLD_GAIN}} log-loss per fight and the opening line by {{HOLD_GAIN_OPEN}}. That is modest in accuracy terms — both sides pick about the same winners — but it is where money is made: the engine is better at saying <em>how likely</em>, not just <em>who</em>.</p>
+  </div>
+  <dl class="verdict">
+    <div><dt>Winner-picking, unseen fights</dt><dd><b>{{HOLD_ENGINE_ACC}}</b>engine with market vs {{HOLD_CLOSE_ACC}} closing favourite; stats alone {{HOLD_STATS_ACC}}</dd></div>
+    <div><dt>Early bets, 2021–Sep 2026</dt><dd><b>{{OPEN_ROI}}</b>return on stake over {{OPEN_BETS}} bets at opening prices</dd></div>
+    <div><dt>Line moved our way</dt><dd><b>{{CLV}}</b>average closing-line value of those early bets</dd></div>
+    <div><dt>Late bets, 5%-margin book</dt><dd><b>{{CLOSE_ROI}}</b>over {{CLOSE_BETS}} bets — positive, but not proven</dd></div>
+  </dl>
+</section>
+
+<section aria-labelledby="v2">
+  <span class="eyebrow">Version 2 · re-checked September 2026</span>
+  <h2 id="v2">More bets at Pinnacle prices, and the edge is still early</h2>
+  <p class="prose">Version 1 found about 1.5 bets per card near fight time. Version 2 changes were chosen on 2010–2020 fights only ({{V2_TRIED}} changes tried, {{V2_KEPT}} kept, all logged in <code>reports/v2_attempts.csv</code>): a better-regularised stats model, softer labels for split decisions, the level of promotions a fighter came from, and a market layer that knows how old the line is. Prices below are what Pinnacle would plausibly offer: the consensus fair price with a {{PIN_CLOSE}} margin near the close and {{PIN_EARLY}} early (Pinnacle’s archived closing margin was 2.4–3.4%).</p>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th scope="col">When the bet is placed</th><th scope="col">Bets per card</th><th scope="col">Return</th><th scope="col">Profit</th><th scope="col">Worst dip</th><th scope="col">Years up</th></tr></thead>
+      <tbody>{{V2_ROWS}}</tbody>
+    </table>
+  </div>
+  <div class="callout prose">
+    <p><strong>How much to trust this table.</strong> 2021–2026 had already been used to score version 1, so it is a re-check, not an untouched test. The frozen plan and its single result are in <code>reports/PREREGISTRATION.md</code> (Addenda B and C). From 14 September 2026 every recommendation is saved before the fight in <code>predictions/ledger.csv</code>; that forward record is the clean test from now on. Method-of-victory props showed a large edge in separate research but are not in the app, because Pinnacle does not offer them.</p>
+  </div>
+</section>
+
+<section aria-labelledby="market">
+  <span class="eyebrow">Did it beat the market?</span>
+  <h2 id="market">Probability quality, fight by fight</h2>
+  <p class="prose">Log loss rewards confident correct probabilities and punishes confident wrong ones; lower is better. “Gain” is the average per-fight improvement over the market, with a bootstrap confidence interval. The development years were used to choose the design and are shown only for context.</p>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th scope="col">Period</th><th scope="col">Closing line</th><th scope="col">Engine</th><th scope="col">Gain vs close</th><th scope="col">Opening line</th><th scope="col">Engine (open)</th><th scope="col">Gain vs open</th><th scope="col">Accuracy close / engine</th><th scope="col">Stats only</th></tr></thead>
+      <tbody>{{SCORE_ROWS}}</tbody>
+    </table>
+  </div>
+</section>
+
+<section aria-labelledby="money">
+  <span class="eyebrow">Would it have made money?</span>
+  <h2 id="money">Cumulative units, one disciplined rule the whole way</h2>
+  <p class="prose">Rule: bet only when expected value exceeds 3%, stake 1/8 Kelly, never more than 1.5 units (1 unit = 1% of bankroll), one bet per fight, draws lose, no-contests refund. Every probability behind every bet came from a model trained only on earlier fights.</p>
+  <div class="figure">
+    <div class="legend"><span class="chip" style="--c: var(--blue)">Bet when lines open, at the opening price</span><span class="chip" style="--c: var(--red)">Bet near fight time, priced as a 5%-margin book</span></div>
+    {{CURVES}}
+    <p class="caption">Shaded bands: development (design chosen here), validation and locked holdout (scored once, after the design was frozen).</p>
+  </div>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th scope="col">Setting</th><th scope="col">Bets</th><th scope="col">Staked</th><th scope="col">Profit</th><th scope="col">Return</th><th scope="col">Worst dip</th><th scope="col">Years up</th></tr></thead>
+      <tbody>{{BET_ROWS}}</tbody>
+    </table>
+  </div>
+  <div class="callout prose">
+    <p><strong>Read this before staking anything.</strong> Opening lines are the softest prices but often carry low limits, so the early-bet result is real but not scalable. The late-bet result is positive in the holdout yet was not statistically significant in validation, so treat it as unproven. The worst historical dip is a floor, not a ceiling.</p>
+  </div>
+</section>
+
+<section aria-labelledby="signal">
+  <span class="eyebrow">Which information carries signal?</span>
+  <h2 id="signal">Records from outside the UFC matter more than cage statistics</h2>
+  <div class="figure">
+    {{INCREMENTS}}
+    <p class="caption">Market-free model, development years, log loss as each source is added (longer bar = better). Grey bars are the betting lines for scale.</p>
+  </div>
+  <div class="prose">
+    <p>UFCStats striking and grappling numbers alone reach 0.652. The biggest single jumps came from each fighter’s full professional record on Sherdog (pre-UFC fights, a global Elo across every promotion) and from FightMatrix’s pre-fight ratings. A Bayesian 14-skill model of opponent-adjusted offence and defence was elegant but added nothing the engineered statistics didn’t already carry. Age was the most important single physical variable; reach, height and stance barely moved the needle.</p>
+    <p>After controlling for the closing line, the corrections that replicated were consistent with an intuitive story: the market underweights <em>defence</em> (strikes absorbed, striking defence) and wrestling pressure (takedown attempts), and slightly overreacts to late line movement.</p>
+  </div>
+</section>
+
+<section aria-labelledby="folklore">
+  <span class="eyebrow">Conventional wisdom vs the data</span>
+  <h2 id="folklore">Patterns found before 2021, re-tested on 2021–2026</h2>
+  <p class="prose">Each was a flat one-unit bet at the average closing price. Most historical “angles” disappeared once the calendar moved on — which is exactly why none of them is allowed to drive the engine on its own.</p>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th scope="col">Angle</th><th scope="col">Before 2021</th><th scope="col">2021–Sep 2026</th><th scope="col">Verdict</th></tr></thead>
+      <tbody>{{FOLK_ROWS}}</tbody>
+    </table>
+  </div>
+  <p class="prose">Two more myths the data rejected: fighters who missed weight won only 40% of their bouts (n = 259), not the 55–60% often quoted, and the eye-catching “5′10″ beats 6′1″ only 26% of the time” cell shrank to 40% on later fights — small-sample noise.</p>
+</section>
+
+<section aria-labelledby="where">
+  <span class="eyebrow">Where it succeeds and fails</span>
+  <h2 id="where">Strong on known quantities, no edge on debutants</h2>
+  <div class="twocol">
+    <div>
+      <h3>By UFC experience (fewer fights of the two)</h3>
+      <div class="table-wrap"><table><thead><tr><th scope="col">Group</th><th scope="col">Fights</th><th scope="col">Market</th><th scope="col">Engine</th><th scope="col">Gain</th><th scope="col">Acc. mkt / eng</th></tr></thead><tbody>{{BD_EXPERIENCE}}</tbody></table></div>
+      <h3>By market favourite price</h3>
+      <div class="table-wrap"><table><thead><tr><th scope="col">Group</th><th scope="col">Fights</th><th scope="col">Market</th><th scope="col">Engine</th><th scope="col">Gain</th><th scope="col">Acc. mkt / eng</th></tr></thead><tbody>{{BD_PRICE}}</tbody></table></div>
+    </div>
+    <div>
+      <h3>By division</h3>
+      <div class="table-wrap"><table><thead><tr><th scope="col">Group</th><th scope="col">Fights</th><th scope="col">Market</th><th scope="col">Engine</th><th scope="col">Gain</th><th scope="col">Acc. mkt / eng</th></tr></thead><tbody>{{BD_DIVISION}}</tbody></table></div>
+      <h3>When engine and market pick different winners</h3>
+      <div class="table-wrap"><table><thead><tr><th scope="col">Group</th><th scope="col">Fights</th><th scope="col">Market</th><th scope="col">Engine</th><th scope="col">Gain</th><th scope="col">Acc. mkt / eng</th></tr></thead><tbody>{{BD_AGREE}}</tbody></table></div>
+    </div>
+  </div>
+  <p class="prose">All 2021–Sep 2026, log loss (lower is better). The market is sharper than the engine on debutants — it knows regional reputations and camp news the data doesn’t. Light heavyweight is the one division where the engine loses ground. The biggest misses were genuine upsets priced above 80% by both sides (Nunes–Peña, Shevchenko–Grasso, Adesanya–Strickland): the fights the engine should be least confident about are the ones nobody can call.</p>
+</section>
+
+<section aria-labelledby="calibration">
+  <span class="eyebrow">How well calibrated is it?</span>
+  <h2 id="calibration">When it says 70%, it wins about 70%</h2>
+  <div class="twocol">
+    <div class="figure">
+      <div class="legend"><span class="chip" style="--c: var(--blue)">Engine</span><span class="chip" style="--c: var(--red)">Closing line</span></div>
+      {{CALIBRATION}}
+      <p class="caption">2021–Sep 2026. Dot size = fights in the bin; dashed line = perfect calibration.</p>
+    </div>
+    <div class="prose">
+      <p>Both sides sit close to the diagonal. The one persistent market flaw is at the extremes: favourites priced above 80% win more often than their price implies, and longshots under 20% are overbet — backing them lost 44% of stake since 2021. The engine inherits the line’s strengths and leans into that tilt, which is where a good share of its gain comes from.</p>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="use">
+  <span class="eyebrow">Using it</span>
+  <h2 id="use">Double-click, update, compare with Pinnacle</h2>
+  <ul class="tight">
+    <li>Open <strong>UFC Edge</strong> and press <em>Update &amp; predict</em>. Each fight shows the engine’s probability, the market’s, and a stake at the estimated Pinnacle price.</li>
+    <li>Type the odds Pinnacle actually shows under each fighter: the stake recalculates, and fights without a bet show the price that would make them one.</li>
+    <li>Update as soon as a card’s lines open; that is where the tested edge was largest. Never take a worse price than the minimum shown.</li>
+    <li>Keep the stake rule. Doubling units on a “sure thing” is how a real edge still goes broke.</li>
+  </ul>
+</section>
+
+<section aria-labelledby="method">
+  <span class="eyebrow">Method and safeguards</span>
+  <h2 id="method">How we tried not to fool ourselves</h2>
+  <ul class="tight">
+    <li><strong>No hindsight by construction.</strong> Features are built date by date; each fighter is snapshotted before a fight and updated after. Canary tests delete everything after mid-2016 (and shuffle inputs): all earlier features stay bit-identical.</li>
+    <li><strong>Pre-registration.</strong> Design, thresholds and success criteria were written down before scoring 2021–2024, and again before the 2025–2026 holdout. The one failed criterion (late-bet profit in validation) is reported as a failure.</li>
+    <li><strong>Only future-obtainable data.</strong> UFCStats (daily mirror), Sherdog, BestFightOdds, FightMatrix, Wikipedia and Open-Meteo can all be re-collected for next week’s card. Wikimedia pageviews were dropped when the API throttled collection.</li>
+    <li><strong>Independent prices.</strong> Our scraped odds matched two separate archives (average gap under 2.5 points, including Pinnacle). Development-period profits were re-settled at those archives’ prices and survived.</li>
+    <li><strong>Controls.</strong> A recalibrated market alone, and the market plus a random “model”, both fail to make money under the same pipeline.</li>
+  </ul>
+  <p class="prose">Known limits: opening-line limits cap real stakes; the UFCStats mirror lags a day; a handful of overturned results are treated as final; FightMatrix can backfill forgotten regional bouts into old ratings.</p>
+</section>
+
+<footer>
+  Engine and research code: <code>ufc/</code> and <code>research/</code>. Every table above is regenerated by <code>research/30_report.py</code> from saved out-of-sample predictions. Past performance of a betting model is evidence, not a promise; bet only what you can afford to lose.
+</footer>
+</main>

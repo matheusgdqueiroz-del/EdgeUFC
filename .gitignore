@@ -1,0 +1,20 @@
+# secrets: the Odds API key is saved here by the app
+predictions/settings.json
+
+__pycache__/
+*.pyc
+*.lnk
+
+# third-party repositories and page caches: re-created by `python setup_data.py` / `python -m ufc.update`
+data_raw/
+
+# regenerated on every run, backups, or prop-research raw dump (python -m ufc.sources.bfo_props)
+data/live_table.parquet
+data/model_table_v1.parquet
+data/engine_oos_valid.parquet
+data/bfo/event_lines.csv
+data/pinnacle/hist/
+data/v2/as_run_prior_leak/
+data/v2/index_v1_backup.html
+data/v2/settings_backup.json
+data/v2/*.log

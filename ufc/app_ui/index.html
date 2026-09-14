@@ -1,0 +1,583 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UFC Edge</title>
+<link rel="icon" href="/icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root {
+  --canvas: #ebeef2;
+  --surface: #ffffff;
+  --raised: #f5f7f9;
+  --ink: #10161d;
+  --ink-2: #56626f;
+  --ink-3: #8b96a3;
+  --rule: #d6dce3;
+  --blue: #1b5aa6;
+  --blue-ink: #ffffff;
+  --blue-soft: #dbe7f6;
+  --red: #b0372b;
+  --red-soft: #f5dfdb;
+  --bar-a: #2a3440;
+  --bar-b: #c3cbd4;
+  --display: "Barlow Condensed", "Arial Narrow", "Roboto Condensed", sans-serif;
+  --ui: "Barlow", "Segoe UI", system-ui, sans-serif;
+  --mono: "IBM Plex Mono", Consolas, "Cascadia Mono", monospace;
+  --shadow: 0 1px 2px rgba(16, 22, 29, .06), 0 6px 20px rgba(16, 22, 29, .06);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --canvas: #0c1015; --surface: #141a21; --raised: #1a222b; --ink: #e7ecf1; --ink-2: #9aa6b3; --ink-3: #6c7784;
+    --rule: #27313b; --blue: #74aaf0; --blue-ink: #0c1015; --blue-soft: #1b2b3f; --red: #ea7d6f; --red-soft: #3b2420;
+    --bar-a: #d9e0e7; --bar-b: #3a4652; --shadow: none;
+  }
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; background: var(--canvas); color: var(--ink); font: 400 15px/1.5 var(--ui); }
+button, input, select { font: inherit; color: inherit; }
+button { cursor: pointer; }
+:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.num { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+
+/* ---------- top bar ---------- */
+.bar { position: sticky; top: 0; z-index: 10; background: var(--ink); color: var(--canvas); }
+@media (prefers-color-scheme: dark) { .bar { background: #06090c; color: var(--ink); border-bottom: 1px solid var(--rule); } }
+.bar-inner { max-width: 1180px; margin: 0 auto; padding: 0 20px; height: 60px; display: flex; align-items: center; gap: 28px; }
+.brand { display: flex; align-items: center; gap: 10px; font: 700 24px/1 var(--display); letter-spacing: .06em; text-transform: uppercase; white-space: nowrap; }
+.brand img { width: 28px; height: 28px; }
+.brand span { color: #74aaf0; }
+nav { display: flex; gap: 4px; }
+nav button { background: none; border: 0; padding: 8px 12px; border-radius: 4px; color: inherit; opacity: .7; font-weight: 500; }
+nav button[aria-current="page"] { opacity: 1; background: rgba(255, 255, 255, .1); }
+nav button:hover { opacity: 1; }
+.bar-right { margin-left: auto; display: flex; align-items: center; gap: 14px; }
+.stamp { font-size: 12px; opacity: .7; text-align: right; line-height: 1.3; }
+.btn { border: 0; border-radius: 4px; padding: 9px 16px; font-weight: 600; background: var(--blue); color: var(--blue-ink); white-space: nowrap; }
+.bar .btn { background: #74aaf0; color: #0c1015; }
+.btn:disabled { opacity: .55; cursor: default; }
+.btn.ghost { background: transparent; color: var(--ink); border: 1px solid var(--rule); }
+
+main { max-width: 1180px; margin: 0 auto; padding: 22px 20px 60px; }
+.view[hidden] { display: none !important; }
+
+/* ---------- job panel ---------- */
+.job { background: var(--surface); border: 1px solid var(--rule); border-radius: 6px; padding: 16px 18px; margin-bottom: 20px; box-shadow: var(--shadow); }
+.job h3 { margin: 0 0 4px; font: 600 20px/1.2 var(--display); letter-spacing: .02em; }
+.job p { margin: 0 0 12px; color: var(--ink-2); }
+.steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.steps li { display: flex; gap: 10px; align-items: center; font-size: 14px; }
+.steps li::before { content: ""; width: 14px; height: 14px; border-radius: 50%; border: 2px solid var(--blue); flex: none; }
+.steps li.done::before { background: var(--blue); }
+.steps li.now::before { border-color: var(--blue); border-right-color: transparent; animation: spin .9s linear infinite; }
+.steps li.done { color: var(--ink-2); }
+@keyframes spin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .steps li.now::before { animation: none; } }
+.job.error { border-color: var(--red); }
+.job pre { white-space: pre-wrap; font: 12px/1.45 var(--mono); background: var(--red-soft); padding: 10px; border-radius: 4px; max-height: 180px; overflow: auto; }
+
+/* ---------- events ---------- */
+.events { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 18px; }
+.event-pill { border: 1px solid var(--rule); background: var(--surface); border-radius: 999px; padding: 6px 14px; display: flex; gap: 8px; align-items: baseline; }
+.event-pill[aria-pressed="true"] { background: var(--ink); color: var(--canvas); border-color: var(--ink); }
+.event-pill small { font-family: var(--mono); font-size: 11px; opacity: .75; }
+.event-head { display: grid; grid-template-columns: 1fr auto; gap: 12px 24px; align-items: end; margin-bottom: 14px; }
+.event-head h1 { margin: 0; font: 700 clamp(30px, 4.4vw, 46px)/1 var(--display); text-transform: uppercase; letter-spacing: .01em; text-wrap: balance; }
+.event-meta { color: var(--ink-2); margin-top: 6px; display: flex; flex-wrap: wrap; gap: 4px 16px; }
+.summary { display: flex; gap: 10px; flex-wrap: wrap; justify-content: flex-end; }
+.stat { background: var(--surface); border: 1px solid var(--rule); border-radius: 6px; padding: 8px 14px; min-width: 104px; }
+.stat b { display: block; font: 600 22px/1.1 var(--mono); }
+.stat span { font-size: 12px; color: var(--ink-2); }
+.toolbar { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px; margin: 4px 0 12px; color: var(--ink-2); font-size: 13px; }
+.toolbar label { display: inline-flex; align-items: center; gap: 8px; color: var(--ink); font-size: 14px; }
+.legend { display: inline-flex; gap: 16px; flex-wrap: wrap; }
+.legend i { display: inline-block; vertical-align: middle; margin-right: 6px; }
+.legend .l-bar { width: 22px; height: 8px; background: linear-gradient(90deg, var(--bar-a) 60%, var(--bar-b) 60%); border-radius: 2px; }
+.legend .l-mkt { width: 2px; height: 14px; background: var(--red); }
+
+/* ---------- bouts ---------- */
+.bouts { display: grid; gap: 10px; }
+.bout { background: var(--surface); border: 1px solid var(--rule); border-radius: 6px; box-shadow: var(--shadow); }
+.bout.is-bet { border-color: var(--blue); box-shadow: inset 4px 0 0 var(--blue), var(--shadow); }
+.bout-main { padding: 14px 18px; display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(220px, 1.25fr) minmax(0, 1fr) 220px; gap: 16px; align-items: center; }
+.tags { grid-column: 1 / -1; display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: -6px; }
+.tag { font: 500 11px/1 var(--mono); letter-spacing: .06em; text-transform: uppercase; padding: 4px 6px; border-radius: 3px; background: var(--raised); color: var(--ink-2); }
+.tag.warn { background: var(--red-soft); color: var(--red); }
+.tag.key { background: var(--ink); color: var(--canvas); }
+.fighter { min-width: 0; }
+.fighter.b { text-align: right; }
+.fighter .name { font: 600 22px/1.05 var(--display); letter-spacing: .01em; text-transform: uppercase; overflow-wrap: anywhere; }
+.fighter .rec { font: 12px/1.4 var(--mono); color: var(--ink-2); margin-top: 3px; }
+.fighter.pick .name::after { content: " ●"; color: var(--blue); font-size: 12px; vertical-align: middle; }
+.fighter.b.pick .name::after { content: ""; }
+.fighter.b.pick .name::before { content: "● "; color: var(--blue); font-size: 12px; vertical-align: middle; }
+.meter { display: grid; gap: 6px; width: 100%; background: none; border: 0; padding: 4px 0; text-align: left; border-radius: 4px; }
+.meter:hover .details { color: var(--ink); }
+.px { display: inline-flex; align-items: center; gap: 6px; margin-top: 7px; font: 500 11px/1 var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--ink-2); }
+.fighter.b .px { flex-direction: row-reverse; }
+.px input { width: 76px; border: 1px solid var(--rule); background: var(--raised); border-radius: 4px; padding: 5px 7px; font: 500 14px/1 var(--mono); color: var(--ink); text-align: center; }
+.px input:not(:placeholder-shown) { border-color: var(--blue); background: var(--blue-soft); }
+.px input::placeholder { color: var(--ink-3); }
+.meter-nums { display: flex; justify-content: space-between; font: 600 18px/1 var(--mono); }
+.meter-nums .dim { color: var(--ink-3); font-weight: 500; }
+.track { position: relative; height: 10px; border-radius: 3px; background: var(--bar-b); overflow: visible; }
+.fill { position: absolute; left: 0; top: 0; bottom: 0; background: var(--bar-a); border-radius: 3px 0 0 3px; }
+.mkt { position: absolute; top: -5px; bottom: -5px; width: 2px; background: var(--red); transform: translateX(-1px); }
+.meter-sub { display: flex; justify-content: space-between; font: 11px/1.2 var(--mono); color: var(--ink-2); }
+.meter-sub .m { color: var(--red); }
+.rec-cell { text-align: right; display: grid; gap: 3px; justify-items: end; }
+.chip { display: inline-flex; gap: 8px; align-items: baseline; background: var(--blue); color: var(--blue-ink); padding: 6px 10px; border-radius: 4px; font-weight: 600; }
+.chip b { font: 600 17px/1 var(--mono); }
+.rec-cell .who { font-weight: 600; }
+.rec-cell .small { font: 12px/1.35 var(--mono); color: var(--ink-2); }
+.none { color: var(--ink-3); font-weight: 500; }
+.chev { transition: transform .15s; display: inline-block; }
+.details { color: var(--ink-2); }
+.bout[data-open="true"] .chev { transform: rotate(180deg); }
+
+/* tale of the tape */
+.tape { border-top: 1px solid var(--rule); padding: 12px 18px 16px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 18px 36px; }
+.tape[hidden] { display: none; }
+.tape table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.tape th { font: 500 11px/1 var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--ink-2); text-align: center; padding: 6px; }
+.tape td { padding: 6px; border-top: 1px solid var(--rule); font-family: var(--mono); font-variant-numeric: tabular-nums; }
+.tape td:first-child { text-align: left; } .tape td:last-child { text-align: right; }
+.tape td.lab { text-align: center; font: 500 12px/1.2 var(--ui); color: var(--ink-2); }
+.tape .better { color: var(--blue); font-weight: 500; }
+.explain { font-size: 14px; color: var(--ink-2); display: grid; gap: 8px; align-content: start; }
+.explain strong { color: var(--ink); }
+
+.empty { background: var(--surface); border: 1px dashed var(--rule); border-radius: 8px; padding: 40px; text-align: center; }
+.empty h2 { font: 700 30px/1.1 var(--display); text-transform: uppercase; margin: 0 0 8px; }
+.empty p { color: var(--ink-2); margin: 0 auto 18px; max-width: 52ch; }
+
+/* settings */
+.settings { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 14px; }
+.card { background: var(--surface); border: 1px solid var(--rule); border-radius: 6px; padding: 18px; }
+.card h2 { margin: 0 0 6px; font: 600 22px/1.1 var(--display); letter-spacing: .02em; text-transform: uppercase; }
+.card p { margin: 0 0 14px; color: var(--ink-2); font-size: 14px; }
+.field { display: flex; gap: 8px; }
+.field input, .field select { border: 1px solid var(--rule); background: var(--raised); border-radius: 4px; padding: 9px 10px; }
+.field input { width: 100%; font-family: var(--mono); }
+.seg { display: grid; grid-template-columns: 1fr 1fr; border: 1px solid var(--rule); border-radius: 5px; overflow: hidden; }
+.seg button { border: 0; background: var(--raised); padding: 10px; text-align: left; }
+.seg button + button { border-left: 1px solid var(--rule); }
+.seg button[aria-pressed="true"] { background: var(--ink); color: var(--canvas); }
+.seg small { display: block; font: 11px/1.35 var(--mono); opacity: .8; margin-top: 2px; }
+.days { display: flex; gap: 6px; flex-wrap: wrap; }
+.days button { border: 1px solid var(--rule); background: var(--raised); border-radius: 4px; padding: 8px 14px; font-family: var(--mono); }
+.days button[aria-pressed="true"] { background: var(--ink); color: var(--canvas); border-color: var(--ink); }
+.toast { position: fixed; bottom: 22px; left: 50%; transform: translateX(-50%); background: var(--ink); color: var(--canvas); padding: 8px 16px; border-radius: 4px; font-weight: 500; }
+.toast[hidden] { display: none; }
+.report { width: 100%; height: calc(100vh - 110px); border: 1px solid var(--rule); border-radius: 6px; background: var(--surface); }
+
+@media (max-width: 900px) {
+  .bout-main { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+  .meter { grid-column: 1 / -1; order: 3; }
+  .rec-cell { grid-column: 1 / -1; order: 4; justify-items: start; text-align: left; }
+  .tape { grid-template-columns: 1fr; }
+  .event-head { grid-template-columns: 1fr; } .summary { justify-content: flex-start; }
+  .bar-inner { gap: 12px; } .stamp { display: none; }
+}
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="bar-inner">
+    <div class="brand"><img src="/icon.png" alt="">UFC <span>Edge</span></div>
+    <nav aria-label="Main">
+      <button data-view="cards" aria-current="page">Fight cards</button>
+      <button data-view="record">Track record</button>
+      <button data-view="settings">Settings</button>
+    </nav>
+    <div class="bar-right">
+      <div class="stamp" id="stamp"></div>
+      <button class="btn" id="run-full">Update &amp; predict</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="job" id="job" hidden aria-live="polite"></section>
+
+  <section class="view" id="view-cards">
+    <div id="cards"></div>
+  </section>
+
+  <section class="view" id="view-record" hidden>
+    <iframe class="report" id="report" title="Track record report"></iframe>
+  </section>
+
+  <section class="view" id="view-settings" hidden>
+    <div class="settings">
+      <div class="card">
+        <h2>Bankroll</h2>
+        <p>One unit is 1% of this amount. Stakes are shown in units and in money.</p>
+        <div class="field">
+          <select id="currency" aria-label="Currency"><option>$</option><option>€</option><option>£</option><option>R$</option></select>
+          <input id="bankroll" type="number" min="0" step="50" inputmode="decimal" aria-label="Bankroll amount">
+        </div>
+      </div>
+      <div class="card">
+        <h2>Staking style</h2>
+        <p>How aggressively to size bets when the engine finds an edge.</p>
+        <div class="seg" role="group" aria-label="Staking style">
+          <button id="stake-steady" data-staking="steady">Steady<small id="steady-desc"></small></button>
+          <button id="stake-growth" data-staking="growth">Growth<small id="growth-desc"></small></button>
+        </div>
+        <p style="margin:12px 0 0">Steady is the tested default: small stakes, historical worst dip about 20 units. Growth sizes up to what grew fastest historically, with much deeper drawdowns.</p>
+      </div>
+      <div class="card">
+        <h2>Pinnacle odds feed</h2>
+        <p>Live Pinnacle moneylines come from The Odds API. Paste your API key once; it stays on this computer. Each update uses 1 of the free plan’s 500 monthly credits.</p>
+        <div class="field">
+          <input id="odds-key" type="password" autocomplete="off" spellcheck="false" placeholder="API key" aria-label="Odds API key">
+          <button class="btn" id="save-key">Save</button>
+        </div>
+        <p id="key-status" style="margin:10px 0 0"></p>
+      </div>
+      <div class="card">
+        <h2>Odds format</h2>
+        <p>How odds are shown and typed. Pinnacle shows decimal odds outside the US.</p>
+        <div class="seg" role="group" aria-label="Odds format">
+          <button data-odds="decimal">Decimal<small>1.85 · 2.40</small></button>
+          <button data-odds="american">American<small>−118 · +140</small></button>
+        </div>
+      </div>
+      <div class="card">
+        <h2>Look ahead</h2>
+        <p>Which upcoming cards to predict. Applies on the next update.</p>
+        <div class="days" role="group" aria-label="Days ahead">
+          <button data-days="7">7 days</button><button data-days="14">14 days</button><button data-days="30">30 days</button><button data-days="45">45 days</button>
+        </div>
+      </div>
+      <div class="card">
+        <h2>Re-run without downloading</h2>
+        <p>Recomputes predictions from the data already on this computer (about 6 minutes). Use “Update &amp; predict” to fetch new odds, results and news first.</p>
+        <button class="btn ghost" id="run-quick">Re-run model only</button>
+      </div>
+    </div>
+  </section>
+</main>
+<div class="toast" id="toast" role="status" hidden></div>
+
+<script>
+const $ = (s, el = document) => el.querySelector(s);
+let S = { predictions: null, settings: null, job: null, report: false };
+let currentEvent = null, betsOnly = false, open = new Set(), polling = null;
+
+const pct = p => p == null ? "—" : Math.round(p * 100) + "%";
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const ftin = i => i == null ? "—" : `${Math.floor(i / 12)}′${Math.round(i % 12)}″`;
+const money = u => { const s = S.settings; const v = u * (s.bankroll || 0) / 100; return `${s.currency}${v >= 100 ? v.toFixed(0) : v.toFixed(2)}`; };
+const dayName = d => new Date(d + "T12:00:00").toLocaleDateString("en-US", { weekday: "short", day: "numeric", month: "short" });
+
+function toast(msg) { const t = $("#toast"); t.textContent = msg; t.hidden = false; clearTimeout(toast.t); toast.t = setTimeout(() => t.hidden = true, 1800); }
+
+async function api(path, body) {
+  const r = await fetch(path, body ? { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) } : {});
+  return r.json();
+}
+
+const fmtOdds = dec => {
+  if (dec == null || !isFinite(dec)) return "—";
+  if ((S.settings.odds_format || "decimal") === "decimal") return dec.toFixed(2);
+  return dec >= 2 ? `+${Math.round((dec - 1) * 100)}` : `−${Math.round(100 / (dec - 1))}`;
+};
+function parseOdds(txt) {
+  const t = String(txt || "").trim().replace("−", "-").replace(",", ".");
+  if (!t) return null;
+  const v = Number(t);
+  if (!isFinite(v)) return null;
+  if (/^[+-]/.test(t) || Math.abs(v) >= 100) return v >= 100 ? 1 + v / 100 : v <= -100 ? 1 + 100 / -v : null;
+  return v > 1.001 ? v : null;
+}
+const PRICE_TTL = 48 * 3600e3;  // typed prices go stale: forget them after two days
+function typed(id, side) {
+  try {
+    const x = JSON.parse(localStorage.getItem(`pin:${id}:${side}`) || "null");
+    return x && Date.now() - x.t < PRICE_TTL ? x.v : "";
+  } catch { return ""; }
+}
+function setTyped(id, side, v) {
+  try { v ? localStorage.setItem(`pin:${id}:${side}`, JSON.stringify({ v, t: Date.now() })) : localStorage.removeItem(`pin:${id}:${side}`); } catch {}
+}
+function policy() {
+  const pols = S.predictions?.policies || {};
+  return pols[S.settings.staking] || pols.steady || S.predictions?.policy;
+}
+function unitsAt(pb, dec, pol) {
+  const u = Math.min(Math.max(pol.frac * ((pb * dec - 1) / (dec - 1)) * 100, 0), pol.max_units);
+  return u >= .25 ? Math.round(u * 2) / 2 : 0;
+}
+function minPrice(pb, pol) {  // lowest decimal price at which this side becomes a bet
+  for (let d = 1.01; d < 100; d = Math.round((d + 0.01) * 100) / 100) if (pb * d - 1 > pol.min_edge && unitsAt(pb, d, pol) > 0) return d;
+  return null;
+}
+function stake(b) {
+  const pol = policy();
+  if (b.market_a == null || !b.a.pin_est || !b.b.pin_est || !pol) return null;
+  const side = { a: { pb: b.prob_a }, b: { pb: 1 - b.prob_a } };
+  for (const k of ["a", "b"]) {
+    const t = parseOdds(typed(b.fight_id, k));
+    Object.assign(side[k], { price: t || b[k].pin_est, typed: !!t, live: !t && !!b.pin_live, min: minPrice(side[k].pb, pol) });
+    side[k].ev = side[k].pb * side[k].price - 1;
+  }
+  const k = side.a.ev >= side.b.ev ? "a" : "b", best = side[k];
+  const u = best.ev > pol.min_edge ? unitsAt(best.pb, best.price, pol) : 0;
+  return { side: u > 0 ? k : null, units: u, ev: best.ev, price: best.price, typed: best.typed, live: best.live, sides: side };
+}
+
+function recordLine(f) {
+  const bits = [];
+  if (f.ufc_wins != null) bits.push(`UFC ${f.ufc_wins}-${f.ufc_losses}`);
+  if (f.pro_wins != null) bits.push(`Pro ${f.pro_wins}-${f.pro_losses}`);
+  if (f.age != null) bits.push(`${Math.round(f.age)} yrs`);
+  return bits.join(" · ") || "No record on file";
+}
+
+function streak(n) { return n > 0 ? `Won ${n}` : n < 0 ? `Lost ${-n}` : "—"; }
+function layoff(d) { if (d == null) return "UFC debut"; if (d < 60) return `${d} days`; return `${(d / 30.4).toFixed(0)} months`; }
+
+function tape(b) {
+  const A = b.a, B = b.b;
+  const row = (lab, va, vb, cmp) => {
+    let ca = "", cb = "";
+    if (cmp && va != null && vb != null && va !== vb) { (cmp(va, vb) ? (ca = "better") : (cb = "better")); }
+    return `<tr><td class="${ca}">${va ?? "—"}</td><td class="lab">${lab}</td><td class="${cb}">${vb ?? "—"}</td></tr>`;
+  };
+  const hi = (x, y) => x > y, lo = (x, y) => x < y;
+  const s = stake(b);
+  const pickA = b.prob_a >= .5, pick = pickA ? A : B;
+  const mkt = b.market_a == null ? null : (pickA ? b.market_a : 1 - b.market_a);
+  const statsP = pickA ? b.stats_a : 1 - b.stats_a;
+  const why = [];
+  why.push(`<div><strong>Engine:</strong> ${esc(pick.name)} wins ${pct(Math.max(b.prob_a, 1 - b.prob_a))} of the time.</div>`);
+  if (mkt != null) why.push(`<div><strong>Market:</strong> ${pct(mkt)} after removing the bookmaker margin. ${Math.abs(mkt - Math.max(b.prob_a, 1 - b.prob_a)) < .02 ? "The engine largely agrees with the market here." : ""}</div>`);
+  why.push(`<div><strong>Stats-only model</strong> (ignores the odds): ${pct(statsP)} for ${esc(pick.name)}.</div>`);
+  if (s && s.side) why.push(`<div><strong>Bet:</strong> ${s.units}u on ${esc(b[s.side].name)} at ${fmtOdds(s.price)} (${priceLabel(b, s)}), expected return ${(s.ev * 100).toFixed(1)}% per unit. Still a bet down to ${fmtOdds(s.sides[s.side].min)}.</div>`);
+  else if (s) why.push(`<div><strong>No bet:</strong> it becomes a bet if Pinnacle offers ${esc(A.name)} at ${fmtOdds(s.sides.a.min)} or more, or ${esc(B.name)} at ${fmtOdds(s.sides.b.min)} or more.</div>`);
+  else why.push(`<div><strong>No odds posted yet.</strong> Update closer to the event.</div>`);
+  if (s && b.pin_live) why.push(`<div><strong>Pinnacle line</strong> read ${new Date(b.pin_time).toLocaleString("en-US", { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" })}. Lines move: type the odds Pinnacle shows now under each fighter if they changed.</div>`);
+  else if (s) why.push(`<div><strong>Pinnacle estimate</strong> = consensus of the sportsbooks tracked by BestFightOdds, with a Pinnacle-sized margin (no live Pinnacle line for this fight). Type the odds Pinnacle shows under each fighter for an exact stake.</div>`);
+  if (s && b.days_to_fight != null) why.push(`<div>Line read ${b.days_to_fight} day${b.days_to_fight === 1 ? "" : "s"} before the fight${b.stage === 0 ? ", unchanged since it opened" : ""}. The engine trusts the market more as the fight gets closer.</div>`);
+  if (A.debut || B.debut) why.push(`<div>A UFC debut is involved: historically the engine has no edge over the market in these fights.</div>`);
+  return `
+    <table>
+      <thead><tr><th style="text-align:left">${esc(A.name)}</th><th>Tale of the tape</th><th style="text-align:right">${esc(B.name)}</th></tr></thead>
+      <tbody>
+        ${row("UFC record", A.ufc_wins != null ? `${A.ufc_wins}-${A.ufc_losses}` : null, B.ufc_wins != null ? `${B.ufc_wins}-${B.ufc_losses}` : null)}
+        ${row("Pro record", A.pro_wins != null ? `${A.pro_wins}-${A.pro_losses}` : null, B.pro_wins != null ? `${B.pro_wins}-${B.pro_losses}` : null)}
+        ${row("Streak", streak(A.streak), streak(B.streak))}
+        ${row("Age", A.age != null ? A.age.toFixed(1) : null, B.age != null ? B.age.toFixed(1) : null)}
+        ${row("Height", ftin(A.height), ftin(B.height))}
+        ${row("Reach", A.reach != null ? A.reach + "″" : null, B.reach != null ? B.reach + "″" : null)}
+        ${row("Stance", A.stance, B.stance)}
+        ${row("Last fight", layoff(A.layoff_days), layoff(B.layoff_days))}
+        ${row("FightMatrix rank", A.fm_rank != null ? "#" + A.fm_rank : null, B.fm_rank != null ? "#" + B.fm_rank : null)}
+        ${row(b.pin_live ? "Pinnacle odds" : "Est. Pinnacle odds", A.pin_est ? fmtOdds(A.pin_est) : null, B.pin_est ? fmtOdds(B.pin_est) : null)}
+        ${row("Books now (avg / best)", A.dec_avg ? `${fmtOdds(A.dec_avg)} / ${fmtOdds(A.dec_best)}` : null, B.dec_avg ? `${fmtOdds(B.dec_avg)} / ${fmtOdds(B.dec_best)}` : null)}
+        ${row("Opening odds", A.dec_open ? fmtOdds(A.dec_open) : null, B.dec_open ? fmtOdds(B.dec_open) : null)}
+      </tbody>
+    </table>
+    <div class="explain">${why.join("")}</div>`;
+}
+
+function recHTML(b, s) {
+  if (!s) return `<span class="none">Odds not posted</span><span class="small">stats model only</span>`;
+  if (s.side) return `<span class="chip">BET <b>${s.units}u</b></span><span class="who">${esc(b[s.side].name)} @ ${fmtOdds(s.price)}</span>
+    <span class="small">edge +${(s.ev * 100).toFixed(1)}% · ${money(s.units)}</span><span class="small">${priceLabel(b, s)} · bet down to ${fmtOdds(s.sides[s.side].min)}</span>`;
+  const la = b.a.name.split(" ").slice(-1)[0], lb = b.b.name.split(" ").slice(-1)[0];
+  return `<span class="none">No bet</span><span class="small">bet if ${esc(la)} ≥ ${fmtOdds(s.sides.a.min)}</span><span class="small">or ${esc(lb)} ≥ ${fmtOdds(s.sides.b.min)}</span>`;
+}
+
+function priceLabel(b, s) {
+  if (s.typed) return "your Pinnacle price";
+  if (b.pin_live) return `Pinnacle ${new Date(b.pin_time).toLocaleTimeString("en-US", { hour: "2-digit", minute: "2-digit" })}`;
+  return "est. Pinnacle";
+}
+
+function priceInput(b, side) {
+  if (b.market_a == null) return "";
+  return `<label class="px"><span>${b.pin_live ? "Pinnacle" : "Pinnacle?"}</span><input data-price="${side}" inputmode="decimal" autocomplete="off" value="${esc(typed(b.fight_id, side))}" placeholder="${fmtOdds(b[side].pin_est)}" aria-label="Pinnacle odds for ${esc(b[side].name)}"></label>`;
+}
+
+function boutHTML(b) {
+  const s = stake(b);
+  const pa = b.prob_a, pickA = pa >= .5;
+  const tags = [];
+  if (b.bout_order === 0) tags.push(`<span class="tag key">Main event</span>`);
+  else if (b.bout_order === 1) tags.push(`<span class="tag">Co-main</span>`);
+  if (b.title) tags.push(`<span class="tag key">Title fight</span>`);
+  tags.push(`<span class="tag">${esc(b.weightclass)}${b.women ? " · women" : ""}</span>`, `<span class="tag">${b.rounds} rounds</span>`);
+  if (b.a.debut || b.b.debut) tags.push(`<span class="tag">UFC debut</span>`);
+  if (b.a.replacement || b.b.replacement) tags.push(`<span class="tag warn">Short notice</span>`);
+  if (b.a.missed_weight || b.b.missed_weight) tags.push(`<span class="tag warn">Missed weight</span>`);
+  const mkt = b.market_a, isOpen = open.has(b.fight_id);
+  return `<article class="bout ${s && s.side ? "is-bet" : ""}" data-id="${esc(b.fight_id)}" data-open="${isOpen}">
+    <div class="bout-main">
+      <div class="tags">${tags.join("")}</div>
+      <div class="fighter a ${pickA ? "pick" : ""}"><div class="name">${esc(b.a.name)}</div><div class="rec">${esc(recordLine(b.a))}</div>${priceInput(b, "a")}</div>
+      <button class="meter" aria-expanded="${isOpen}" aria-label="${esc(b.a.name)} ${pct(pa)}, ${esc(b.b.name)} ${pct(1 - pa)}. Show details">
+        <div class="meter-nums"><span class="${pickA ? "" : "dim"}">${pct(pa)}</span><span class="${pickA ? "dim" : ""}">${pct(1 - pa)}</span></div>
+        <div class="track"><div class="fill" style="width:${(pa * 100).toFixed(1)}%"></div>${mkt != null ? `<div class="mkt" style="left:${(mkt * 100).toFixed(1)}%"></div>` : ""}</div>
+        <div class="meter-sub"><span>engine</span>${mkt != null ? `<span class="m">market ${pct(mkt)} · ${pct(1 - mkt)}</span>` : `<span>no odds yet</span>`}<span class="details">details <span class="chev" aria-hidden="true">⌄</span></span></div>
+      </button>
+      <div class="fighter b ${pickA ? "" : "pick"}"><div class="name">${esc(b.b.name)}</div><div class="rec">${esc(recordLine(b.b))}</div>${priceInput(b, "b")}</div>
+      <div class="rec-cell">${recHTML(b, s)}</div>
+    </div>
+    <div class="tape" ${isOpen ? "" : "hidden"}>${tape(b)}</div>
+  </article>`;
+}
+
+function summaryHTML(bouts) {
+  const stakes = bouts.map(stake).filter(s => s && s.side);
+  const u = stakes.reduce((t, s) => t + s.units, 0);
+  return `<div class="stat"><b>${stakes.length}</b><span>bets</span></div>
+    <div class="stat"><b>${u % 1 ? u.toFixed(1) : u}u</b><span>total stake</span></div>
+    <div class="stat"><b>${money(u)}</b><span>at ${S.settings.currency}${(S.settings.bankroll / 100).toFixed(S.settings.bankroll < 1000 ? 2 : 0)} / unit</span></div>`;
+}
+
+function renderCards() {
+  const el = $("#cards");
+  const P = S.predictions;
+  if (!P || !P.bouts) {
+    el.innerHTML = `<div class="empty"><h2>No predictions yet</h2><p>Download the latest results, odds and fight cards, then let the engine price every upcoming bout. The first run takes about 10 minutes.</p><button class="btn" onclick="runJob('full')">Update &amp; predict</button></div>`;
+    return;
+  }
+  if (!P.bouts.length) {
+    el.innerHTML = `<div class="empty"><h2>No cards in range</h2><p>No UFC events were found in the next ${P.days || S.settings.days} days. Try a longer look-ahead in Settings, then update.</p></div>`;
+    return;
+  }
+  const events = [...new Map(P.bouts.map(b => [b.event, b])).values()].sort((x, y) => x.date.localeCompare(y.date));
+  if (!events.find(e => e.event === currentEvent)) currentEvent = events[0].event;
+  const bouts = P.bouts.filter(b => b.event === currentEvent).sort((x, y) => x.bout_order - y.bout_order);
+  const ev = bouts[0];
+  const days = Math.round((new Date(ev.date + "T12:00:00") - new Date()) / 864e5);
+  const shown = betsOnly ? bouts.filter(b => { const s = stake(b); return s && s.side; }) : bouts;
+  const withOdds = bouts.filter(b => b.market_a != null).length;
+  el.innerHTML = `
+    <div class="events" role="group" aria-label="Events">${events.map(e => `<button class="event-pill" aria-pressed="${e.event === currentEvent}" data-event="${esc(e.event)}">${esc(e.event.replace(/^UFC Fight Night \d+ - /, "Fight Night: "))}<small>${dayName(e.date)}</small></button>`).join("")}</div>
+    <div class="event-head">
+      <div>
+        <h1>${esc(ev.event)}</h1>
+        <div class="event-meta"><span>${dayName(ev.date)}${days >= 0 ? ` · in ${days} day${days === 1 ? "" : "s"}` : ""}</span><span>${esc(ev.location || "")}</span><span>${bouts.length} bouts · ${withOdds} with odds</span></div>
+      </div>
+      <div class="summary" id="summary">${summaryHTML(bouts)}</div>
+    </div>
+    <div class="toolbar">
+      <label><input type="checkbox" id="bets-only" ${betsOnly ? "checked" : ""}> Only show bets</label>
+      <span class="legend"><span><i class="l-bar"></i>engine win probability</span><span><i class="l-mkt"></i>betting market</span><span>Type Pinnacle's odds under a fighter for an exact stake</span></span>
+    </div>
+    <div class="bouts">${shown.length ? shown.map(boutHTML).join("") : `<div class="empty"><p>No bets on this card at current prices.</p></div>`}</div>`;
+}
+
+function renderStamp() {
+  const P = S.predictions;
+  $("#stamp").innerHTML = P ? `Predictions ${new Date(P.generated_at).toLocaleString("en-US", { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" })}<br>results through ${P.history_through}` : "No predictions yet";
+}
+
+function renderSettings() {
+  const s = S.settings, pols = S.predictions?.policies || {};
+  $("#bankroll").value = s.bankroll; $("#currency").value = s.currency;
+  const d = p => p ? `1/${Math.round(1 / p.frac)} Kelly · edge > ${(p.min_edge * 100).toFixed(0)}% · max ${p.max_units}u` : "";
+  $("#steady-desc").textContent = d(pols.steady || { frac: .125, min_edge: .03, max_units: 1.5 });
+  $("#growth-desc").textContent = pols.growth ? d(pols.growth) : "available after the first run";
+  document.querySelectorAll("[data-staking]").forEach(b => b.setAttribute("aria-pressed", b.dataset.staking === s.staking));
+  document.querySelectorAll("[data-days]").forEach(b => b.setAttribute("aria-pressed", +b.dataset.days === s.days));
+  document.querySelectorAll("[data-odds]").forEach(b => b.setAttribute("aria-pressed", b.dataset.odds === (s.odds_format || "decimal")));
+  $("#key-status").textContent = s.odds_api_key_set ? `Key saved (…${s.odds_api_key_tail}). Run “Update & predict” to pull Pinnacle lines.` : "No key saved: Pinnacle prices are estimated from the other books.";
+}
+
+const STEP_LABELS = [
+  ["[update] UFCStats", "Downloading new fight results"], ["[update] Sherdog", "Updating fighter records and upcoming cards"],
+  ["[update] home-town", "Locating home towns"], ["[update] BestFightOdds", "Fetching current betting lines"], ["[update] Pinnacle", "Fetching Pinnacle lines"],
+  ["[update] Wikipedia", "Checking weigh-ins and replacements"], ["[update] FightMatrix", "Updating FightMatrix ratings"],
+  ["[step] Loading", "Loading fight history"], ["[step] Reading", "Reading upcoming cards"], ["[step] Building", "Building fighter profiles"],
+  ["[step] Re-running", "Re-running walk-forward history"], ["[step] Training", "Training the model"], ["[step] Comparing", "Comparing with the market"],
+  ["[step] Sizing", "Sizing stakes"]];
+
+function renderJob() {
+  const j = S.job, el = $("#job");
+  const running = j && j.running;
+  $("#run-full").disabled = !!running; $("#run-quick").disabled = !!running;
+  if (!j || (!running && !j.error && Date.now() / 1000 - j.finished > 8)) { el.hidden = true; return; }
+  el.hidden = false; el.classList.toggle("error", !!j.error);
+  const seen = j.lines.map(l => (STEP_LABELS.find(([k]) => l.startsWith(k)) || [null, l.replace(/^\[\w+\]\s*/, "")])[1]);
+  const uniq = [...new Set(seen)].filter(x => !/ ok \(|Done/.test(x));
+  const mins = Math.floor((((j.finished || Date.now() / 1000) - j.started)) / 60);
+  if (j.error) {
+    el.innerHTML = `<h3>Update stopped</h3><p>The last step failed. Your previous predictions are still shown. Check the internet connection and try again.</p><pre>${esc(j.error)}</pre><button class="btn" onclick="runJob('${j.mode}')">Try again</button>`;
+  } else if (running) {
+    el.innerHTML = `<h3>${j.mode === "full" ? "Updating data and predicting" : "Re-running the model"} · ${mins} min</h3><p>${j.mode === "full" ? "Usually 8–12 minutes." : "Usually about 6 minutes."} You can keep browsing; the cards refresh when it finishes.</p>
+      <ol class="steps">${uniq.map((s, i) => `<li class="${i === uniq.length - 1 ? "now" : "done"}">${esc(s)}</li>`).join("") || `<li class="now">Starting</li>`}</ol>`;
+  } else {
+    el.innerHTML = `<h3>Predictions updated</h3><p>Finished in ${Math.max(1, mins)} min.</p>`;
+  }
+}
+
+async function refresh() {
+  S = await api("/api/state");
+  renderStamp(); renderJob(); renderCards(); renderSettings();
+  if (S.job && S.job.running) { if (!polling) polling = setInterval(poll, 2500); }
+  else if (polling) { clearInterval(polling); polling = null; }
+}
+async function poll() { const was = S.job && S.job.running; await refresh(); if (was && !(S.job && S.job.running) && !S.job.error) toast("Predictions updated"); }
+
+window.runJob = async mode => { S.job = await api("/api/run", { mode }); renderJob(); if (!polling) polling = setInterval(poll, 2500); window.scrollTo({ top: 0 }); };
+
+async function saveSettings(patch) { S.settings = await api("/api/settings", patch); renderSettings(); renderCards(); toast("Saved"); }
+
+document.addEventListener("click", e => {
+  const nav = e.target.closest("nav button");
+  if (nav) {
+    document.querySelectorAll("nav button").forEach(b => b.removeAttribute("aria-current")); nav.setAttribute("aria-current", "page");
+    document.querySelectorAll(".view").forEach(v => v.hidden = v.id !== "view-" + nav.dataset.view);
+    if (nav.dataset.view === "record" && !$("#report").src) $("#report").src = "/report";
+    return;
+  }
+  const pill = e.target.closest(".event-pill"); if (pill) { currentEvent = pill.dataset.event; renderCards(); return; }
+  const meter = e.target.closest(".meter");
+  if (meter) {
+    const art = meter.closest(".bout"), id = art.dataset.id;
+    open.has(id) ? open.delete(id) : open.add(id);
+    const o = open.has(id);
+    art.dataset.open = o; meter.setAttribute("aria-expanded", o); art.querySelector(".tape").hidden = !o; return;
+  }
+  const st = e.target.closest("[data-staking]"); if (st) { saveSettings({ staking: st.dataset.staking }); return; }
+  const dy = e.target.closest("[data-days]"); if (dy) { saveSettings({ days: +dy.dataset.days }); return; }
+  const of = e.target.closest("[data-odds]"); if (of) { saveSettings({ odds_format: of.dataset.odds }); return; }
+});
+document.addEventListener("input", e => {
+  const inp = e.target.closest("[data-price]");
+  if (!inp) return;
+  const art = inp.closest(".bout"), b = S.predictions.bouts.find(x => x.fight_id === art.dataset.id);
+  setTyped(b.fight_id, inp.dataset.price, parseOdds(inp.value) ? inp.value.trim() : "");
+  const st = stake(b);
+  art.classList.toggle("is-bet", !!(st && st.side));
+  art.querySelector(".rec-cell").innerHTML = recHTML(b, st);
+  art.querySelector(".tape").innerHTML = tape(b);
+  $("#summary").innerHTML = summaryHTML(S.predictions.bouts.filter(x => x.event === currentEvent));
+});
+document.addEventListener("change", e => {
+  if (e.target.id === "bets-only") { betsOnly = e.target.checked; renderCards(); }
+  if (e.target.id === "bankroll") saveSettings({ bankroll: e.target.value });
+  if (e.target.id === "currency") saveSettings({ currency: e.target.value });
+});
+$("#run-full").onclick = () => runJob("full");
+$("#run-quick").onclick = () => runJob("quick");
+$("#save-key").onclick = async () => {
+  const v = $("#odds-key").value.trim();
+  const r = await api("/api/settings", { odds_api_key: v });
+  if (r.error) { toast(r.error); return; }
+  S.settings = r; $("#odds-key").value = ""; renderSettings(); toast(v ? "Key saved" : "Key removed");
+};
+setInterval(() => fetch("/api/ping").catch(() => {}), 30000);
+refresh();
+</script>
+</body>
+</html>

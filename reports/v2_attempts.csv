@@ -1,0 +1,29 @@
+id,date,layer,change,dev_metric,v1,v2,gain,ci_lo,ci_hi,accepted,notes
+1,2026-09-14 16:28,stats,soft_s70,logloss 2010-2020,0.63448,0.6337,0.00078,-0.00055,0.00204,no,
+2,2026-09-14 16:29,stats,soft_s60,logloss 2010-2020,0.63448,0.63336,0.00112,-0.00059,0.00272,no,
+3,2026-09-14 16:29,stats,soft_s80,logloss 2010-2020,0.63448,0.63357,0.00091,-0.00014,0.00187,no,
+4,2026-09-14 16:30,stats,lgbm_only,logloss 2010-2020,0.63448,0.63535,-0.00087,-0.00469,0.00319,no,
+5,2026-09-14 16:30,stats,lr_C001,logloss 2010-2020,0.63448,0.63195,0.00253,0.00114,0.00392,yes,
+6,2026-09-14 16:30,stats,lr_C0003,logloss 2010-2020,0.63448,0.63076,0.00372,0.00135,0.00609,yes,
+7,2026-09-14 16:31,stats,lr_C005_w70,logloss 2010-2020,0.63448,0.63259,0.00189,0.00034,0.00359,yes,
+8,2026-09-14 16:32,stats,bag5,logloss 2010-2020,0.63448,0.63422,0.00026,-0.00025,0.00075,no,
+9,2026-09-14 16:34,stats,C0.001,logloss 2010-2020,0.63448,0.63081,0.00367,0.00049,0.00695,yes,
+10,2026-09-14 16:34,stats,C0.003+soft70,logloss 2010-2020,0.63448,0.63054,0.00393,0.00129,0.00657,yes,
+11,2026-09-14 16:34,stats,promo,logloss 2010-2020,0.63448,0.63417,0.0003,-0.00136,0.00201,no,
+12,2026-09-14 16:35,stats,C0.003+promo,logloss 2010-2020,0.63448,0.62982,0.00466,0.00192,0.00731,yes,
+13,2026-09-14 16:35,stats,C0.003+promo vs C0.003,logloss 2010-2020,0.63076,0.62982,0.00094,-0.00051,0.0023,no,
+14,2026-09-14 16:35,stats,C0.003+soft70 vs C0.003,logloss 2010-2020,0.63076,0.63054,0.00022,-0.00088,0.00125,no,
+15,2026-09-14 16:36,stats,C0.003+promo+soft70 vs C0.003,logloss 2010-2020,0.63076,0.62899,0.00177,0.0003,0.00328,yes,
+16,2026-09-14 16:36,stats,C0.003+w0.6 vs C0.003,logloss 2010-2020,0.63076,0.63108,-0.00032,-0.00078,0.00021,no,
+17,2026-09-14 16:36,stats,C0.003+w0.4 vs C0.003,logloss 2010-2020,0.63076,0.63074,2e-05,-0.00051,0.00048,no,
+18,2026-09-14 16:49,market,"MarketLayers2 ens (stage_stack+edge_glm+resid, v2 stats) vs v1 per-stage stack","logloss 2013-2020, stage 0",0.6175,0.61675,0.00075,-0.0016,0.0029,no,"similar at stages 1-9: gain +0.0009..+0.0013, CI incl 0"
+19,2026-09-14 16:49,market,v2 stage_stack alone vs v1 stack,"logloss 2013-2020, stage 0",0.6175,0.61617,0.00133,-0.0001,0.0026,no,"stage 9: +0.00076 [-0.0003,+0.0017]"
+20,2026-09-14 16:49,market,"v2 ens2 = mean(stage_stack, edge_glm), resid dropped (chosen after seeing resid underperform on DEV)","logloss 2013-2020, stage 0",0.6175,0.61522,0.00228,0.0001,0.0044,yes,"stage 3 +0.0024 [+0.0002,+0.0044]; stage 6 +0.0023 [+0.0003,+0.0044]; stage 9 +0.0019 [-0.0003,+0.0038]; bets/event 4.6-5.7 vs 4.1-4.6"
+21,2026-09-14 16:56,props,"method model vs base rates (DEV outcomes, no odds)",logloss 2010-2020,,,,,,yes,"itd -0.025, method|winner -0.078, under_k -0.02..-0.026 (reports/42)"
+22,2026-09-14 16:56,props,"PRE-REGISTERED props evaluation, as run (family bug: fight-decision and fighter-decision pooled)",ROI mean closing price 2022-2026,,0.0716,,0.011,0.131,criterion met,reports/45_props_as_run_family_bug.csv
+23,2026-09-14 16:56,props,"props evaluation, families corrected (after seeing as-run output)",ROI mean closing price 2022-2026,,0.0823,,0.024,0.14,criterion met,"fdec +19.3% [+8.2,+30.4] 5/5 yrs; itd +7.7% [+3.4,+12.1]; dec +2.4% ns; under -7.7% ns; ko/sub too few"
+24,2026-09-14 16:56,props,"robustness (post hoc): fdec under -2%/-4% prices, 3+ books, edge>6%, one bet/bout, flat, worst price",ROI,,,,,,holds,fdec CI excludes 0 in all; itd fragile below mean price (reports/46)
+25,2026-09-14 17:07,final,"v2 vs v1 on re-used 2021-2026 (Addendum C), open-line log loss",logloss,0.6046,0.6033,0.0013,-0.0006,0.0033,reported,open steady @Pinnacle-like: 6.08 bets/event ROI +14.0% vs v1 5.84 +12.4%
+26,2026-09-14 17:07,final,"v2 vs v1 on re-used 2021-2026 (Addendum C), close log loss",logloss,0.5907,0.5907,0.0,-0.0017,0.0016,reported,close steady: v2 4.85 bets/event +4.3% vs v1 2.13 +7.6%
+27,2026-09-14 17:16,stats,C0.003+promo+soft70 vs C0.003,logloss 2010-2020,0.63076,0.62883,0.00193,0.00016,0.00355,yes,re-run after fixing promotion-strength prior leak (research/00c canary); earlier rows used leaky features
+28,2026-09-14 17:16,stats,C0.003+promo vs C0.003,logloss 2010-2020,0.63076,0.62911,0.00165,-1e-05,0.00328,no,re-run after fixing promotion-strength prior leak (research/00c canary); earlier rows used leaky features

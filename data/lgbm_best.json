@@ -1,0 +1,10 @@
+{
+ "num_leaves": 8,
+ "min_child_samples": 40,
+ "colsample_bytree": 0.25,
+ "learning_rate": 0.015,
+ "n_estimators": 800,
+ "reg_lambda": 5.0,
+ "subsample": 0.6,
+ "halflife": null
+}

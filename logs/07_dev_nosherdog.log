@@ -1,0 +1,27 @@
+{'ufc': 195, 'sherdog': 0, 'geo': 0, 'wiki': 2, 'skills': 42, 'fm': 0, 'pv': 0, 'mkt_hist': 3, 'context': 11}
+lgbm_ufc {'n': 4560, 'logloss': np.float64(0.6531), 'brier': np.float64(0.2308), 'acc': np.float64(0.6162), 'auc': 0.641, 'ece': np.float64(0.0164), 'model': 'lgbm_ufc'} | on market-covered: {'n': 4482, 'logloss': np.float64(0.6533), 'acc': np.float64(0.616)}
+lgbm_ufc+skills {'n': 4560, 'logloss': np.float64(0.6528), 'brier': np.float64(0.2305), 'acc': np.float64(0.6211), 'auc': 0.6434, 'ece': np.float64(0.0211), 'model': 'lgbm_ufc+skills'} | on market-covered: {'n': 4482, 'logloss': np.float64(0.6528), 'acc': np.float64(0.6209)}
+lgbm_all {'n': 4560, 'logloss': np.float64(0.652), 'brier': np.float64(0.2302), 'acc': np.float64(0.6204), 'auc': 0.6443, 'ece': np.float64(0.0182), 'model': 'lgbm_all'} | on market-covered: {'n': 4482, 'logloss': np.float64(0.6522), 'acc': np.float64(0.6198)}
+lgbm_skills_only {'n': 4560, 'logloss': np.float64(0.6565), 'brier': np.float64(0.2322), 'acc': np.float64(0.6105), 'auc': 0.6406, 'ece': np.float64(0.0189), 'model': 'lgbm_skills_only'} | on market-covered: {'n': 4482, 'logloss': np.float64(0.6567), 'acc': np.float64(0.6104)}
+lr_all {'n': 4560, 'logloss': np.float64(0.6715), 'brier': np.float64(0.2367), 'acc': np.float64(0.6171), 'auc': 0.6389, 'ece': np.float64(0.058), 'model': 'lr_all'} | on market-covered: {'n': 4482, 'logloss': np.float64(0.6715), 'acc': np.float64(0.6183)}
+stack ens+p_close coefs (year, market, model): [(2017, np.float64(0.934), np.float64(0.255)), (2018, np.float64(0.941), np.float64(0.261)), (2019, np.float64(0.949), np.float64(0.279)), (2020, np.float64(0.952), np.float64(0.267))]
+stack ens+p_open coefs (year, market, model): [(2017, np.float64(0.976), np.float64(0.332)), (2018, np.float64(0.99), np.float64(0.341)), (2019, np.float64(0.975), np.float64(0.384)), (2020, np.float64(0.947), np.float64(0.392))]
+stack lgbm_all+p_close coefs (year, market, model): [(2017, np.float64(0.935), np.float64(0.274)), (2018, np.float64(0.938), np.float64(0.289)), (2019, np.float64(0.951), np.float64(0.296)), (2020, np.float64(0.963), np.float64(0.265))]
+stack lgbm_all+p_open coefs (year, market, model): [(2017, np.float64(0.975), np.float64(0.359)), (2018, np.float64(0.986), np.float64(0.378)), (2019, np.float64(0.973), np.float64(0.412)), (2020, np.float64(0.955), np.float64(0.403))]
+
+=== dev (2010-01-01 .. 2021-01-01) — rows restricted to bouts with market odds where available ===
+                           n  logloss   brier     acc     auc     ece
+model                                                                
+stack_ens_p_close       4233   0.6083  0.2106  0.6601  0.7119  0.0217
+resid_lgbm_on_close     4233   0.6090  0.2109  0.6584  0.7112  0.0251
+stack_lgbm_all_p_close  4233   0.6093  0.2110  0.6605  0.7103  0.0201
+p_close                 4482   0.6125  0.2123  0.6584  0.7072  0.0240
+stack_ens_p_open        4233   0.6190  0.2153  0.6508  0.6958  0.0257
+stack_lgbm_all_p_open   4233   0.6205  0.2160  0.6501  0.6931  0.0224
+p_open                  4482   0.6281  0.2191  0.6464  0.6836  0.0153
+ens                     4482   0.6507  0.2294  0.6287  0.6499  0.0313
+lgbm_all                4482   0.6522  0.2303  0.6198  0.6438  0.0176
+lgbm_ufc+skills         4482   0.6528  0.2306  0.6209  0.6431  0.0209
+lgbm_ufc                4482   0.6533  0.2308  0.6160  0.6404  0.0157
+lgbm_skills_only        4482   0.6567  0.2323  0.6104  0.6402  0.0182
+lr_all                  4482   0.6715  0.2367  0.6183  0.6389  0.0596

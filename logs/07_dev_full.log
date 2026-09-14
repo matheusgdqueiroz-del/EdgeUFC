@@ -1,0 +1,35 @@
+{'ufc': 195, 'sherdog': 19, 'geo': 4, 'wiki': 2, 'skills': 42, 'fm': 5, 'pv': 0, 'mkt_hist': 3, 'context': 15}
+lgbm_ufc {'n': 4560, 'logloss': np.float64(0.6513), 'brier': np.float64(0.2299), 'acc': np.float64(0.6164), 'auc': 0.645, 'ece': np.float64(0.0186), 'model': 'lgbm_ufc'} | on market-covered: {'n': 4482, 'logloss': np.float64(0.6515), 'acc': np.float64(0.6158)}
+lgbm_ufc+skills {'n': 4560, 'logloss': np.float64(0.6522), 'brier': np.float64(0.2303), 'acc': np.float64(0.6204), 'auc': 0.6441, 'ece': np.float64(0.0262), 'model': 'lgbm_ufc+skills'} | on market-covered: {'n': 4482, 'logloss': np.float64(0.6524), 'acc': np.float64(0.6205)}
+lgbm_ufc+skills+sherdog {'n': 4560, 'logloss': np.float64(0.6439), 'brier': np.float64(0.2264), 'acc': np.float64(0.6305), 'auc': 0.6588, 'ece': np.float64(0.0155), 'model': 'lgbm_ufc+skills+sherdog'} | on market-covered: {'n': 4482, 'logloss': np.float64(0.6439), 'acc': np.float64(0.6305)}
+lgbm_ufc+skills+sherdog+geo {'n': 4560, 'logloss': np.float64(0.6431), 'brier': np.float64(0.226), 'acc': np.float64(0.6285), 'auc': 0.6592, 'ece': np.float64(0.0177), 'model': 'lgbm_ufc+skills+sherdog+geo'} | on market-covered: {'n': 4482, 'logloss': np.float64(0.6431), 'acc': np.float64(0.6287)}
+lgbm_ufc+skills+sherdog+geo+fm {'n': 4560, 'logloss': np.float64(0.635), 'brier': np.float64(0.2221), 'acc': np.float64(0.6399), 'auc': 0.6746, 'ece': np.float64(0.0219), 'model': 'lgbm_ufc+skills+sherdog+geo+fm'} | on market-covered: {'n': 4482, 'logloss': np.float64(0.6352), 'acc': np.float64(0.6401)}
+lgbm_all {'n': 4560, 'logloss': np.float64(0.6352), 'brier': np.float64(0.2222), 'acc': np.float64(0.6368), 'auc': 0.674, 'ece': np.float64(0.0189), 'model': 'lgbm_all'} | on market-covered: {'n': 4482, 'logloss': np.float64(0.6353), 'acc': np.float64(0.637)}
+lgbm_skills_only {'n': 4560, 'logloss': np.float64(0.6567), 'brier': np.float64(0.2321), 'acc': np.float64(0.6138), 'auc': 0.6419, 'ece': np.float64(0.014), 'model': 'lgbm_skills_only'} | on market-covered: {'n': 4482, 'logloss': np.float64(0.657), 'acc': np.float64(0.6136)}
+lgbm_sherdog+fm+age_only {'n': 4560, 'logloss': np.float64(0.6502), 'brier': np.float64(0.2291), 'acc': np.float64(0.6237), 'auc': 0.6489, 'ece': np.float64(0.0256), 'model': 'lgbm_sherdog+fm+age_only'} | on market-covered: {'n': 4482, 'logloss': np.float64(0.6505), 'acc': np.float64(0.6238)}
+lr_all {'n': 4560, 'logloss': np.float64(0.6572), 'brier': np.float64(0.2295), 'acc': np.float64(0.6289), 'auc': 0.6638, 'ece': np.float64(0.0543), 'model': 'lr_all'} | on market-covered: {'n': 4482, 'logloss': np.float64(0.657), 'acc': np.float64(0.6287)}
+stack ens+p_close coefs (year, market, model): [(2017, np.float64(0.842), np.float64(0.291)), (2018, np.float64(0.854), np.float64(0.292)), (2019, np.float64(0.849), np.float64(0.324)), (2020, np.float64(0.854), np.float64(0.316))]
+stack ens+p_open coefs (year, market, model): [(2017, np.float64(0.842), np.float64(0.371)), (2018, np.float64(0.862), np.float64(0.372)), (2019, np.float64(0.83), np.float64(0.426)), (2020, np.float64(0.799), np.float64(0.44))]
+stack lgbm_all+p_close coefs (year, market, model): [(2017, np.float64(0.842), np.float64(0.302)), (2018, np.float64(0.848), np.float64(0.313)), (2019, np.float64(0.851), np.float64(0.335)), (2020, np.float64(0.867), np.float64(0.31))]
+stack lgbm_all+p_open coefs (year, market, model): [(2017, np.float64(0.836), np.float64(0.389)), (2018, np.float64(0.849), np.float64(0.401)), (2019, np.float64(0.824), np.float64(0.448)), (2020, np.float64(0.805), np.float64(0.446))]
+
+=== dev (2010-01-01 .. 2021-01-01) — rows restricted to bouts with market odds where available ===
+                                   n  logloss   brier     acc     auc     ece
+model                                                                        
+stack_ens_p_close               4233   0.6067  0.2099  0.6624  0.7140  0.0231
+stack_lgbm_all_p_close          4233   0.6076  0.2102  0.6652  0.7127  0.0291
+resid_lgbm_on_close             4233   0.6090  0.2109  0.6603  0.7108  0.0212
+p_close                         4482   0.6125  0.2123  0.6584  0.7072  0.0240
+stack_ens_p_open                4233   0.6159  0.2139  0.6546  0.7003  0.0227
+stack_lgbm_all_p_open           4233   0.6174  0.2146  0.6546  0.6984  0.0194
+p_open                          4482   0.6281  0.2191  0.6464  0.6836  0.0153
+ens                             4482   0.6342  0.2217  0.6363  0.6768  0.0236
+lgbm_ufc+skills+sherdog+geo+fm  4482   0.6352  0.2221  0.6401  0.6738  0.0211
+lgbm_all                        4482   0.6353  0.2223  0.6370  0.6733  0.0195
+lgbm_ufc+skills+sherdog+geo     4482   0.6431  0.2260  0.6287  0.6590  0.0188
+lgbm_ufc+skills+sherdog         4482   0.6439  0.2264  0.6305  0.6585  0.0140
+lgbm_sherdog+fm+age_only        4482   0.6505  0.2292  0.6238  0.6482  0.0261
+lgbm_ufc                        4482   0.6515  0.2300  0.6158  0.6443  0.0187
+lgbm_ufc+skills                 4482   0.6524  0.2304  0.6205  0.6436  0.0266
+lgbm_skills_only                4482   0.6570  0.2323  0.6136  0.6413  0.0151
+lr_all                          4482   0.6570  0.2294  0.6287  0.6639  0.0546

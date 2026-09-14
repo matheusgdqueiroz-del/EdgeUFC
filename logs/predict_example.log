@@ -1,0 +1,35 @@
+
+=== UFC 331 - Van vs. Pantoja 2  (2026-09-19) ===
+                               bout            weight              pick  win_prob  stats_model  market_prob           bet_on price_avg price_best  edge  units notes
+    Joshua Van vs Alexandre Pantoja         Flyweight        Joshua Van     0.612        0.811        0.544       Joshua Van      -133       -130 +7.0%    1.0      
+  Arman Tsarukyan vs Mauricio Ruffy       Lightweight   Arman Tsarukyan     0.752        0.612        0.730                -      -330       -288 -2.1%    0.0      
+     Patricio Freire vs Doo Ho Choi     Featherweight       Doo Ho Choi     0.740        0.665        0.690                -      -263       -250 +2.2%    0.0      
+    Renato Carneiro vs Brian Ortega       Lightweight   Renato Carneiro     0.688        0.661        0.649                -      -214       -200 +1.0%    0.0      
+Alonzo Menifield vs Iwo Baraniewski Light Heavyweight   Iwo Baraniewski     0.703        0.659        0.664                -      -231       -210 +0.7%    0.0      
+      Gable Steveson vs Sean Sharaf       Heavyweight    Gable Steveson     0.932        0.842        0.899                -     -1662      -1430 -1.2%    0.0      
+    Marlon Vera vs Charles Jourdain      Bantamweight  Charles Jourdain     0.732        0.746        0.669 Charles Jourdain      -236       -225 +4.3%    1.5      
+   Tai Tuivasa vs Robelis Despaigne       Heavyweight Robelis Despaigne     0.822        0.599        0.824                -      -636       -620 -4.8%    0.0      
+Edmen Shahbazyan vs Brunno Ferreira      Middleweight  Edmen Shahbazyan     0.594        0.551        0.594                -      -165       -156 -4.7%    0.0      
+  Giga Chikadze vs Joanderson Brito     Featherweight  Joanderson Brito     0.799        0.774        0.754                -      -380       -345 +0.9%    0.0      
+     Casey O'Neill vs Eduarda Moura         Flyweight     Casey O'Neill     0.595        0.485        0.620                -      -186       -180 -8.5%    0.0      
+          Ryan Gandra vs Osman Diaz Light Heavyweight       Ryan Gandra     0.825        0.767        0.785                -      -468       -450 +0.2%    0.0      
+     Michael Aswell vs Joo Sang Yoo     Featherweight      Joo Sang Yoo     0.693        0.471        0.700                -      -278       -255 -5.7%    0.0      
+
+=== UFC Fight Night 289 - Barcelos vs. Rosas Jr.  (2026-09-26) ===
+                                       bout            weight                 pick  win_prob  stats_model  market_prob      bet_on price_avg price_best edge  units     notes
+           Raoni Barcelos vs Raul Rosas Jr.      Bantamweight       Raul Rosas Jr.     0.560        0.560          NaN no odds yet                              0.0          
+              Montel Jackson vs Ricky Simon      Bantamweight       Montel Jackson     0.636        0.636          NaN no odds yet                              0.0          
+                Norma Dumont vs Ailin Perez      Bantamweight          Ailin Perez     0.685        0.685          NaN no odds yet                              0.0          
+             Elves Brener vs Josiah Harrell       Lightweight         Elves Brener     0.501        0.501          NaN no odds yet                              0.0          
+      Yazmin Jauregui vs Vanessa Demopoulos       Strawweight      Yazmin Jauregui     0.840        0.840          NaN no odds yet                              0.0          
+       Rodolfo Bellato vs Christian Edwards Light Heavyweight      Rodolfo Bellato     0.611        0.611          NaN no odds yet                              0.0          
+            John Castaneda vs Heili Alateng      Bantamweight       John Castaneda     0.817        0.817          NaN no odds yet                              0.0          
+             Mickey Gall vs Sedriques Dumas      Middleweight      Sedriques Dumas     0.545        0.545          NaN no odds yet                              0.0          
+           Valesca Machado vs Melissa Amaya       Strawweight      Valesca Machado     0.526        0.526          NaN no odds yet                              0.0 UFC debut
+Ilimbek Akylbek Uulu vs Mehemmedali Osmanli      Bantamweight Ilimbek Akylbek Uulu     0.524        0.524          NaN no odds yet                              0.0 UFC debut
+           Robert Bryczek vs Rodolfo Vieira      Middleweight       Rodolfo Vieira     0.684        0.684          NaN no odds yet                              0.0          
+           Brady Hiestand vs Rinya Nakamura      Bantamweight       Rinya Nakamura     0.752        0.752          NaN no odds yet                              0.0          
+
+Staking policy (chosen on out-of-sample history): bet when edge > 3%, 0.12 Kelly, max 2 units. 1 unit = 1% of bankroll.
+Odds move: recheck edges close to fight time; never bet a price worse than the one shown.
+saved E:\codex\UFCPredictor\predictions\predictions_2026-09-14.csv

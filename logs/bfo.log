@@ -1,0 +1,17 @@
+fighters 200 queue 1229
+fighters 400 queue 1555
+fighters 600 queue 1492
+fighters 800 queue 1623
+fighters 1000 queue 1502
+fighters 1200 queue 1578
+fighters 1400 queue 1858
+fighters 1600 queue 1843
+fighters 1800 queue 1909
+fighters 2000 queue 1560
+fighters 2200 queue 1564
+fighters 2400 queue 969
+fighters 2600 queue 441
+fighters 2800 queue 22
+BFS done 2829 26714
+searching 100
+DONE 26906

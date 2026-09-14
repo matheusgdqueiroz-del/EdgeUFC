@@ -1,0 +1,71 @@
+
+=== DEV context 2013-2020 (walk-forward, already used for design): 3704 bouts, 322 events ===
+C1 log loss (gain = v1 - v2, positive favours v2; 95% CI clustered by event)
+  opening line: n=3612 line 0.6282  v1 0.6160  v2 0.6140  gain +0.0020 [-0.0001, +0.0043]
+     v2 vs the line itself: gain +0.0142 [+0.0098, +0.0184]
+  closing line: n=3612 line 0.6132  v1 0.6077  v2 0.6063  gain +0.0014 [-0.0001, +0.0029]
+     v2 vs the line itself: gain +0.0068 [+0.0032, +0.0103]
+  stats model (market-free): v1 0.6332 -> v2 gain +0.0049 [+0.0020, +0.0078]
+C2 steady rule at synthetic Pinnacle prices (stage fair probability x margin)
+stage               margin model  bets  per_event    roi         roi_90ci  profit_u  max_dd     clv years_up
+ open              primary    v2  1844       5.73 0.1582 [+0.122, +0.195]    343.20   16.87  0.0631      8/8
+ open              primary    v1  1764       5.48 0.1396 [+0.106, +0.175]    288.49   20.96  0.0661      8/8
+ open             low 2.5%    v2  2266       7.04 0.1592 [+0.127, +0.193]    434.46   19.81  0.0769      8/8
+ open             low 2.5%    v1  2276       7.07 0.1372 [+0.109, +0.168]    370.97   22.05  0.0738      8/8
+ open            high 5.5%    v2  1621       5.03 0.1589 [+0.118, +0.197]    301.66   17.66  0.0569      8/8
+ open            high 5.5%    v1  1548       4.81 0.1317 [+0.095, +0.169]    235.89   23.58  0.0609      8/8
+ open consensus mean price    v2  1443       4.48 0.1582                     268.13   18.30     NaN      8/8
+ open consensus mean price    v1  1369       4.25 0.1315                     208.90   23.82     NaN      8/8
+early              primary    v2  1621       5.03 0.1294 [+0.089, +0.169]    239.65   16.63  0.0290      8/8
+early             low 2.5%    v2  2126       6.60 0.1276 [+0.094, +0.163]    315.95   21.78  0.0436      8/8
+early            high 5.5%    v2  1428       4.43 0.1330 [+0.090, +0.174]    214.70   13.97  0.0213      8/8
+early consensus mean price    v2  1783       5.54 0.1272                     260.90   19.55     NaN      8/8
+  mid              primary    v2  1775       5.51 0.1201 [+0.082, +0.161]    238.75   19.52  0.0280      8/8
+  mid             low 2.5%    v2  2052       6.37 0.1249 [+0.090, +0.160]    289.64   18.22  0.0358      8/8
+  mid            high 5.5%    v2  1333       4.14 0.1306 [+0.085, +0.176]    190.97   16.15  0.0126      8/8
+  mid consensus mean price    v2  1759       5.46 0.1221                     240.90   19.10     NaN      8/8
+close              primary    v2  1667       5.18 0.0990 [+0.058, +0.143]    179.33   21.60  0.0000      8/8
+close              primary    v1  1128       3.50 0.1234 [+0.070, +0.176]    127.46   10.29  0.0000      8/8
+close             low 2.5%    v2  1936       6.01 0.1043 [+0.065, +0.144]    221.64   22.25  0.0098      8/8
+close             low 2.5%    v1  1391       4.32 0.1214 [+0.075, +0.169]    161.46   14.80  0.0098      8/8
+close            high 5.5%    v2  1276       3.96 0.1077 [+0.059, +0.159]    141.84   18.46 -0.0190      8/8
+close            high 5.5%    v1   731       2.27 0.1247 [+0.051, +0.198]     77.72   17.15 -0.0190      8/8
+close consensus mean price    v2  1658       5.15 0.1055                     190.11   18.77     NaN      8/8
+close consensus mean price    v1  1101       3.42 0.1341                     136.60   13.47     NaN      8/8
+
+=== RE-USED PERIOD 2021-01-01 -> 2026-09-12: 2916 bouts, 243 events ===
+C1 log loss (gain = v1 - v2, positive favours v2; 95% CI clustered by event)
+  opening line: n=2846 line 0.6168  v1 0.6046  v2 0.6030  gain +0.0016 [-0.0004, +0.0036]
+     v2 vs the line itself: gain +0.0141 [+0.0096, +0.0188]
+  closing line: n=2846 line 0.5945  v1 0.5907  v2 0.5906  gain +0.0001 [-0.0016, +0.0018]
+     v2 vs the line itself: gain +0.0042 [+0.0006, +0.0077]
+  stats model (market-free): v1 0.6224 -> v2 gain +0.0024 [-0.0006, +0.0050]
+C2 steady rule at synthetic Pinnacle prices (stage fair probability x margin)
+stage               margin model  bets  per_event    roi         roi_90ci  profit_u  max_dd     clv years_up
+ open              primary    v2  1479       6.09 0.1429 [+0.105, +0.183]    249.22   14.57  0.0997      6/6
+ open              primary    v1  1420       5.84 0.1235 [+0.085, +0.162]    206.12   14.11  0.0999      5/6
+ open             low 2.5%    v2  1822       7.50 0.1519 [+0.117, +0.187]    332.26   15.45  0.1093      6/6
+ open             low 2.5%    v1  1817       7.48 0.1286 [+0.095, +0.162]    277.62   16.91  0.1076      6/6
+ open            high 5.5%    v2  1302       5.36 0.1406 [+0.100, +0.182]    214.55   20.14  0.0972      6/6
+ open            high 5.5%    v1  1237       5.09 0.1214 [+0.080, +0.164]    175.43   15.61  0.0971      5/6
+ open consensus mean price    v2  1477       6.08 0.1422                     249.29   18.15     NaN      6/6
+ open consensus mean price    v1  1417       5.83 0.1250                     209.14   17.67     NaN      6/6
+early              primary    v2  1324       5.45 0.0852 [+0.046, +0.126]    130.73   18.94  0.0430      5/6
+early             low 2.5%    v2  1707       7.02 0.1010 [+0.066, +0.136]    203.40   17.47  0.0599      6/6
+early            high 5.5%    v2  1128       4.64 0.0842 [+0.041, +0.129]    108.87   19.67  0.0369      5/6
+early consensus mean price    v2  1224       5.04 0.0865                     122.30   21.14     NaN      5/6
+  mid              primary    v2  1395       5.74 0.0760 [+0.038, +0.115]    121.12   22.44  0.0371      4/6
+  mid             low 2.5%    v2  1592       6.55 0.0853 [+0.049, +0.122]    158.12   22.30  0.0456      6/6
+  mid            high 5.5%    v2  1012       4.16 0.0687 [+0.023, +0.117]     76.77   22.96  0.0222      5/6
+  mid consensus mean price    v2  1113       4.58 0.0719                      89.69   20.50     NaN      5/6
+close              primary    v2  1170       4.81 0.0471 [+0.006, +0.089]     61.20   25.09  0.0000      5/6
+close              primary    v1   518       2.13 0.0760 [+0.015, +0.142]     33.42    9.53  0.0000      5/6
+close             low 2.5%    v2  1412       5.81 0.0514 [+0.012, +0.090]     81.51   23.02  0.0098      5/6
+close             low 2.5%    v1   733       3.02 0.0618 [+0.006, +0.115]     40.21   13.55  0.0098      5/6
+close            high 5.5%    v2   804       3.31 0.0336 [-0.019, +0.088]     28.65   25.63 -0.0190      5/6
+close            high 5.5%    v1   281       1.16 0.0722 [-0.022, +0.169]     14.85    9.97 -0.0190      4/6
+close consensus mean price    v2   956       3.93 0.0339                      35.24   31.18     NaN      5/6
+close consensus mean price    v1   381       1.57 0.0823                      24.55    7.27     NaN      5/6
+
+v2 close, primary Pinnacle margin, by year: {2021: '261 bets ROI +0.061', 2022: '211 bets ROI -0.078', 2023: '193 bets ROI +0.021', 2024: '170 bets ROI +0.089', 2025: '183 bets ROI +0.194', 2026: '152 bets ROI +0.005'}
+v2 open, primary Pinnacle margin, by year: {2021: '295 bets ROI +0.145', 2022: '274 bets ROI +0.059', 2023: '232 bets ROI +0.110', 2024: '248 bets ROI +0.196', 2025: '233 bets ROI +0.277', 2026: '197 bets ROI +0.067'}

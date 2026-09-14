@@ -1,0 +1,61 @@
+                breakdown                        group    n  market_ll  engine_ll  stats_ll  gain_vs_market  market_acc  engine_acc  stats_acc
+                     year                         2021  483     0.6210     0.6170    0.6453          0.0040       0.646       0.658      0.644
+                     year                         2022  491     0.6039     0.6035    0.6470          0.0004       0.670       0.674      0.623
+                     year                         2023  490     0.6022     0.6008    0.6345          0.0013       0.684       0.690      0.627
+                     year                         2024  505     0.5810     0.5765    0.6102          0.0045       0.715       0.721      0.685
+                     year                         2025  499     0.5853     0.5772    0.5965          0.0081       0.681       0.687      0.677
+                     year                         2026  379     0.5682     0.5641    0.6001          0.0041       0.720       0.715      0.665
+           UFC experience                   both debut   69     0.5342     0.5395    0.6531         -0.0053       0.768       0.768      0.623
+           UFC experience                 one debutant  460     0.5580     0.5583    0.6227         -0.0003       0.709       0.704      0.650
+           UFC experience           min 1-2 UFC fights  748     0.6018     0.5952    0.6148          0.0066       0.667       0.670      0.652
+           UFC experience                      min 3-5  686     0.5954     0.5911    0.6101          0.0042       0.698       0.701      0.682
+           UFC experience                       min 6+  884     0.6111     0.6073    0.6376          0.0037       0.671       0.686      0.636
+                 division                 Bantamweight  423     0.5891     0.5800    0.5961          0.0091       0.700       0.716      0.697
+                 division                  Lightweight  375     0.6093     0.6031    0.6183          0.0062       0.688       0.696      0.667
+                 division                    Flyweight  372     0.5880     0.5853    0.6195          0.0027       0.694       0.691      0.640
+                 division                Featherweight  354     0.6046     0.5971    0.6133          0.0074       0.653       0.661      0.633
+                 division                 Middleweight  354     0.5930     0.5899    0.6285          0.0032       0.689       0.689      0.664
+                 division                 Welterweight  333     0.5902     0.5861    0.6319          0.0040       0.682       0.682      0.667
+                 division                  Heavyweight  205     0.5550     0.5504    0.6100          0.0046       0.727       0.737      0.654
+                 division            Light Heavyweight  201     0.6269     0.6384    0.6790         -0.0116       0.627       0.627      0.562
+                 division                  Strawweight  187     0.6007     0.6000    0.6437          0.0008       0.701       0.706      0.652
+                 division                 Catch Weight   43     0.5419     0.5510    0.6319         -0.0091       0.698       0.698      0.628
+                 division                        women  479     0.5933     0.5890    0.6337          0.0044       0.691       0.701      0.653
+                 division                          men 2368     0.5946     0.5910    0.6208          0.0036       0.684       0.688      0.653
+        engine confidence                    0.50-0.55  395     0.6943     0.6891    0.7066          0.0052       0.504       0.537      0.527
+        engine confidence                    0.55-0.60  455     0.6660     0.6640    0.7044          0.0020       0.626       0.631      0.527
+        engine confidence                    0.60-0.70  901     0.6557     0.6548    0.6775          0.0009       0.642       0.642      0.599
+        engine confidence                    0.70-0.80  697     0.5519     0.5488    0.5874          0.0031       0.760       0.760      0.740
+        engine confidence                    0.80-1.01  399     0.3498     0.3381    0.3862          0.0117       0.897       0.897      0.892
+   market favourite price                    0.50-0.60  879     0.6812     0.6762    0.6966          0.0049       0.568       0.585      0.549
+   market favourite price                    0.60-0.70 1033     0.6454     0.6456    0.6724         -0.0002       0.656       0.656      0.602
+   market favourite price                    0.70-0.80  631     0.5190     0.5140    0.5588          0.0050       0.788       0.788      0.765
+   market favourite price                    0.80-1.01  304     0.3270     0.3159    0.3750          0.0111       0.908       0.908      0.895
+            card position                   main event  232     0.6340     0.6348    0.6467         -0.0008       0.642       0.664      0.655
+            card position              main card (1-4)  933     0.5961     0.5909    0.6219          0.0052       0.688       0.685      0.648
+            card position                      prelims 1682     0.5880     0.5845    0.6202          0.0036       0.689       0.697      0.656
+            card position                  title fight  109     0.6584     0.6567    0.6606          0.0017       0.633       0.679      0.615
+                agreement        engine & market agree 2764     0.5912     0.5879    0.6219          0.0033       0.693       0.693      0.653
+                agreement engine disagrees with market   83     0.7022     0.6834    0.6563          0.0188       0.410       0.590      0.663
+how it ended (diagnostic)                       KO/TKO  936     0.5878     0.5845    0.6211          0.0033       0.681       0.683      0.652
+how it ended (diagnostic)                   submission  504     0.5626     0.5562    0.5856          0.0064       0.726       0.734      0.702
+how it ended (diagnostic)                     decision 1401     0.6081     0.6048    0.6356          0.0033       0.675       0.680      0.638
+how it ended (diagnostic)               split decision  259     0.6986     0.7019    0.7093         -0.0033       0.560       0.568      0.556
+
+most confident misses:
+      date              f1_name             f2_name  ens3  p_close   y method       weightclass
+2026-08-15       Jeremiah Wells    Myktybek Orolbai 0.089    0.108 1.0    SUB      Welterweight
+2025-01-18       Payton Talbott      Raoni Barcelos 0.891    0.885 0.0  U-DEC      Bantamweight
+2026-06-20           Andre Lima        Kevin Borjas 0.884    0.845 0.0  U-DEC         Flyweight
+2024-03-02       Aiemann Zahabi      Javid Basharat 0.117    0.134 1.0  U-DEC      Bantamweight
+2022-04-23           Dean Barry        Mike Jackson 0.878    0.870 0.0     DQ      Welterweight
+2024-11-23            Wang Cong Gabriella Fernandes 0.875    0.867 0.0    SUB         Flyweight
+2026-08-29    Umar Nurmagomedov         Song Yadong 0.874    0.837 0.0     KO      Bantamweight
+2025-03-15          Carlos Vera       Josias Musasa 0.127    0.148 1.0    SUB      Bantamweight
+2025-06-14     Alonzo Menifield            Oumar Sy 0.128    0.162 1.0  U-DEC Light Heavyweight
+2021-12-11         Amanda Nunes       Julianna Pena 0.865    0.863 0.0    SUB      Bantamweight
+2023-03-04 Valentina Shevchenko        Alexa Grasso 0.863    0.859 0.0    SUB         Flyweight
+2024-03-16   Ovince Saint Preux   Kennedy Nzechukwu 0.143    0.163 1.0  S-DEC Light Heavyweight
+2026-04-04        Azamat Bekoev        Tresean Gore 0.856    0.836 0.0    SUB      Middleweight
+2021-02-20       Curtis Blaydes       Derrick Lewis 0.854    0.771 0.0     KO       Heavyweight
+2024-10-19             Rob Font      Kyler Phillips 0.150    0.176 1.0  U-DEC      Bantamweight

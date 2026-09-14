@@ -1,0 +1,1521 @@
+locality,lat,lon,elevation,timezone,g_country
+"Batesville, Arkansas",35.7698,-91.64097,103.0,America/Chicago,United States
+"Powell, Ohio",40.15784,-83.07519,277.0,America/New_York,United States
+"Baton Rouge, Louisiana",30.44332,-91.18747,14.0,America/Chicago,United States
+"Tampa, Florida",27.94752,-82.45843,1.0,America/New_York,United States
+"San Diego, California",32.71571,-117.16472,20.0,America/Los_Angeles,United States
+"Lafayette, Louisiana",30.22409,-92.01984,11.0,America/Chicago,United States
+"Whittier, California",33.97918,-118.03284,112.0,America/Los_Angeles,United States
+"Tell City, Indiana",37.95144,-86.76777,128.0,America/Indiana/Tell_City,United States
+"San Antonio, Texas",29.42412,-98.49363,198.0,America/Chicago,United States
+"Phoenix, Arizona",33.44838,-112.07404,331.0,America/Phoenix,United States
+"Rahiri, Northland",-39.23333,174.13333,505.0,Pacific/Auckland,New Zealand
+"Manchester, Greater Manchester",53.48095,-2.23743,51.0,Europe/London,United Kingdom
+Espoo,60.2052,24.6522,16.0,Europe/Helsinki,Finland
+Accra,5.55602,-0.1969,33.0,Africa/Accra,Ghana
+"Grozny, Chechnya",43.31195,45.68895,128.0,Europe/Moscow,Russia
+"Des Moines, Iowa",41.60054,-93.60911,266.0,America/Chicago,United States
+"Barcelona, Catalonia",41.38879,2.15899,15.0,Europe/Madrid,Spain
+Rabat,34.01325,-6.83255,46.0,Africa/Casablanca,Morocco
+"Makhachkala, Dagestan",42.97782,47.50027,10.0,Europe/Moscow,Russia
+Argun,43.29289,45.86691,118.0,Europe/Moscow,Russia
+"St. Louis, Missouri",38.62727,-90.19789,142.0,America/Chicago,United States
+"Eugene, Oregon",44.05207,-123.08675,131.0,America/Los_Angeles,United States
+"Beaver Falls, Pennsylvania",40.75201,-80.31923,244.0,America/New_York,United States
+Chorzow,50.30582,18.9742,319.0,Europe/Warsaw,Poland
+"Nazran, Ingushetia",43.22597,44.77323,523.0,Europe/Moscow,Russia
+Grozny,43.31195,45.68895,128.0,Europe/Moscow,Russia
+"Guayaquil, Guayas",-2.19616,-79.88621,14.0,America/Guayaquil,Ecuador
+"Milwaukee, Wisconsin",43.0389,-87.90647,188.0,America/Chicago,United States
+"La Porte, Texas",29.66578,-95.01937,6.0,America/Chicago,United States
+"Manaus, Amazonas",-3.10194,-60.025,20.0,America/Manaus,Brazil
+"Meigu County, Sichuan",35.1221,105.48032,1631.0,Asia/Shanghai,China
+"Laval, Quebec",45.56995,-73.692,34.0,America/Toronto,Canada
+"Hurlingham, Buenos Aires",-34.5904,-58.62904,16.0,America/Argentina/Buenos_Aires,Argentina
+"Ili, Xinjiang",24.46899,113.83029,131.0,Asia/Shanghai,China
+"Dublin, Leinster",53.33306,-6.24889,17.0,Europe/Dublin,Ireland
+"Tijuana, Baja California",32.5027,-117.00371,97.0,America/Tijuana,Mexico
+"Higashikurume, Tokyo",35.75202,139.51169,61.0,Asia/Tokyo,Japan
+Gothenburg,57.70716,11.96679,10.0,Europe/Stockholm,Sweden
+"New York City, New York",40.71427,-74.00597,10.0,America/New_York,United States
+Lyon,45.74906,4.84789,173.0,Europe/Paris,France
+"Biloxi, Mississippi",30.39603,-88.88531,6.0,America/Chicago,United States
+"Erbil, Kurdistan Region",36.19117,44.00943,429.0,Asia/Baghdad,Iraq
+"Mississauga, Ontario",43.5789,-79.6583,159.0,America/Toronto,Canada
+"Volgograd, Volgograd Oblast",48.71378,44.4976,42.0,Europe/Volgograd,Russia
+"Carson, California",33.83141,-118.28202,12.0,America/Los_Angeles,United States
+"Nalchik, Kabardino-Balkaria",43.49806,43.61889,464.0,Europe/Moscow,Russia
+Lemoa,40.0,-4.0,511.0,,Spain
+"Santa Fe, New Mexico",35.68698,-105.9378,2132.0,America/Denver,United States
+"Blumenau, Santa Catarina",-26.91944,-49.06611,20.0,America/Sao_Paulo,Brazil
+"Campina Grande, Paraiba",-7.23056,-35.88111,508.0,America/Fortaleza,Brazil
+"Barquisimeto, Lara",10.0647,-69.35703,606.0,America/Caracas,Venezuela
+"Houston, Texas",29.76328,-95.36327,12.0,America/Chicago,United States
+Mexico,23.0,-102.0,2062.0,,Mexico
+Ohio,41.55753,-89.46093,275.0,America/Chicago,United States
+Vienna,48.20849,16.37208,171.0,Europe/Vienna,Austria
+Moscow,55.75204,37.61781,155.0,Europe/Moscow,Russia
+Zentar Zupa,,,,,
+"Woodbridge, Ontario",60.10867,-113.64258,292.0,,Canada
+Rome,41.89193,12.51133,20.0,Europe/Rome,Italy
+"Rome, Lazio",41.89193,12.51133,20.0,Europe/Rome,Italy
+"Laredo, Texas",27.50641,-99.50754,126.0,America/Chicago,United States
+"Miami, Florida",25.77427,-80.19366,2.0,America/New_York,United States
+"St. Ives, New South Wales",-25.0,135.0,269.0,,Australia
+"Montreal, Quebec",45.50884,-73.58781,216.0,America/Toronto,Canada
+"Sydney, New South Wales",-33.86785,151.20732,58.0,Australia/Sydney,Australia
+"Tarpon Springs, Florida",28.14612,-82.75677,7.0,America/New_York,United States
+"Boston, Massachusetts",42.35843,-71.05977,14.0,America/New_York,United States
+"Dallas, Texas",32.78306,-96.80667,128.0,America/Chicago,United States
+"Apopka, Florida",28.67617,-81.51186,40.0,America/New_York,United States
+"Tres Rios, Rio de Janeiro",-22.11667,-43.20917,276.0,America/Sao_Paulo,Brazil
+"Sao Bernardo do Campo, Sao Paulo",-23.69389,-46.565,796.0,America/Sao_Paulo,Brazil
+"Lemoore, California",36.30078,-119.78291,70.0,America/Los_Angeles,United States
+"Hollywood, California",34.09834,-118.32674,108.0,America/Los_Angeles,United States
+"Las Vegas, Nevada",36.17497,-115.13722,610.0,America/Los_Angeles,United States
+"Indianapolis, Indiana",39.76838,-86.15804,218.0,America/Indiana/Indianapolis,United States
+"Bogota, Capital District",4.60971,-74.08175,2582.0,America/Bogota,Colombia
+"Fredericktown, Missouri",37.55978,-90.29401,226.0,America/Chicago,United States
+"Icara, Santa Catarina",-28.71333,-49.3,43.0,America/Sao_Paulo,Brazil
+"Guadalajara, Jalisco",20.67738,-103.34749,1546.0,America/Mexico_City,Mexico
+"Stockholm, Stockholm County",59.32938,18.06871,17.0,Europe/Stockholm,Sweden
+"Munich, Bavaria",48.13743,11.57549,524.0,Europe/Berlin,Germany
+Comrat City,47.25,28.58333,172.0,Europe/Chisinau,Moldova
+"Windang, New South Wales",-34.53333,150.86667,3.0,Australia/Sydney,Australia
+St. Petersburg,60.0,100.0,307.0,,Russia
+"Rio de Janeiro, Rio de Janeiro",-22.90642,-43.18223,12.0,America/Sao_Paulo,Brazil
+Rio de Janeiro,-22.90642,-43.18223,12.0,America/Sao_Paulo,Brazil
+"Arraial do Cabo, Rio de Janeiro",-22.96611,-42.02778,11.0,America/Sao_Paulo,Brazil
+"Tyumen, Tyumen Oblast",57.15222,65.52722,81.0,Asia/Yekaterinburg,Russia
+"Japeri, Rio de Janeiro",-22.64306,-43.65333,32.0,America/Sao_Paulo,Brazil
+"Port Colborne, Ontario",42.90012,-79.23288,188.0,America/Toronto,Canada
+"Temecula, California",33.49364,-117.14836,310.0,America/Los_Angeles,United States
+Amman,31.95522,35.94503,757.0,Asia/Amman,Jordan
+Dagestan,42.11585,48.19192,36.0,Europe/Moscow,Russia
+"Rostov-on-Don, Rostov",47.21997,39.70769,54.0,Europe/Moscow,Russia
+Aktau,43.66105,51.17392,16.0,Asia/Aqtau,Kazakhstan
+Satu Mare,47.79926,22.86255,124.0,Europe/Bucharest,Romania
+"Feira de Santana, Bahia",-12.26667,-38.96667,223.0,America/Bahia,Brazil
+Amsterdam,52.37403,4.88969,13.0,Europe/Amsterdam,Netherlands
+"Cortland, New York",41.28,-73.87164,134.0,America/New_York,United States
+"Mission Viejo, California",33.60002,-117.672,121.0,America/Los_Angeles,United States
+"Sao Paulo, Sao Paulo",-23.5475,-46.63611,769.0,America/Sao_Paulo,Brazil
+Alajuela,10.01723,-84.21275,955.0,America/Costa_Rica,Costa Rica
+"Biddeford, Maine",43.49258,-70.45338,21.0,America/New_York,United States
+"Mebane, North Carolina",36.09597,-79.26696,206.0,America/New_York,United States
+"Wilmington, North Carolina",34.23556,-77.94604,9.0,America/New_York,United States
+"Long Island, New York",40.81677,-73.06622,29.0,America/New_York,United States
+"Grand Rapids, Minnesota",47.23717,-93.53021,392.0,America/Chicago,United States
+"Denver, Colorado",39.73915,-104.9847,1609.0,America/Denver,United States
+"Bath, Michigan",42.81864,-84.44859,262.0,America/Detroit,United States
+"Belem, Para",-6.69167,-35.53333,140.0,America/Fortaleza,Brazil
+"Salvador, Bahia",-12.97563,-38.49096,4.0,America/Bahia,Brazil
+"Varginha, Minas Gerais",-21.55139,-45.43028,887.0,America/Sao_Paulo,Brazil
+Kalinin City,40.25,45.0,2768.0,Asia/Yerevan,Armenia
+Baghdad,33.34058,44.40088,41.0,Asia/Baghdad,Iraq
+"Richmond, Virginia",37.55376,-77.46026,64.0,America/New_York,United States
+"Curitiba, Parana",-25.42778,-49.27306,924.0,America/Sao_Paulo,Brazil
+"Riverside, California",33.95335,-117.39616,252.0,America/Los_Angeles,United States
+"Cascais, Lisbon",38.69681,-9.42147,20.0,Europe/Lisbon,Portugal
+"Sacramento, California",38.58157,-121.4944,9.0,America/Los_Angeles,United States
+"Goiania, Goias",-16.67861,-49.25389,766.0,America/Sao_Paulo,Brazil
+"Montes Claros, Minas Gerais",-16.735,-43.86167,686.0,America/Sao_Paulo,Brazil
+"Springfield, Pennsylvania",37.21533,-93.29824,396.0,America/Chicago,United States
+"Tama, Iowa",41.96666,-92.57686,257.0,America/Chicago,United States
+"Woonsocket, Rhode Island",42.00288,-71.51478,55.0,America/New_York,United States
+"Leicester, Leicestershire",52.6386,-1.13169,65.0,Europe/London,United Kingdom
+"Shreveport, Louisiana",32.52515,-93.75018,44.0,America/Chicago,United States
+Athens,37.98376,23.72784,70.0,Europe/Athens,Greece
+"Umea, Vasterbotten",63.82842,20.25972,24.0,Europe/Stockholm,Sweden
+Minsk,53.90019,27.56653,222.0,Europe/Minsk,Belarus
+"Novosibirsk, Novosibirsk Oblast",55.02259,82.93175,113.0,Asia/Novosibirsk,Russia
+"Arlington, Texas",32.73569,-97.10807,184.0,America/Chicago,United States
+"Anchorage, Alaska",61.21806,-149.90028,31.0,America/Anchorage,United States
+"Sunderland, Tyne and Wear",54.90465,-1.38222,36.0,Europe/London,United Kingdom
+"Los Angeles, California",34.05223,-118.24368,89.0,America/Los_Angeles,United States
+Bishkek,42.87,74.59,767.0,Asia/Bishkek,Kyrgyzstan
+Uttarakhand,22.0,79.0,686.0,Asia/Kolkata,India
+Kinshasha,,,,,
+"Duluth, Minnesota",46.78327,-92.10658,214.0,America/Chicago,United States
+"Farmington, New Mexico",36.72806,-108.21869,1615.0,America/Denver,United States
+"Sukabumi, West Java",-6.91806,106.92667,613.0,Asia/Jakarta,Indonesia
+"Natal, Rio Grande do Norte",-5.795,-35.20944,32.0,America/Fortaleza,Brazil
+Copenhagen,55.67594,12.56553,14.0,Europe/Copenhagen,Denmark
+"Travelers Rest, South Carolina",34.96762,-82.44345,334.0,America/New_York,United States
+Rostov-on-don,47.21997,39.70769,54.0,Europe/Moscow,Russia
+Dubrovnik,42.64125,18.10909,9.0,Europe/Zagreb,Croatia
+"Tucson, Arizona",32.22174,-110.92648,759.0,America/Phoenix,United States
+"Glyfada, Attica",37.86289,23.75802,24.0,Europe/Athens,Greece
+"Seattle, Washington",47.60621,-122.33207,56.0,America/Los_Angeles,United States
+"Dunnigan, California",38.88518,-121.96969,21.0,America/Los_Angeles,United States
+"Boca Raton, Florida",26.35869,-80.0831,4.0,America/New_York,United States
+"Fort Wayne, Indiana",41.1306,-85.12886,247.0,America/Indiana/Indianapolis,United States
+"Oklahoma City, Oklahoma",35.46756,-97.51643,366.0,America/Chicago,United States
+"Garland, Texas",32.91262,-96.63888,168.0,America/Chicago,United States
+"Palos Heights, Illinois",41.66809,-87.79644,190.0,America/Chicago,United States
+"Omaha, Nebraska",41.25626,-95.94043,323.0,America/Chicago,United States
+"Kailua, Hawaii",21.40241,-157.74054,10.0,Pacific/Honolulu,United States
+"Homestead, Florida",25.46872,-80.47756,1.0,America/New_York,United States
+Helsinki,60.16952,24.93545,26.0,Europe/Helsinki,Finland
+"Cairns, Queensland",-16.92366,145.76613,7.0,Australia/Brisbane,Australia
+"Weesp, North Holland",52.3075,5.04167,5.0,Europe/Amsterdam,Netherlands
+"San Luis Obispo, California",35.28275,-120.65962,71.0,America/Los_Angeles,United States
+"Joao Pessoa, Paraiba",-7.115,-34.86306,45.0,America/Fortaleza,Brazil
+"Toronto, Ontario",43.70643,-79.39864,161.0,America/Toronto,Canada
+"Lakewood, California",33.85363,-118.13396,14.0,America/Los_Angeles,United States
+"Fortaleza, Ceara",-3.71722,-38.54306,18.0,America/Fortaleza,Brazil
+"Vitoria da Conquista, Bahia",-14.86611,-40.83944,876.0,America/Bahia,Brazil
+"Brasilia, Distrito Federal",-15.77972,-47.92972,1136.0,America/Sao_Paulo,Brazil
+"Presidente Prudente, Sao Paulo",-22.12556,-51.38889,462.0,America/Sao_Paulo,Brazil
+"Helena, Montana",46.59271,-112.03611,1237.0,America/Denver,United States
+"Kashiwara, Osaka",34.45,135.76666,83.0,Asia/Tokyo,Japan
+"Richmond, British Columbia",49.17003,-123.13683,9.0,America/Vancouver,Canada
+"Khabarovsk, Khabarovsk Krai",48.46204,135.0971,48.0,Asia/Vladivostok,Russia
+Yerevan,40.17765,44.5126,1002.0,Asia/Yerevan,Armenia
+"Felixstowe, Suffolk",51.96375,1.3511,22.0,Europe/London,United Kingdom
+Dublin,53.33306,-6.24889,17.0,Europe/Dublin,Ireland
+"Odessa, Odessa Oblast",46.48572,30.74383,50.0,Europe/Kyiv,Ukraine
+"Lake Forest, California",33.64697,-117.68922,148.0,America/Los_Angeles,United States
+"Khasavyurt, Dagestan",43.24872,46.58571,131.0,Europe/Moscow,Russia
+"Chornomorsk, Odessa",46.29914,30.65529,29.0,Europe/Kyiv,Ukraine
+"Folsom, California",38.67796,-121.17606,67.0,America/Los_Angeles,United States
+Almaty,43.25249,76.9115,783.0,Asia/Almaty,Kazakhstan
+Doula,6.0,12.5,720.0,Africa/Douala,Cameroon
+Mexico City,19.42847,-99.12766,2240.0,America/Mexico_City,Mexico
+"Jacksonville, Florida",30.33218,-81.65565,5.0,America/New_York,United States
+"Clarkston, Washington",46.41629,-117.04557,246.0,America/Los_Angeles,United States
+"West Bloomfield Township, Michigan",42.56891,-83.38356,296.0,America/Detroit,United States
+"Mesquite, Texas",32.7668,-96.59916,151.0,America/Chicago,United States
+"Vancouver, Washington",45.63873,-122.66149,52.0,America/Los_Angeles,United States
+"Portland, Oregon",45.52345,-122.67621,12.0,America/Los_Angeles,United States
+"Vladikavkaz, North Ossetia-Alania",43.04101,44.66986,681.0,Europe/Moscow,Russia
+Nalchik,43.49806,43.61889,464.0,Europe/Moscow,Russia
+Kaskelen,43.19839,76.63099,846.0,Asia/Almaty,Kazakhstan
+"Philadelphia, Pennsylvania",39.95238,-75.16362,12.0,America/New_York,United States
+"Hilo, Hawaii",19.72991,-155.09073,18.0,Pacific/Honolulu,United States
+Beijing,39.9075,116.39723,49.0,Asia/Shanghai,China
+"Crystal Lake, Illinois",42.24113,-88.3162,279.0,America/Chicago,United States
+Warsaw,52.22977,21.01178,113.0,Europe/Warsaw,Poland
+Eindhoven,51.44083,5.47778,22.0,Europe/Amsterdam,Netherlands
+"Erdenetsagaan, Sukhbaatar",46.0,105.0,1387.0,,Mongolia
+Stockholm,59.32938,18.06871,17.0,Europe/Stockholm,Sweden
+"Brisbane, Queensland",-27.46794,153.02809,27.0,Australia/Brisbane,Australia
+"Chicago, Illinois",41.85003,-87.65005,179.0,America/Chicago,United States
+"Gold Coast, Queensland",-28.00029,153.43088,12.0,Australia/Brisbane,Australia
+"Bettendorf, Iowa",41.52448,-90.51569,173.0,America/Chicago,United States
+"Sioux Falls, South Dakota",43.54369,-96.72796,448.0,America/Chicago,United States
+"Kenosha, Wisconsin",42.58474,-87.82119,184.0,America/Chicago,United States
+"Orlando, Florida",28.53834,-81.37924,30.0,America/New_York,United States
+"Melbourne, Victoria",-37.814,144.96332,25.0,Australia/Melbourne,Australia
+"Yorba Linda, California",33.88863,-117.81311,116.0,America/Los_Angeles,United States
+"Oroville, California",39.51394,-121.55776,51.0,America/Los_Angeles,United States
+"Castlerock, Washington",46.27511,-122.90761,18.0,America/Los_Angeles,United States
+"Bayonne, Nouvelle-Aquitaine",43.49316,-1.473,6.0,Europe/Paris,France
+"Glendale, Arizona",33.53865,-112.18599,351.0,America/Phoenix,United States
+Santa Cruz,-17.0,-65.0,233.0,America/La_Paz,Bolivia
+Patos,40.68333,19.61944,61.0,Europe/Tirane,Albania
+"Lawrenceville, Georgia",33.95621,-83.98796,325.0,America/New_York,United States
+"Bhagur, Maharashtra",19.87599,73.83382,545.0,Asia/Kolkata,India
+"Everett, Washington",47.97898,-122.20208,25.0,America/Los_Angeles,United States
+"Boothwyn, Pennsylvania",39.83011,-75.44158,30.0,America/New_York,United States
+"Prince George, British Columbia",53.9166,-122.75301,578.0,America/Vancouver,Canada
+"Apple Valley, California",34.50083,-117.18588,898.0,America/Los_Angeles,United States
+"Groton, Connecticut",41.3501,-72.07841,24.0,America/New_York,United States
+"Lincoln, California",38.89156,-121.29301,51.0,America/Los_Angeles,United States
+Bali,-8.33333,115.0,618.0,Asia/Makassar,Indonesia
+Tianjin,39.14222,117.17667,11.0,Asia/Shanghai,China
+Sofia,42.69751,23.32415,562.0,Europe/Sofia,Bulgaria
+"St. Paul, Minnesota",57.12143,-170.28088,7.0,America/Anchorage,United States
+Seoul,37.566,126.9784,38.0,Asia/Seoul,South Korea
+"Xi'an, Shaanxi",34.25833,108.92861,416.0,Asia/Shanghai,China
+"State College, Pennsylvania",40.79339,-77.86,355.0,America/New_York,United States
+"Fresno, California",36.74773,-119.77237,94.0,America/Los_Angeles,United States
+"Homewood, Illinois",41.55726,-87.6656,201.0,America/Chicago,United States
+"East Lansing, Michigan",42.73698,-84.48387,261.0,America/Detroit,United States
+"Santa Cruz, California",36.97412,-122.0308,11.0,America/Los_Angeles,United States
+"Kansas City, Kansas",39.11417,-94.62746,266.0,America/Chicago,United States
+Graz,47.06733,15.44197,362.0,Europe/Vienna,Austria
+Dukent,41.66667,63.83333,193.0,,Uzbekistan
+Novi Sad,45.25167,19.83694,79.0,Europe/Belgrade,Serbia
+Brussels,50.85045,4.34878,28.0,Europe/Brussels,Belgium
+Belgrade,44.80401,20.46513,120.0,Europe/Belgrade,Serbia
+"Waianae, Hawaii",21.43785,-158.18555,5.0,Pacific/Honolulu,United States
+"Littleton, Colorado",39.61332,-105.01665,1631.0,America/Denver,United States
+"Winnipeg, Manitoba",49.8844,-97.14704,245.0,America/Winnipeg,Canada
+"Bloomington, Minnesota",44.8408,-93.29828,252.0,America/Chicago,United States
+London,51.50853,-0.12574,25.0,Europe/London,United Kingdom
+Auckland,-36.84853,174.76349,43.0,Pacific/Auckland,New Zealand
+"Melksham, Wiltshire",51.37281,-2.14002,41.0,Europe/London,United Kingdom
+"Spokane, Washington",47.65966,-117.42908,571.0,America/Los_Angeles,United States
+"Jefferson, Ohio",41.73867,-80.76981,293.0,America/New_York,United States
+"Adelaide, South Australia",-34.92866,138.59863,59.0,Australia/Adelaide,Australia
+"Starkville, Mississippi",33.45049,-88.81961,101.0,America/Chicago,United States
+"Prior Lake, Minnesota",44.7133,-93.42273,289.0,America/Chicago,United States
+"Bountiful, Utah",40.88939,-111.88077,1333.0,America/Denver,United States
+"Englewood, Colorado",39.64777,-104.98776,1637.0,America/Denver,United States
+"Austin, Texas",30.26715,-97.74306,149.0,America/Chicago,United States
+"Aurora, Colorado",39.72943,-104.83192,1648.0,America/Denver,United States
+"Hampstead, New Hampshire",42.87453,-71.18117,100.0,America/New_York,United States
+"Vila Mau, Para",-16.71832,-43.88469,678.0,America/Sao_Paulo,Brazil
+Swansea,51.62079,-3.94323,18.0,Europe/London,United Kingdom
+"Athens, Georgia",33.96095,-83.37794,228.0,America/New_York,United States
+"Parker, Colorado",39.5186,-104.76136,1789.0,America/Denver,United States
+"Bakersfield, California",35.37329,-119.01871,123.0,America/Los_Angeles,United States
+"Bradley, Illinois",41.14198,-87.86115,194.0,America/Chicago,United States
+"Sallisaw, Oklahoma",35.46037,-94.78745,162.0,America/Chicago,United States
+"Pleasant Prairie, Wisconsin",42.55308,-87.93341,212.0,America/Chicago,United States
+"San Jose, California",37.33939,-121.89496,26.0,America/Los_Angeles,United States
+"Selden, New York",40.86649,-73.03566,27.0,America/New_York,United States
+"Torrance, California",33.83585,-118.34063,27.0,America/Los_Angeles,United States
+"Jacksonville, North Carolina",34.75405,-77.43024,4.0,America/New_York,United States
+"Gilroy, California",37.00578,-121.56828,61.0,America/Los_Angeles,United States
+"Orem, Utah",40.2969,-111.69465,1455.0,America/Denver,United States
+"Brainerd, Minnesota",46.35802,-94.20083,371.0,America/Chicago,United States
+"Webster, South Dakota",45.33218,-97.52009,566.0,America/Chicago,United States
+"Grass Valley, California",39.21906,-121.06106,735.0,America/Los_Angeles,United States
+Hagatna,,,,,
+"McIntosh, Alabama",31.26628,-88.03139,15.0,America/Chicago,United States
+"Paranavai, Parana",-23.07306,-52.46528,456.0,America/Sao_Paulo,Brazil
+"Cotia, Sao Paulo",-23.60389,-46.91917,801.0,America/Sao_Paulo,Brazil
+"Brasilia, Federal District",-15.77972,-47.92972,1136.0,America/Sao_Paulo,Brazil
+"Macae, Rio de Janeiro",-22.38484,-41.78324,8.0,America/Sao_Paulo,Brazil
+"Piracicaba, Sao Paulo",-22.72528,-47.64917,530.0,America/Sao_Paulo,Brazil
+"Cajazeiras, Paraiba",-6.89028,-38.55528,305.0,America/Fortaleza,Brazil
+"Minneapolis, Minnesota",44.97997,-93.26384,253.0,America/Chicago,United States
+"Charlotte, North Carolina",35.22709,-80.84313,229.0,America/New_York,United States
+"Sherwood, Arkansas",34.81509,-92.22432,100.0,America/Chicago,United States
+"College Station, Texas",30.62798,-96.33441,103.0,America/Chicago,United States
+"Wichita Falls, Texas",33.91371,-98.49339,289.0,America/Chicago,United States
+"Albuquerque, New Mexico",35.08449,-106.65114,1511.0,America/Denver,United States
+"Atlanta, Georgia",33.749,-84.38798,320.0,America/New_York,United States
+"Tempe, Arizona",33.41477,-111.90931,360.0,America/Phoenix,United States
+"Granite City, Illinois",38.70144,-90.14872,129.0,America/Chicago,United States
+"Porterville, California",36.06523,-119.01677,140.0,America/Los_Angeles,United States
+"Woodlake, California",36.41356,-119.09872,134.0,America/Los_Angeles,United States
+"Salinas, California",36.67774,-121.6555,16.0,America/Los_Angeles,United States
+"Sao Luis, Maranhao",-2.52972,-44.30278,29.0,America/Fortaleza,Brazil
+"Kensington, Victoria",-25.0,135.0,269.0,,Australia
+"Methuen, Massachusetts",42.7262,-71.19089,34.0,America/New_York,United States
+"Colorado Springs, Colorado",38.83388,-104.82136,1832.0,America/Denver,United States
+"Margate, Kent",51.38132,1.38617,24.0,Europe/London,United Kingdom
+"North Rustico, Prince Edward Island",46.45012,-63.3154,20.0,America/Halifax,Canada
+Pretoria,-25.74486,28.18783,1332.0,Africa/Johannesburg,South Africa
+"Lebanon, Indiana",40.04837,-86.46917,287.0,America/Indiana/Indianapolis,United States
+"Yokosuka, Kanagawa",35.28361,139.66722,9.0,Asia/Tokyo,Japan
+Tyrone,53.0,-8.0,126.0,Europe/Dublin,Ireland
+"Redondo Beach, California",33.84918,-118.38841,19.0,America/Los_Angeles,United States
+"New Britain, Connecticut",41.66121,-72.77954,51.0,America/New_York,United States
+Lima,-12.04318,-77.02824,152.0,America/Lima,Peru
+"Medicilandia, Para",-3.44611,-52.88889,130.0,America/Santarem,Brazil
+"Newmarket, Ontario",44.05011,-79.46631,250.0,America/Toronto,Canada
+"Taubate, Sao Paulo",-23.02639,-45.55528,589.0,America/Sao_Paulo,Brazil
+"Manta, Manabi",-0.94937,-80.73137,3.0,America/Guayaquil,Ecuador
+Quezon City,14.6488,121.0509,49.0,Asia/Manila,Philippines
+Skeldon,5.87035,-57.14681,1.0,America/Guyana,Guyana
+"Douglasville, Pennsylvania",33.7515,-84.74771,366.0,America/New_York,United States
+"Kirkland, Washington",47.68149,-122.20874,47.0,America/Los_Angeles,United States
+"Tuscon, Arizona",31.91369,-111.79929,787.0,America/Phoenix,United States
+Irvine,55.6194,-4.65508,14.0,Europe/London,United Kingdom
+"Broomfield, Colorado",39.92054,-105.08665,1644.0,America/Denver,United States
+"Fushun, Liaoning",41.88669,123.94363,85.0,Asia/Shanghai,China
+"Asuncion, Capital District",-25.28646,-57.647,113.0,America/Asuncion,Paraguay
+"Cascavel, Parana",-24.95583,-53.45528,786.0,America/Sao_Paulo,Brazil
+"Ibitinga, Sao Paulo",-21.75778,-48.82889,500.0,America/Sao_Paulo,Brazil
+Barki,52.0,20.0,110.0,Europe/Warsaw,Poland
+"Consort, Alberta",52.01683,-110.76836,754.0,America/Edmonton,Canada
+"London, Ontario",42.98339,-81.23304,252.0,America/Toronto,Canada
+"Hanford, California",36.32745,-119.64568,76.0,America/Los_Angeles,United States
+"West Linn, Oregon",45.36568,-122.61231,41.0,America/Los_Angeles,United States
+"Gyeongju, North Gyeongsang",35.84278,129.21167,45.0,Asia/Seoul,South Korea
+"Pawhuska, Oklahoma",36.66784,-96.33723,250.0,America/Chicago,United States
+"Goyang, Gyeonggi",37.65639,126.835,19.0,Asia/Seoul,South Korea
+Busan,35.10168,129.03004,15.0,Asia/Seoul,South Korea
+Paphos,34.77679,32.42451,81.0,Asia/Nicosia,Cyprus
+"Plano, Texas",33.01984,-96.69889,203.0,America/Chicago,United States
+"Beloeil, Quebec",45.56839,-73.20568,13.0,America/Toronto,Canada
+"Guaruja, Sao Paulo",-23.99306,-46.25639,13.0,America/Sao_Paulo,Brazil
+"Mundelein, Illinois",42.26308,-88.00397,224.0,America/Chicago,United States
+"Peabody, Massachusetts",42.52787,-70.92866,8.0,America/New_York,United States
+"Hollidaysburg, Pennsylvania",40.42729,-78.3889,289.0,America/New_York,United States
+"East Rockaway, New York",40.64205,-73.66957,3.0,America/New_York,United States
+"Cleveland, Texas",30.34132,-95.08549,48.0,America/Chicago,United States
+"Keller, Texas",32.93457,-97.25168,216.0,America/Chicago,United States
+"Enumclaw, Washington",47.20427,-121.9915,232.0,America/Los_Angeles,United States
+"D'Iberville, Mississippi",30.42631,-88.89086,4.0,America/Chicago,United States
+"Gloucester, Gloucestershire",51.86568,-2.2431,24.0,Europe/London,United Kingdom
+Paris,48.85341,2.3488,42.0,Europe/Paris,France
+"Stockton, California",37.9577,-121.29078,4.0,America/Los_Angeles,United States
+"Clearwater, Florida",27.96585,-82.8001,9.0,America/New_York,United States
+"Lodi, California",38.1302,-121.27245,15.0,America/Los_Angeles,United States
+"San Francisco, California",37.77493,-122.41942,16.0,America/Los_Angeles,United States
+"Chatam, Ontario",60.10867,-113.64258,292.0,,Canada
+"Cincinnati, Ohio",39.12711,-84.51439,191.0,America/New_York,United States
+"Johnstown, Pennsylvania",40.32674,-78.92197,356.0,America/New_York,United States
+"Alloa, East Ayrshire",56.11586,-3.78997,22.0,Europe/London,United Kingdom
+"Liverpool, Merseyside",53.41058,-2.97794,30.0,Europe/London,United Kingdom
+"Surprise, Arizona",33.63059,-112.33322,358.0,America/Phoenix,United States
+"Greenville, Texas",33.13845,-96.11081,165.0,America/Chicago,United States
+"Cahokia, Illinois",38.57088,-90.19011,124.0,America/Chicago,United States
+Manila,14.6042,120.9822,13.0,Asia/Manila,Philippines
+"Perth, Western Australia",-31.95224,115.8614,34.0,Australia/Perth,Australia
+"Cole Harbour, Nova Scotia",44.67244,-63.47506,50.0,America/Halifax,Canada
+"Toms River, New Jersey",39.95373,-74.19792,6.0,America/New_York,United States
+"Gardena, California",33.88835,-118.30896,15.0,America/Los_Angeles,United States
+"Beach Grove, Indiana",35.67869,-93.74186,244.0,America/Chicago,United States
+"Buena Park, California",33.86751,-117.99812,23.0,America/Los_Angeles,United States
+"Bloomington, Illinois",40.4842,-88.99369,243.0,America/Chicago,United States
+"Fargo, North Dakota",46.87719,-96.7898,276.0,America/Chicago,United States
+"Baldwin, New York",40.65649,-73.6093,7.0,America/New_York,United States
+"Ribeirao Preto, Sao Paulo",-21.1775,-47.81028,554.0,America/Sao_Paulo,Brazil
+"Washougal, Washington",45.58262,-122.35342,24.0,America/Los_Angeles,United States
+"Brea, California",33.91668,-117.90006,110.0,America/Los_Angeles,United States
+"Plymouth, Massachusetts",41.95844,-70.66726,23.0,America/New_York,United States
+Budapest,47.49835,19.04045,104.0,Europe/Budapest,Hungary
+"Scottsdale, Arizona",33.50921,-111.89903,383.0,America/Phoenix,United States
+"Ventura, California",34.27834,-119.29317,11.0,America/Los_Angeles,United States
+"Hawthorne, California",33.9164,-118.35257,22.0,America/Los_Angeles,United States
+"Bourne, Massachusetts",41.74122,-70.59892,8.0,America/New_York,United States
+Manipur,22.28194,88.91111,5.0,Asia/Kolkata,India
+Deurne,51.22134,4.46595,8.0,Europe/Brussels,Belgium
+"Mossoro, Rio Grande do Norte",-5.1875,-37.34417,24.0,America/Fortaleza,Brazil
+Molina,-10.0,-75.25,306.0,America/Lima,Peru
+"Jundiai, Sao Paulo",-23.18639,-46.88417,753.0,America/Sao_Paulo,Brazil
+"Rondonopolis, Mato Grosso",-16.47083,-54.63556,230.0,America/Cuiaba,Brazil
+"Payson, Utah",40.0444,-111.73215,1418.0,America/Denver,United States
+"Round Lake, Illinois",42.37169,-88.09008,233.0,America/Chicago,United States
+"Marietta, Georgia",33.9526,-84.54993,344.0,America/New_York,United States
+"Brighton, Michigan",42.52948,-83.78022,282.0,America/Detroit,United States
+"Covington, Georgia",33.59678,-83.86018,226.0,America/New_York,United States
+"Los Lunas, New Mexico",34.80617,-106.73336,1480.0,America/Denver,United States
+"Uhrichsville, Ohio",40.39312,-81.3465,261.0,America/New_York,United States
+"Visalia, California",36.33023,-119.29206,101.0,America/Los_Angeles,United States
+"Cordova, Alaska",60.5432,-145.75867,29.0,America/Anchorage,United States
+"Amarillo, Texas",35.222,-101.8313,1118.0,America/Chicago,United States
+"Wayne, Michigan",42.28143,-83.38632,200.0,America/Detroit,United States
+"Springfield, Oregon",37.21533,-93.29824,396.0,America/Chicago,United States
+"Augusta, Georgia",33.47097,-81.97484,43.0,America/New_York,United States
+"Vancouver, British Columbia",49.65064,-125.44939,1128.0,America/Vancouver,Canada
+"Darien, Wisconsin",42.60168,-88.7076,289.0,America/Chicago,United States
+Ballymena,54.86357,-6.27628,49.0,Europe/London,United Kingdom
+"South Lyon, Michigan",42.46059,-83.65161,282.0,America/Detroit,United States
+"Santa Rosa, California",38.44047,-122.71443,50.0,America/Los_Angeles,United States
+"Manassas, Virginia",38.75095,-77.47527,93.0,America/New_York,United States
+Shanghai,31.22222,121.45806,12.0,Asia/Shanghai,China
+"Freetown, Massachusetts",41.76677,-71.03282,50.0,America/New_York,United States
+"Rockton, Illinois",42.45252,-89.07233,225.0,America/Chicago,United States
+"Brookfield, Florida",43.06057,-88.10648,253.0,America/Chicago,United States
+Cwmbran,51.65446,-3.02281,66.0,Europe/London,United Kingdom
+"Merrick, New York",40.66288,-73.55152,4.0,America/New_York,United States
+"Layton, Utah",41.06022,-111.97105,1326.0,America/Denver,United States
+"Metairie, Louisiana",29.97854,-90.16396,1.0,America/Chicago,United States
+"Naples, Florida",26.14234,-81.79596,1.0,America/New_York,United States
+"Exmouth, Devon",50.61723,-3.40233,33.0,Europe/London,United Kingdom
+Zacatecas,22.76843,-102.58141,2480.0,America/Mexico_City,Mexico
+Bucharest,44.43225,26.10626,83.0,Europe/Bucharest,Romania
+"Palm Springs, California",33.8303,-116.54529,146.0,America/Los_Angeles,United States
+"Bishop Auckland, County Durham",54.65554,-1.67706,110.0,Europe/London,United Kingdom
+"Naperville, Illinois",41.78586,-88.14729,216.0,America/Chicago,United States
+"San Bernardino, California",34.10834,-117.28977,321.0,America/Los_Angeles,United States
+"Avignon, Vaucluse",43.94834,4.80892,31.0,Europe/Paris,France
+"Le Celle St. Clous, Haut de Seine",46.0,2.0,543.0,Europe/Paris,France
+"Daegu, Yeongnam",35.87028,128.59111,45.0,Asia/Seoul,South Korea
+"Salt Lake City, Utah",40.76078,-111.89105,1299.0,America/Denver,United States
+"Fayetteville, North Carolina",35.05266,-78.87836,29.0,America/New_York,United States
+"Otgon, Dzavhan",47.60755,97.55516,4008.0,Asia/Hovd,Mongolia
+"Kashiwazaki, Niigata",37.36667,138.55,4.0,Asia/Tokyo,Japan
+Tokyo,35.6895,139.69171,44.0,Asia/Tokyo,Japan
+"Ina, Saitama",35.82756,137.95378,638.0,Asia/Tokyo,Japan
+"St. Clair, Missouri",42.49698,-82.88881,177.0,America/Detroit,United States
+"Cape Town, Western Cape",-33.92584,18.42322,25.0,Africa/Johannesburg,South Africa
+"Bangor, Maine",44.79884,-68.77265,36.0,America/New_York,United States
+Opole,50.67119,17.92604,173.0,Europe/Warsaw,Poland
+Oranjestad,,,,,
+Piotrkow Trybunalski,51.40547,19.70321,194.0,Europe/Warsaw,Poland
+Lodz,51.77058,19.47395,214.0,Europe/Warsaw,Poland
+"Townsville, Queensland",-19.26639,146.8057,15.0,Australia/Brisbane,Australia
+Gorazde,43.66795,18.97564,348.0,Europe/Sarajevo,Bosnia and Herzegovina
+Orenburg,51.76712,55.09883,124.0,Asia/Yekaterinburg,Russia
+"Cleveland, Ohio",41.4995,-81.69541,199.0,America/New_York,United States
+"Bethel, Connecticut",41.37121,-73.41401,115.0,America/New_York,United States
+Arendal,58.46151,8.77253,19.0,Europe/Oslo,Norway
+"Nottingham, East Midlands",52.9536,-1.15047,46.0,Europe/London,United Kingdom
+"Honolulu, Hawaii",21.30694,-157.85834,5.0,Pacific/Honolulu,United States
+"Bridgewater, Massachusetts",41.99038,-70.97504,30.0,America/New_York,United States
+"Sparta, New Jersey",41.03343,-74.63849,228.0,America/New_York,United States
+"Mankato, Minnesota",44.15906,-94.00915,253.0,America/Chicago,United States
+"Coldwater, Michigan",41.94033,-85.00052,294.0,America/Detroit,United States
+"Zanesville, Ohio",39.94035,-82.01319,206.0,America/New_York,United States
+"Burjassot, Valencia",39.50984,-0.41327,51.0,Europe/Madrid,Spain
+"Radcliff, Kentucky",37.84035,-85.94913,235.0,America/New_York,United States
+"Raducaneni, Isai",46.95,27.93333,242.0,Europe/Bucharest,Romania
+"Valenca, Rio de Janeiro",-22.24556,-43.70028,560.0,America/Sao_Paulo,Brazil
+"San Miguel, Lima",-13.0125,-73.98083,2667.0,America/Lima,Peru
+"Rockford, Illinois",42.27113,-89.094,218.0,America/Chicago,United States
+"Alhambra, California",34.09529,-118.12701,150.0,America/Los_Angeles,United States
+"Uberaba, Minas Gerais",-19.74833,-47.93194,772.0,America/Sao_Paulo,Brazil
+"Schaumburg, Illinois",42.03336,-88.08341,242.0,America/Chicago,United States
+"Palmdale, California",34.57943,-118.11646,810.0,America/Los_Angeles,United States
+Kyiv,50.45466,30.5238,179.0,Europe/Kyiv,Ukraine
+"Coconut Creek, Florida",26.25175,-80.17894,2.0,America/New_York,United States
+Milan,45.46427,9.18951,122.0,Europe/Rome,Italy
+"Memphis, Tennessee",35.14953,-90.04898,78.0,America/Chicago,United States
+"Sacaramento, California",38.3004,-76.50745,30.0,America/New_York,United States
+Edinburgh,55.95206,-3.19648,66.0,Europe/London,United Kingdom
+"Doncaster, Yorkshire",53.52285,-1.13116,19.0,Europe/London,United Kingdom
+"Santa Ana, California",33.74557,-117.86783,35.0,America/Los_Angeles,United States
+"Jackson, New Jersey",32.29876,-90.18481,85.0,America/Chicago,United States
+"Wrightsville, Pennsylvania",40.02565,-76.52997,88.0,America/New_York,United States
+"Sedalia, Missouri",38.70446,-93.22826,277.0,America/Chicago,United States
+"North Hollywood, California",34.17223,-118.37897,196.0,America/Los_Angeles,United States
+"Shermans Dale, Pennsylvania",40.32425,-77.17304,143.0,America/New_York,United States
+"Chino, California",34.01223,-117.68894,222.0,America/Los_Angeles,United States
+"Hobart, Indiana",41.53226,-87.25504,190.0,America/Chicago,United States
+"London, Greater London",51.50853,-0.12574,25.0,Europe/London,United Kingdom
+"Auburn, Nebraska",40.39278,-95.83889,300.0,America/Chicago,United States
+"El Paso, Texas",31.75872,-106.48693,1133.0,America/Denver,United States
+"Mason City, Iowa",43.15357,-93.20104,344.0,America/Chicago,United States
+"Escondido, California",33.11921,-117.08642,197.0,America/Los_Angeles,United States
+"Windsor, Ontario",42.30008,-83.01654,190.0,America/Toronto,Canada
+"Laconia, New Hampshire",43.52785,-71.47035,153.0,America/New_York,United States
+"Baguio, Cordillera Administrative Region",16.41639,120.59306,1493.0,Asia/Manila,Philippines
+"Columbia City, Indiana",41.15727,-85.48831,262.0,America/Indiana/Indianapolis,United States
+Bishop Auckland,54.65554,-1.67706,110.0,Europe/London,United Kingdom
+"Huntington Beach, California",33.6603,-117.99923,12.0,America/Los_Angeles,United States
+"Bois-Colombes, Hauts-de-Seine",48.91936,2.27485,30.0,Europe/Paris,France
+"Brooklyn, New York",40.6501,-73.94958,15.0,America/New_York,United States
+"Mesa, Arizona",33.42227,-111.82264,378.0,America/Phoenix,United States
+Hradec Kralove,50.20923,15.83277,250.0,Europe/Prague,Czechia
+"Tulsa, Oklahoma",36.15398,-95.99277,220.0,America/Chicago,United States
+"Lowell, Massachusetts",42.63342,-71.31617,36.0,America/New_York,United States
+"Brookings, South Dakota",44.31136,-96.79839,494.0,America/Chicago,United States
+"Windsor, California",38.54713,-122.81638,36.0,America/Los_Angeles,United States
+"Kansas City, Missouri",39.09973,-94.57857,274.0,America/Chicago,United States
+California,38.3004,-76.50745,30.0,America/New_York,United States
+Dusseldorf,51.22319,6.77927,42.0,Europe/Berlin,Germany
+"Soure, Para",-3.73611,-38.65306,35.0,America/Fortaleza,Brazil
+"Teresopolis, Rio de Janeiro",-22.4167,-42.97822,936.0,America/Sao_Paulo,Brazil
+"Santana de Parnaiba, Sao Paulo",-23.44417,-46.91778,711.0,America/Sao_Paulo,Brazil
+Bengkulu,-3.80044,102.26554,19.0,Asia/Jakarta,Indonesia
+Sarajevo,43.84864,18.35644,509.0,Europe/Sarajevo,Bosnia and Herzegovina
+"Sant'Ana do Livramento, Rio Grande do Sul",-30.89083,-55.53278,213.0,America/Sao_Paulo,Brazil
+"Saugerties, New York",42.07759,-73.95291,47.0,America/New_York,United States
+"New York, New York",40.71427,-74.00597,10.0,America/New_York,United States
+"Yelm, Washington",46.94204,-122.60596,105.0,America/Los_Angeles,United States
+Mannheim,49.4891,8.46694,100.0,Europe/Berlin,Germany
+Kharkiv,49.98177,36.25475,94.0,Europe/Kyiv,Ukraine
+"Lansing, Michigan",42.73253,-84.55553,260.0,America/Detroit,United States
+"Liberty, Missouri",39.24611,-94.41912,268.0,America/Chicago,United States
+"Marshall, Texas",32.54487,-94.36742,126.0,America/Chicago,United States
+"Cuba, Illinois",40.49282,-90.19068,208.0,America/Chicago,United States
+"Rochester, New York",43.15478,-77.61556,154.0,America/New_York,United States
+"South Berwick, Maine",43.23453,-70.8095,34.0,America/New_York,United States
+"Bedford, Ohio",41.39311,-81.53651,289.0,America/New_York,United States
+Drobeta,44.62693,22.65288,76.0,Europe/Bucharest,Romania
+"Careiro da Varzea, Amazonas",-3.19695,-59.82674,17.0,America/Manaus,Brazil
+"Caxias do Sul, Rio Grande do Sul",-29.16806,-51.17944,787.0,America/Sao_Paulo,Brazil
+"Temuco, Araucania",-38.73628,-72.59738,104.0,America/Santiago,Chile
+"Winter Haven, Florida",28.02224,-81.73286,50.0,America/New_York,United States
+"Manacapuru, Amazonas",-3.29972,-60.62056,34.0,America/Manaus,Brazil
+"Recife, Pernambuco",-8.05389,-34.88111,8.0,America/Recife,Brazil
+Astana,51.1801,71.44598,358.0,Asia/Almaty,Kazakhstan
+"Belo Horizonte, Minas Gerais",-19.92083,-43.93778,888.0,America/Sao_Paulo,Brazil
+Kaliningrad,54.70639,20.51102,2.0,Europe/Kaliningrad,Russia
+"Amagasaki, Hyogo",34.71667,135.41667,1.0,Asia/Tokyo,Japan
+"Victorville, California",34.53611,-117.29116,832.0,America/Los_Angeles,United States
+"Sierra Vista, Arizona",31.55454,-110.30369,1412.0,America/Phoenix,United States
+"Johannesburg, Gauteng",-26.20227,28.04363,1767.0,Africa/Johannesburg,South Africa
+"Stoughton, Massachusetts",42.1251,-71.10227,71.0,America/New_York,United States
+"Louisville, Kentucky",38.25424,-85.75941,142.0,America/Kentucky/Louisville,United States
+"Busan, Yeongnam",35.10168,129.03004,15.0,Asia/Seoul,South Korea
+"Incheon, Seoul Capital",37.45646,126.70515,43.0,Asia/Seoul,South Korea
+"Fond du Lac, Wisconsin",43.775,-88.43883,232.0,America/Chicago,United States
+"Gumi, Gyeongsangbuk-do",36.1136,128.336,63.0,Asia/Seoul,South Korea
+"Columbus, Ohio",39.96118,-82.99879,235.0,America/New_York,United States
+"Castanhal, Para",-1.29389,-47.92639,46.0,America/Belem,Brazil
+"South Haven, Michigan",42.40309,-86.27364,187.0,America/Detroit,United States
+"Sioux City, Iowa",42.49999,-96.40031,366.0,America/Chicago,United States
+"Pretoria, Gauteng",-25.74486,28.18783,1332.0,Africa/Johannesburg,South Africa
+"Arenzville, Illinois",39.87699,-90.37346,153.0,America/Chicago,United States
+"Franklin, Tennessee",35.92506,-86.86889,196.0,America/Chicago,United States
+"Harrisburg, Pennsylvania",40.2737,-76.88442,101.0,America/New_York,United States
+"Carencro, Louisiana",30.31714,-92.04901,12.0,America/Chicago,United States
+"Lancaster, Pennsylvania",40.03788,-76.30551,110.0,America/New_York,United States
+"Fayettville, North Carolina",41.10395,-80.30979,329.0,America/New_York,United States
+"Findlay, Ohio",41.04422,-83.64993,237.0,America/New_York,United States
+"Freeport, New York",40.6576,-73.58318,6.0,America/New_York,United States
+"Sun Valley, California",39.5963,-119.77602,1440.0,America/Los_Angeles,United States
+"Portage, Indiana",41.57587,-87.17615,194.0,America/Chicago,United States
+"Mexicali, Baja California",32.62781,-115.45446,4.0,America/Tijuana,Mexico
+"Yuma, Arizona",32.72532,-114.6244,43.0,America/Phoenix,United States
+"Campo Formoso, Bahia",-10.5075,-40.32139,580.0,America/Bahia,Brazil
+"Nova Friburgo, Rio de Janeiro",-22.28194,-42.53111,858.0,America/Sao_Paulo,Brazil
+"Riachuelo, Sergipe",-10.72833,-37.18722,19.0,America/Maceio,Brazil
+"Buritama, Sao Paulo",-21.06611,-50.14722,400.0,America/Sao_Paulo,Brazil
+"McKinney, Texas",33.19762,-96.61527,192.0,America/Chicago,United States
+"Handa, Aichi",34.88333,136.93333,1.0,Asia/Tokyo,Japan
+Belo Horizonte,-19.92083,-43.93778,888.0,America/Sao_Paulo,Brazil
+"Pirapora do Bom Jesus, Sao Paulo",-23.39694,-47.00222,678.0,America/Sao_Paulo,Brazil
+"Boulder, Colorado",40.01499,-105.27055,1624.0,America/Denver,United States
+"Princeton, New Jersey",40.34872,-74.65905,62.0,America/New_York,United States
+"Francisco Beltrao, Parana",-26.08111,-53.055,567.0,America/Sao_Paulo,Brazil
+"Maues, Amazonas",-3.38361,-57.71861,19.0,America/Manaus,Brazil
+Sydney,-33.86785,151.20732,58.0,Australia/Sydney,Australia
+Trondheim,63.43049,10.39506,18.0,Europe/Oslo,Norway
+"Hillsboro, Oregon",45.52289,-122.98983,59.0,America/Los_Angeles,United States
+"Rahway, New Jersey",40.60816,-74.27765,5.0,America/New_York,United States
+"El Agustino, Lima",-12.04263,-76.98901,228.0,America/Lima,Peru
+"Seville, Andalusia",37.38283,-5.97317,16.0,Europe/Madrid,Spain
+"Omiya, Saitama",35.96354,139.83054,15.0,Asia/Tokyo,Japan
+"Daejeon, Hoseo",36.34913,127.38493,58.0,Asia/Seoul,South Korea
+"Medan, Karo",3.58333,98.66667,26.0,Asia/Jakarta,Indonesia
+"Corvallis, Oregon",44.56457,-123.26204,71.0,America/Los_Angeles,United States
+"Edison, New Jersey",40.51872,-74.4121,27.0,America/New_York,United States
+"Lawton, Oklahoma",34.60869,-98.39033,339.0,America/Chicago,United States
+"Olneyville, Rhode Island",41.81482,-71.44645,13.0,America/New_York,United States
+"Clinton, Iowa",41.84447,-90.18874,179.0,America/Chicago,United States
+"Vila Velha, Espirito Santo",-20.32972,-40.2925,5.0,America/Sao_Paulo,Brazil
+"Sorocaba, Sao Paulo",-23.50167,-47.45806,602.0,America/Sao_Paulo,Brazil
+"Cedar Rapids, Iowa",42.00833,-91.64407,247.0,America/Chicago,United States
+"Monterrey, Nuevo Leon",25.68435,-100.31721,560.0,America/Monterrey,Mexico
+"Caracas, Capital District",10.48801,-66.87919,887.0,America/Caracas,Venezuela
+"Elmwood Park, New Jersey",40.90399,-74.11848,14.0,America/New_York,United States
+"Tustin, California",33.74585,-117.82617,43.0,America/Los_Angeles,United States
+Kaunas,54.90156,23.90909,96.0,Europe/Vilnius,Lithuania
+"Manila, National Capital Region",14.6042,120.9822,13.0,Asia/Manila,Philippines
+"Birmingham, Alabama",33.52066,-86.80249,187.0,America/Chicago,United States
+"Tartagal, Salta",-22.51682,-63.8056,467.0,America/Argentina/Salta,Argentina
+"Anaheim Hills, California",33.84446,-117.77728,127.0,America/Los_Angeles,United States
+"East Palo Alto, California",37.46883,-122.14108,6.0,America/Los_Angeles,United States
+Arizona,39.76,-98.5,543.0,,United States
+"Florianopolis, Santa Catarina",-27.59667,-48.54917,26.0,America/Sao_Paulo,Brazil
+"Wrentham, Massachusetts",42.06677,-71.32811,76.0,America/New_York,United States
+"Porto Alegre, Rio Grande do Sul",-30.03283,-51.23019,46.0,America/Sao_Paulo,Brazil
+Venissieux,45.69706,4.88593,194.0,Europe/Paris,France
+Baku,40.37767,49.89201,23.0,Asia/Baku,Azerbaijan
+"Hyde Park, New York",41.78482,-73.93319,57.0,America/New_York,United States
+"Buffalo Grove, Illinois",42.15141,-87.95979,207.0,America/Chicago,United States
+"Winter Park, Florida",28.6,-81.33924,28.0,America/New_York,United States
+"Macapa, Amapa",0.03889,-51.06639,17.0,America/Belem,Brazil
+"Juiz de Fora, Minas Gerais",-21.76417,-43.35028,707.0,America/Sao_Paulo,Brazil
+"Maceio, Alagoas",-9.66583,-35.73528,11.0,America/Maceio,Brazil
+"Antioch, Tennessee",35.00508,-85.6583,218.0,America/Chicago,United States
+"Juarez, Chihuahua",31.72024,-106.46084,1124.0,America/Ciudad_Juarez,Mexico
+Zagreb,45.81444,15.97798,135.0,Europe/Zagreb,Croatia
+Rio de Janiero,-10.0,-55.0,258.0,,Brazil
+Altamura,40.82664,16.54952,467.0,Europe/Rome,Italy
+"Xapuri, Acre",-10.65167,-68.50444,171.0,America/Rio_Branco,Brazil
+"Jersey City, New Jersey",40.72816,-74.07764,9.0,America/New_York,United States
+"San Lorenzo, Santa Fe",-31.64881,-60.70868,21.0,America/Argentina/Cordoba,Argentina
+"Edinburg, Texas",26.30174,-98.16334,30.0,America/Chicago,United States
+Saipan,,,,,
+"New Orleans, Louisiana",29.95465,-90.07507,,America/Chicago,United States
+"Santa Monica, California",34.01949,-118.49138,32.0,America/Los_Angeles,United States
+"Howell, New Jersey",42.60726,-83.9294,284.0,America/Detroit,United States
+"Bemiji, Minnesota",43.8419,-93.83189,318.0,America/Chicago,United States
+"Rancho Cucamonga, California",34.1064,-117.59311,368.0,America/Los_Angeles,United States
+"Downey, California",33.94001,-118.13257,36.0,America/Los_Angeles,United States
+"Telemaco Borba, Parana",-24.32389,-50.61556,736.0,America/Sao_Paulo,Brazil
+"Sao Goncalo, Rio de Janeiro",-22.82694,-43.05389,21.0,America/Sao_Paulo,Brazil
+"La Louviere, Hainaut",50.48657,4.18785,133.0,Europe/Brussels,Belgium
+"Springfield, Missouri",37.21533,-93.29824,396.0,America/Chicago,United States
+"Barrie, Ontario",44.40011,-79.66634,269.0,America/Toronto,Canada
+"Zinzeli, Astrakhan Oblast",60.0,100.0,307.0,,Russia
+"Dublin, California",37.70215,-121.93579,112.0,America/Los_Angeles,United States
+"Ship Cove, Newfoundland",47.09991,-54.08145,92.0,America/St_Johns,Canada
+"Leiden, South Holland",52.15833,4.49306,6.0,Europe/Amsterdam,Netherlands
+"Koto, Tokyo",32.77856,130.74538,8.0,Asia/Tokyo,Japan
+"Harker Heights, Texas",31.08351,-97.65974,233.0,America/Chicago,United States
+"Geelong, Victoria",-38.14711,144.36069,23.0,Australia/Melbourne,Australia
+"Belmar, New Jersey",40.17845,-74.0218,4.0,America/New_York,United States
+"St. Isidore, Quebec",56.2001,-117.10267,573.0,America/Edmonton,Canada
+"Racine, Wisconsin",42.72613,-87.78285,188.0,America/Chicago,United States
+"Conselheiro Lafaiete, Minas Gerais",-20.66028,-43.78611,998.0,America/Sao_Paulo,Brazil
+The Hague,52.07667,4.29861,4.0,Europe/Amsterdam,Netherlands
+Utrecht,52.09083,5.12222,13.0,Europe/Amsterdam,Netherlands
+"Eureka, California",40.80207,-124.16367,12.0,America/Los_Angeles,United States
+"Cambridge, Ontario",43.3601,-80.31269,272.0,America/Toronto,Canada
+"Chengdu, Sichuan",30.66667,104.06667,499.0,Asia/Shanghai,China
+"Balneario Camboriu, Santa Catarina",-26.99056,-48.63472,12.0,America/Sao_Paulo,Brazil
+"Bellmore, New York",40.66871,-73.52707,5.0,America/New_York,United States
+"Roselle, Illinois",41.98475,-88.07979,235.0,America/Chicago,United States
+Tbilisi,41.69143,44.83412,433.0,Asia/Tbilisi,Georgia
+"Concord, California",37.97798,-122.03107,23.0,America/Los_Angeles,United States
+"Chandler, Arizona",33.30616,-111.84125,370.0,America/Phoenix,United States
+"Niteroi, Rio de Janeiro",-22.88333,-43.10361,44.0,America/Sao_Paulo,Brazil
+"Weslaco, Texas",26.15952,-97.99084,24.0,America/Chicago,United States
+"Niagara Falls, Ontario",43.10012,-79.06627,184.0,America/Toronto,Canada
+"Campinas, Sao Paulo",-22.90556,-47.06083,686.0,America/Sao_Paulo,Brazil
+"Sobralia, Minas Gerais",-19.23472,-42.09833,273.0,America/Sao_Paulo,Brazil
+Kars,,,,,
+Istanbul,,,,,
+"Zadar, Dalmatia",44.11578,15.22514,2.0,Europe/Zagreb,Croatia
+"Stromsburg, Nebraska",41.11418,-97.59894,511.0,America/Chicago,United States
+"Millington, Tennessee",35.34147,-89.89731,80.0,America/Chicago,United States
+"Oakhurst, New Jersey",40.27094,-74.01625,13.0,America/New_York,United States
+"Sanford, North Carolina",35.47988,-79.1803,109.0,America/New_York,United States
+"Porto Velho, Rondonia",-8.76194,-63.90389,90.0,America/Porto_Velho,Brazil
+"Yakutsk, Sakha",62.03114,129.72289,126.0,Asia/Yakutsk,Russia
+"Beipiao, Liaoning",41.79194,120.77917,266.0,Asia/Shanghai,China
+"Cangzhou, Hebei",38.31124,116.85334,15.0,Asia/Shanghai,China
+"Bandung, West Java",-6.92222,107.60694,714.0,Asia/Jakarta,Indonesia
+"Mar del Plata, Buenos Aires",-38.00042,-57.5562,14.0,America/Argentina/Buenos_Aires,Argentina
+Reykjavik,64.13548,-21.89541,37.0,Atlantic/Reykjavik,Iceland
+"Wapato, Washington",46.44763,-120.42034,261.0,America/Los_Angeles,United States
+"Waco, Texas",31.54933,-97.14667,143.0,America/Chicago,United States
+Shandong,28.66194,121.46,6.0,Asia/Shanghai,China
+"Calgary, Alberta",51.05011,-114.08529,1048.0,America/Edmonton,Canada
+"Queens, New York",40.68149,-73.83652,12.0,America/New_York,United States
+"Wake Forest, North Carolina",35.97987,-78.50972,119.0,America/New_York,United States
+"Dunedin, Florida",28.0199,-82.77323,9.0,America/New_York,United States
+Zevenbergen,51.645,4.60417,5.0,Europe/Amsterdam,Netherlands
+"Middlesbrough, North Yorkshire",54.57623,-1.23483,15.0,Europe/London,United Kingdom
+"Richmond, Kentucky",37.74786,-84.29465,289.0,America/New_York,United States
+"Ocean Springs, Mississippi",30.41131,-88.82781,7.0,America/Chicago,United States
+"Nagoya, Aichi",35.18147,136.9064,23.0,Asia/Tokyo,Japan
+"Ryugasaki, Ibaraki",35.9,140.18333,8.0,Asia/Tokyo,Japan
+"Arrecife, Canary Islands",28.96302,-13.54769,20.0,Atlantic/Canary,Spain
+Matanzas,23.04388,-81.58284,1.0,America/Havana,Cuba
+"Norwalk, California",33.90224,-118.08173,28.0,America/Los_Angeles,United States
+"Ukiah, California",39.15017,-123.20778,193.0,America/Los_Angeles,United States
+"Limoeiro, Pernambuco",-7.87472,-35.45028,142.0,America/Recife,Brazil
+"Diamond Head, Mississippi",21.27697,-157.81126,14.0,Pacific/Honolulu,United States
+"Jing'an, Shanghai",34.49621,116.92249,45.0,Asia/Shanghai,China
+Rio De Janeiro,-22.90642,-43.18223,12.0,America/Sao_Paulo,Brazil
+"Panama City, Panama",8.9936,-79.51973,17.0,America/Panama,Panama
+"Poplar, Montana",48.11307,-105.19831,607.0,America/Denver,United States
+"Vallejo, California",38.10409,-122.25664,21.0,America/Los_Angeles,United States
+Gyeonggi,37.58944,126.76917,11.0,Asia/Seoul,South Korea
+Accrington,53.75379,-2.35863,148.0,Europe/London,United Kingdom
+"Highlands Ranch, Colorado",39.55388,-104.96943,1732.0,America/Denver,United States
+"Dana Point, California",33.46697,-117.69811,44.0,America/Los_Angeles,United States
+Buenos Aires,-34.61315,-58.37723,31.0,America/Argentina/Buenos_Aires,Argentina
+"Santiago, Metropolitan Region",-33.45694,-70.64827,556.0,America/Santiago,Chile
+"Juruti, Para",-2.15222,-56.09222,25.0,America/Santarem,Brazil
+"Hashima, Gifu",35.329,136.68051,5.0,Asia/Tokyo,Japan
+"Rustavi, Kvemo Kartli",41.56271,44.9787,345.0,Asia/Tbilisi,Georgia
+"Escada, Pernambuco",-8.35917,-35.22361,117.0,America/Recife,Brazil
+Malmo,55.60587,13.00073,10.0,Europe/Stockholm,Sweden
+"Ensenada, Baja California",31.87149,-116.60071,29.0,America/Tijuana,Mexico
+"Fort Lauderdale, Florida",26.12231,-80.14338,1.0,America/New_York,United States
+Chisinau,47.00902,28.85938,24.0,Europe/Chisinau,Moldova
+"Chelyabinsk, Chelyabinsk Oblast",55.1611,61.42877,232.0,Asia/Yekaterinburg,Russia
+"New Windsor, New York",41.47676,-74.02375,49.0,America/New_York,United States
+Salzburg,47.79941,13.04399,424.0,Europe/Vienna,Austria
+Lagos,6.45407,3.39467,11.0,Africa/Lagos,Nigeria
+"Shinagawa, Tokyo",33.63627,133.00572,426.0,Asia/Tokyo,Japan
+"Jose da Penha, Rio Grande do Norte",-6.31667,-38.28139,263.0,America/Fortaleza,Brazil
+"Marajo, Para",-24.36528,-53.20667,421.0,America/Sao_Paulo,Brazil
+La Paz,13.83333,-88.91667,694.0,America/El_Salvador,El Salvador
+Monza,45.58005,9.27246,162.0,Europe/Rome,Italy
+Tonsberg,62.0,10.0,740.0,Europe/Oslo,Norway
+Lublin,51.25058,22.57009,184.0,Europe/Warsaw,Poland
+"Westminster, Colorado",39.83665,-105.0372,1641.0,America/Denver,United States
+Uddevalla,58.34784,11.9424,13.0,Europe/Stockholm,Sweden
+"Abertillery, Gwent",51.72981,-3.13432,228.0,Europe/London,United Kingdom
+"Chino Hills, California",33.9938,-117.75888,262.0,America/Los_Angeles,United States
+"Piqua, Ohio",40.14477,-84.24244,266.0,America/New_York,United States
+Abertillery,51.72981,-3.13432,228.0,Europe/London,United Kingdom
+"Clarksville, Tennessee",36.52977,-87.35945,145.0,America/Chicago,United States
+"White Bear Lake, Minnesota",45.08469,-93.00994,287.0,America/Chicago,United States
+"Muskogee, Oklahoma",35.74788,-95.36969,184.0,America/Chicago,United States
+Almada,38.67902,-9.1569,58.0,Europe/Lisbon,Portugal
+"Sento Se, Bahia",-9.74583,-41.88528,408.0,America/Bahia,Brazil
+"Wolverhampton, West Midlands",52.58547,-2.12296,160.0,Europe/London,United Kingdom
+Paramaribo,5.86638,-55.16682,5.0,America/Paramaribo,Suriname
+"Cuba, Missouri",38.06282,-91.40348,305.0,America/Chicago,United States
+"Birmingham, West Midlands",52.48142,-1.89983,149.0,Europe/London,United Kingdom
+"Moscow Mills, Missouri",38.94783,-90.91819,164.0,America/Chicago,United States
+"Manhattan, Kansas",39.18361,-96.57167,311.0,America/Chicago,United States
+"Epping, Victoria",-41.75985,147.3498,199.0,Australia/Hobart,Australia
+Olsztyn,53.78376,20.49272,151.0,Europe/Warsaw,Poland
+"Grand Rapids, Michigan",42.96336,-85.66809,195.0,America/Detroit,United States
+"Redlands, California",34.05557,-117.18254,414.0,America/Los_Angeles,United States
+"Yale, Iowa",41.77665,-94.35802,342.0,America/Chicago,United States
+"Ocala, Florida",29.1872,-82.14009,21.0,America/New_York,United States
+"Citrus Heights, California",38.70712,-121.28106,50.0,America/Los_Angeles,United States
+"Lee's Summit, Missouri",38.91084,-94.38217,316.0,America/Chicago,United States
+"Sylvan Lake, Michigan",42.61142,-83.32855,292.0,America/Detroit,United States
+"South Shields, Tyne and Wear",54.99859,-1.4323,12.0,Europe/London,United Kingdom
+"Penrith, New South Wales",-33.75,150.7,31.0,Australia/Sydney,Australia
+"Mineral Wells, Texas",32.80846,-98.11282,269.0,America/Chicago,United States
+"Leicestershire, East Midlands",52.83111,-1.32806,93.0,Europe/London,United Kingdom
+"Watford, Hertfordshire",51.65531,-0.39602,77.0,Europe/London,United Kingdom
+"Squamish, British Columbia",49.69925,-123.15631,5.0,America/Vancouver,Canada
+"Central Coast, New South Wales",-33.42979,151.37144,15.0,Australia/Sydney,Australia
+"Greenville, North Carolina",35.61266,-77.36635,18.0,America/New_York,United States
+"Chilliwack, British Columbia",49.16638,-121.95257,11.0,America/Vancouver,Canada
+Cieszyn,49.75133,18.63213,273.0,Europe/Warsaw,Poland
+"Atascadero, California",35.48942,-120.67073,268.0,America/Los_Angeles,United States
+"West Hills, California",34.19731,-118.64398,274.0,America/Los_Angeles,United States
+"Stanton, California",33.80252,-117.99312,20.0,America/Los_Angeles,United States
+"Richland, California",33.78779,-117.85311,58.0,America/Los_Angeles,United States
+Al-Malikiyah,35.0,38.0,918.0,Asia/Damascus,Syria
+Heerlen,50.88365,5.98154,114.0,Europe/Amsterdam,Netherlands
+"Warsaw, Indiana",41.2381,-85.85305,252.0,America/Indiana/Indianapolis,United States
+"St. Catharines, Ontario",43.17126,-79.24267,102.0,America/Toronto,Canada
+"Davenport, Illinois",41.52364,-90.57764,180.0,America/Chicago,United States
+"Lethbridge, Alberta",49.69999,-112.81856,907.0,America/Edmonton,Canada
+"Bellingham, Massachusets",48.75955,-122.48822,21.0,America/Los_Angeles,United States
+"Muncie, Indiana",40.19338,-85.38636,284.0,America/Indiana/Indianapolis,United States
+"Colton, California",34.0739,-117.31365,306.0,America/Los_Angeles,United States
+"Edmonton, Alberta",53.55014,-113.46871,668.0,America/Edmonton,Canada
+"Decatur, Illinois",39.84031,-88.9548,205.0,America/Chicago,United States
+"Bolton, Ontario",43.87952,-79.73791,221.0,America/Toronto,Canada
+Liverpool,53.41058,-2.97794,30.0,Europe/London,United Kingdom
+"Whonnock, British Columbia",49.18333,-122.46667,81.0,America/Vancouver,Canada
+"Clovis, California",36.82523,-119.70292,110.0,America/Los_Angeles,United States
+"Pomona, California",34.05529,-117.75228,259.0,America/Los_Angeles,United States
+"Hudson, New Hampshire",42.76481,-71.43979,46.0,America/New_York,United States
+"Braganca Paulista, Sao Paulo",-22.9527,-46.54418,831.0,America/Sao_Paulo,Brazil
+"Hermosa Beach, California",33.86224,-118.39952,8.0,America/Los_Angeles,United States
+"Canton, Ohio",40.79895,-81.37845,323.0,America/New_York,United States
+"Hamilton, Ontario",43.25011,-79.84963,95.0,America/Toronto,Canada
+"Olathe, Kansas",38.8814,-94.81913,315.0,America/Chicago,United States
+"Costa Mesa, California",33.64113,-117.91867,30.0,America/Los_Angeles,United States
+"Pocoes, Bahia",-14.52972,-40.36528,764.0,America/Bahia,Brazil
+"Simalungun Regency, North Sumatra",-5.0,120.0,412.0,,Indonesia
+"Concepcion, Iloilo",15.32546,120.65723,36.0,Asia/Manila,Philippines
+"Bekasi, West Java",-6.2349,106.9896,18.0,Asia/Jakarta,Indonesia
+"West Hazleton, Pennsylvania",40.9587,-75.99604,518.0,America/New_York,United States
+"Port Hueneme, California",34.14778,-119.19511,4.0,America/Los_Angeles,United States
+"Surrey, British Columbia",49.10635,-122.82509,82.0,America/Vancouver,Canada
+"Collinville, Illinois",38.6245,-90.15094,127.0,America/Chicago,United States
+"El Reno, Oklahoma",35.53227,-97.95505,414.0,America/Chicago,United States
+"Napa, California",38.29714,-122.28553,6.0,America/Los_Angeles,United States
+"Evry, Ile-de-France",48.6328,2.44049,81.0,Europe/Paris,France
+"Kenora, Ontario",49.76741,-94.48985,328.0,America/Winnipeg,Canada
+"West Monroe, Louisiana",32.51848,-92.14764,25.0,America/Chicago,United States
+"Oskaloosa, Iowa",41.29639,-92.64436,256.0,America/Chicago,United States
+"Lancaster, California",34.69804,-118.13674,719.0,America/Los_Angeles,United States
+"Poway, California",32.96282,-117.03586,157.0,America/Los_Angeles,United States
+"Umuarama, Parana",-23.76639,-53.325,443.0,America/Sao_Paulo,Brazil
+"Innisfail, Queensland",-17.5183,146.04474,5.0,Australia/Brisbane,Australia
+"Nuremberg, Bavaria",49.45421,11.07752,300.0,Europe/Berlin,Germany
+"Lima, Lima",-12.04318,-77.02824,152.0,America/Lima,Peru
+"Sao Jose dos Pinhais, Parana",-25.5302,-49.20836,882.0,America/Sao_Paulo,Brazil
+Incheon,37.45646,126.70515,43.0,Asia/Seoul,South Korea
+Xinjiang,24.46899,113.83029,131.0,Asia/Shanghai,China
+"Aba, Sichuan",32.90594,101.70625,3277.0,Asia/Shanghai,China
+"Swoyersville, Pennsylvania",41.29175,-75.87464,169.0,America/New_York,United States
+"Simi Valley, California",34.26945,-118.78148,234.0,America/Los_Angeles,United States
+"Loughborough, Leicestershire",52.76667,-1.2,49.0,Europe/London,United Kingdom
+Morden,51.39822,-0.19837,22.0,Europe/London,United Kingdom
+"Ramsey, New Jersey",41.05732,-74.14098,104.0,America/New_York,United States
+"Altona Meadows, Victoria",-37.88413,144.78368,9.0,Australia/Melbourne,Australia
+"Sand Springs, Oklahoma",36.13981,-96.10889,206.0,America/Chicago,United States
+"Tsuyama, Okayama",35.05215,133.99886,97.0,Asia/Tokyo,Japan
+"Harbin, Heilongjiang",45.75,126.65,140.0,Asia/Shanghai,China
+"Tacheng, Xinjiang",46.74535,82.95847,546.0,Asia/Urumqi,China
+"Mito, Ibaraki",36.35,140.45,28.0,Asia/Tokyo,Japan
+Hosteradice,48.95006,16.25931,215.0,Europe/Prague,Czechia
+"Santa Helena, Maranhao",-2.23111,-45.3,12.0,America/Fortaleza,Brazil
+Glasgow,55.86515,-4.25763,40.0,Europe/London,United Kingdom
+"Playa del Carmen, Quintana Roo",20.6274,-87.07987,9.0,America/Cancun,Mexico
+"Luanda, Luanda",-8.83682,13.23432,73.0,Africa/Luanda,Angola
+"Anapolis, Goias",-16.32667,-48.95278,1003.0,America/Sao_Paulo,Brazil
+"Culver City, California",34.02112,-118.39647,29.0,America/Los_Angeles,United States
+"Whitman, Massachusetts",42.08066,-70.9356,36.0,America/New_York,United States
+"Gilbert, Arizona",33.35283,-111.78903,377.0,America/Phoenix,United States
+"Pikeville, Kentucky",37.47927,-82.51876,207.0,America/New_York,United States
+"Pembroke, Massachusetts",42.07149,-70.80921,25.0,America/New_York,United States
+"Media, Pennsylvania",39.91678,-75.38769,87.0,America/New_York,United States
+"Iowa City, Iowa",41.66113,-91.53017,204.0,America/Chicago,United States
+"Wenonah, New Jersey",39.79456,-75.14879,22.0,America/New_York,United States
+"Glendale, California",34.14251,-118.25508,159.0,America/Los_Angeles,United States
+"Gijon, Asturias",43.53573,-5.66152,22.0,Europe/Madrid,Spain
+"Buffalo, New York",42.88645,-78.87837,183.0,America/New_York,United States
+"Hollis, New Hampshire",42.74314,-71.59174,123.0,America/New_York,United States
+"Peculiar, Missouri",38.71918,-94.45856,302.0,America/Chicago,United States
+Laguna,13.40882,122.56155,201.0,Asia/Manila,Philippines
+"Puyallup, Washington",47.18538,-122.2929,14.0,America/Los_Angeles,United States
+"Hackettstown, New Jersey",40.85399,-74.82906,174.0,America/New_York,United States
+"Paranaque, Paranaque",14.48156,121.01749,22.0,Asia/Manila,Philippines
+"Morganton, North Carolina",35.74541,-81.68482,352.0,America/New_York,United States
+"Lakeville, Ohio",40.65617,-82.1271,293.0,America/New_York,United States
+"Waukee, Iowa",41.61166,-93.88523,314.0,America/Chicago,United States
+"Brighton, Sussex",50.82838,-0.13947,29.0,Europe/London,United Kingdom
+"Paranagua, Parana",-25.51626,-48.52537,12.0,America/Sao_Paulo,Brazil
+"Wisbech, Cambridgeshire",52.66622,0.15938,6.0,Europe/London,United Kingdom
+"Halifax, Nova Scotia",44.64269,-63.57688,60.0,America/Halifax,Canada
+"Garden Grove, California",33.77391,-117.94145,27.0,America/Los_Angeles,United States
+"Oslo, Oslo",59.91273,10.74609,26.0,Europe/Oslo,Norway
+"San Luis Obsipo, California",38.3004,-76.50745,30.0,America/New_York,United States
+"Nashville, Tennessee",36.16589,-86.78444,170.0,America/Chicago,United States
+"Floydada, Texas",33.98452,-101.33766,970.0,America/Chicago,United States
+"Fort Worth, Texas",32.72541,-97.32085,199.0,America/Chicago,United States
+"Jefferson, Iowa",42.01526,-94.37747,325.0,America/Chicago,United States
+"Duque de Caxias, Rio de Janeiro",-22.78556,-43.31167,15.0,America/Sao_Paulo,Brazil
+"Norco, California",33.93113,-117.54866,195.0,America/Los_Angeles,United States
+"Greenwood, Indiana",39.61366,-86.10665,245.0,America/Indiana/Indianapolis,United States
+"Belford Roxo, Rio de Janeiro",-22.76417,-43.39944,22.0,America/Sao_Paulo,Brazil
+"Ada, Oklahoma",34.77453,-96.67834,308.0,America/Chicago,United States
+"Encinitas, California",33.03699,-117.29198,25.0,America/Los_Angeles,United States
+"Adams, Massachusetts",42.62425,-73.1176,242.0,America/New_York,United States
+Chalan Pago,,,,,
+"Tamuning, Guam",36.902,-89.8237,97.0,America/Chicago,United States
+"Victoriaville, Quebec",46.05007,-71.96579,131.0,America/Toronto,Canada
+"Plainview, Texas",34.18479,-101.70684,1025.0,America/Chicago,United States
+"Quebec City, Quebec",46.81228,-71.21454,54.0,America/Toronto,Canada
+"Johnson City, Tennessee",36.31344,-82.35347,498.0,America/New_York,United States
+"Valdosta, Georgia",30.83334,-83.28032,67.0,America/New_York,United States
+"Marlton, New Jersey",39.89122,-74.92183,31.0,America/New_York,United States
+"Uijeongbu, Gyeonggi",37.7415,127.0474,50.0,Asia/Seoul,South Korea
+"Pomorie, Burgas",42.56326,27.62986,6.0,Europe/Sofia,Bulgaria
+"Corby, Northamptonshire",52.49637,-0.68939,114.0,Europe/London,United Kingdom
+"Nilopolis, Rio de Janeiro",-22.8075,-43.41389,27.0,America/Sao_Paulo,Brazil
+"Milford, Massachusetts",42.13982,-71.51617,79.0,America/New_York,United States
+"Flint, Michigan",43.01253,-83.68746,229.0,America/Detroit,United States
+"Tangara da Serra, Mato Gross",-14.61944,-57.48583,392.0,America/Cuiaba,Brazil
+"Alto Santo, Ceara",-5.52083,-38.27167,79.0,America/Fortaleza,Brazil
+"Cicero, Illinois",41.84559,-87.75394,184.0,America/Chicago,United States
+"Santa Cruz de La Sierra, Santa Cruz",-17.78629,-63.18117,433.0,America/La_Paz,Bolivia
+"Moyobamba, San Martin",-6.03441,-76.97423,741.0,America/Lima,Peru
+"Tlaltenango, Zacatecas",21.78129,-103.30436,1674.0,America/Mexico_City,Mexico
+"Bromma, Stockholm",59.34,17.94,11.0,Europe/Stockholm,Sweden
+Panama City,8.9936,-79.51973,17.0,America/Panama,Panama
+Donegal,54.65378,-8.11134,9.0,Europe/Dublin,Ireland
+"Lubbock, Texas",33.57786,-101.85517,976.0,America/Chicago,United States
+"Broken Arrow, Oklahoma",36.0526,-95.79082,230.0,America/Chicago,United States
+"Connellsville, Pennsylvania",40.01785,-79.58948,289.0,America/New_York,United States
+"Rockland, Massachusetts",42.13066,-70.91616,49.0,America/New_York,United States
+"Medford, Oregon",42.32652,-122.87559,421.0,America/Los_Angeles,United States
+"Mansfield, Ohio",40.75839,-82.51545,379.0,America/New_York,United States
+"Kauai, Hawaii",22.04942,-159.53099,615.0,Pacific/Honolulu,United States
+"Tallahassee, Florida",30.43826,-84.28073,62.0,America/New_York,United States
+"Lindenwood, Missouri",38.59672,-90.309,143.0,America/Chicago,United States
+"Lake Station, Indiana",41.57504,-87.23892,189.0,America/Chicago,United States
+"East Liverpool, Ohio",40.61868,-80.57729,234.0,America/New_York,United States
+"Harvey, Louisiana",29.90354,-90.07729,1.0,America/Chicago,United States
+"Hakha, Chin",22.64452,93.61076,1799.0,Asia/Yangon,Myanmar
+"Jackson, Mississippi",32.29876,-90.18481,85.0,America/Chicago,United States
+Lubumbashi,,,,,
+"Beaverton, Oregon",45.48706,-122.80371,58.0,America/Los_Angeles,United States
+"Las Palmas, Canary Islands",28.10178,-15.41573,122.0,Atlantic/Canary,Spain
+Bogota,4.60971,-74.08175,2582.0,America/Bogota,Colombia
+"Yakima, Washington",46.60207,-120.5059,326.0,America/Los_Angeles,United States
+"Bloomington, Indiana",39.16533,-86.52639,235.0,America/Indiana/Indianapolis,United States
+"Gatineau, Quebec",45.47723,-75.70164,53.0,America/Toronto,Canada
+"Lexington, Kentucky",37.98869,-84.47772,295.0,America/New_York,United States
+Avondale,-36.88333,174.7,41.0,Pacific/Auckland,New Zealand
+"Cacador, Santa Catarina",-26.77528,-51.015,916.0,America/Sao_Paulo,Brazil
+"Fairbanks, Alaska",64.83778,-147.71638,136.0,America/Anchorage,United States
+"Nampa, Idaho",43.54072,-116.56346,767.0,America/Boise,United States
+"Safford, Arizona",32.83395,-109.70758,889.0,America/Phoenix,United States
+Nebraska,40.67667,-95.85917,322.0,America/Chicago,United States
+"Pacific, Missouri",38.482,-90.74152,142.0,America/Chicago,United States
+"Newport Beach, California",33.61891,-117.92895,3.0,America/Los_Angeles,United States
+"Orange, California",33.78779,-117.85311,58.0,America/Los_Angeles,United States
+"Wheat Ridge, Colorado",39.7661,-105.07721,1664.0,America/Denver,United States
+"Spartanburg, South Carolina",34.94957,-81.93205,246.0,America/New_York,United States
+"Brisbane, New South Wales",-34.79872,149.72414,650.0,Australia/Sydney,Australia
+"Ames, Iowa",42.03471,-93.61994,287.0,America/Chicago,United States
+"Cramerton, North Carolina",35.23875,-81.07508,186.0,America/New_York,United States
+"Toyohashi, Aichi",34.76667,137.38333,12.0,Asia/Tokyo,Japan
+"Waipahu, Hawaii",21.38667,-158.00917,19.0,Pacific/Honolulu,United States
+"Kasugai, Aichi",35.24762,136.97229,30.0,Asia/Tokyo,Japan
+"Ewa Beach, Hawaii",21.31556,-158.00722,3.0,Pacific/Honolulu,United States
+"Tsushima, Nagasaki",34.33333,129.33333,649.0,Asia/Tokyo,Japan
+Hunan,25.97138,119.64571,5.0,Asia/Shanghai,China
+"Burns Lake, British Columbia",54.22972,-125.76084,724.0,America/Vancouver,Canada
+"Ahmadabad, Ardabil",32.43072,51.58661,1639.0,Asia/Tehran,Iran
+"Auchi, Edo",7.06756,6.2636,188.0,Africa/Lagos,Nigeria
+"Peoria, Arizona",33.5806,-112.23738,348.0,America/Phoenix,United States
+"Matsuyama, Ehime",33.83916,132.76575,28.0,Asia/Tokyo,Japan
+"Hefei, Anhui",31.86389,117.28083,24.0,Asia/Shanghai,China
+"Dourados, Mato Grosso do Sul",-22.22111,-54.80556,445.0,America/Campo_Grande,Brazil
+"Neptune, New Jersey",40.20011,-74.02792,9.0,America/New_York,United States
+St. Thomas,,,,,
+Olomouc,49.59552,17.25175,223.0,Europe/Prague,Czechia
+Dunedin,-45.87416,170.50362,21.0,Pacific/Auckland,New Zealand
+"Fukuyama, Hiroshima",34.48333,133.36667,7.0,Asia/Tokyo,Japan
+Kagoshima,31.56667,130.55,6.0,Asia/Tokyo,Japan
+"Middletown, Ohio",39.51506,-84.39828,200.0,America/New_York,United States
+"Bauru, Sao Paulo",-22.31472,-49.06056,530.0,America/Sao_Paulo,Brazil
+"Hachioji, Tokyo",35.65583,139.32388,127.0,Asia/Tokyo,Japan
+"Kagoshima, Kagoshima",31.56667,130.55,6.0,Asia/Tokyo,Japan
+"Ichikawa, Chiba",35.73413,139.9065,9.0,Asia/Tokyo,Japan
+"Katagami, Akita",39.87869,139.99767,10.0,Asia/Tokyo,Japan
+Niigata,37.92259,139.04124,1.0,Asia/Tokyo,Japan
+"Yoichi, Hokkaido",43.20389,140.77028,2.0,Asia/Tokyo,Japan
+"Chigasaki, Kanagawa",35.33638,139.40434,6.0,Asia/Tokyo,Japan
+"Oiso, Kanagawa",35.31558,139.31625,71.0,Asia/Tokyo,Japan
+"Katsushika, Tokyo",35.73333,139.85,1.0,Asia/Tokyo,Japan
+"Poughkeepsie, New York",41.70037,-73.92097,62.0,America/New_York,United States
+"Addison, Illinois",41.9317,-87.98896,210.0,America/Chicago,United States
+"Amherst, Massachusettes",42.97839,-78.79976,182.0,America/New_York,United States
+"Tangshan, Hebei",39.64381,118.18319,7.0,Asia/Shanghai,China
+"Maui, Hawaii",20.77024,-156.26816,1619.0,Pacific/Honolulu,United States
+"Kadoma, Osaka",34.7381,135.57442,8.0,Asia/Tokyo,Japan
+"Westwood, Massachusetts",42.21399,-71.2245,73.0,America/New_York,United States
+"East Peoria, Illinois",40.66615,-89.5801,140.0,America/Chicago,United States
+"Longview, Texas",32.5007,-94.74049,113.0,America/Chicago,United States
+"Rio Preto da Eva, Amazonas",-2.69795,-59.70172,39.0,America/Manaus,Brazil
+"Columbia, Missouri",38.95171,-92.33407,215.0,America/Chicago,United States
+"Columbus, Georgia",32.46098,-84.98771,82.0,America/New_York,United States
+Dortmund,51.51494,7.466,96.0,Europe/Berlin,Germany
+"Pittsburgh, Pennsylvania",40.44062,-79.99589,233.0,America/New_York,United States
+Dubai,25.07725,55.30927,24.0,Asia/Dubai,United Arab Emirates
+"Osaka, Osaka",34.69379,135.50107,4.0,Asia/Tokyo,Japan
+"Hinoba-an, Negros Occidental",13.40882,122.56155,201.0,Asia/Manila,Philippines
+Uttar Pradesh,22.0,79.0,686.0,Asia/Kolkata,India
+"Laranjal do Jari, Amapa",-0.826,-52.506,79.0,America/Belem,Brazil
+"Tsu, Mie",34.73333,136.51666,1.0,Asia/Tokyo,Japan
+"Kobe, Hyogo",34.6913,135.183,35.0,Asia/Tokyo,Japan
+Buriram,14.99433,103.10392,158.0,Asia/Bangkok,Thailand
+"Abiko, Chiba",35.86667,140.01666,10.0,Asia/Tokyo,Japan
+"Yokohama, Kanagawa",35.43333,139.65,21.0,Asia/Tokyo,Japan
+Nice,43.70313,7.26608,25.0,Europe/Paris,France
+Orneta,54.11483,20.13328,59.0,Europe/Warsaw,Poland
+"Yamaguchi, Yamaguchi",34.18333,131.46667,157.0,Asia/Tokyo,Japan
+"Denham Springs, Louisiana",30.4874,-90.95753,13.0,America/Chicago,United States
+"Point Pleasant, New Jersey",40.08317,-74.06819,6.0,America/New_York,United States
+"Okaya, Nagano",36.05659,138.0451,773.0,Asia/Tokyo,Japan
+"Gloucester, Massachusetts",42.61405,-70.66313,16.0,America/New_York,United States
+"Huntsville, Ontario",60.10867,-113.64258,292.0,,Canada
+"Dubbo, New South Wales",-32.24295,148.60484,264.0,Australia/Sydney,Australia
+"Takasaki, Gunma",36.33333,139.01666,93.0,Asia/Tokyo,Japan
+"Jeonju, North Jeolla Province",35.82194,127.14889,44.0,Asia/Seoul,South Korea
+"Davenport, Iowa",41.52364,-90.57764,180.0,America/Chicago,United States
+"Qingdao, Shandong",36.06488,120.38042,16.0,Asia/Shanghai,China
+"Port Moody, British Columbia",49.28124,-122.82457,44.0,America/Vancouver,Canada
+"Sunrise, Florida",26.13397,-80.1131,1.0,America/New_York,United States
+"La Plata, Buenos Aires",-34.92126,-57.95442,27.0,America/Argentina/Buenos_Aires,Argentina
+"Madera, California",36.96134,-120.06072,83.0,America/Los_Angeles,United States
+"Janesville, Wisconsin",42.68279,-89.01872,255.0,America/Chicago,United States
+"Ubatuba, Sao Paulo",-23.43389,-45.07111,6.0,America/Sao_Paulo,Brazil
+Hudderfield,,,,,
+"Linton, North Dakota",46.26666,-100.23289,523.0,America/Chicago,United States
+"Erdington, West Midlands",52.53333,-1.81667,106.0,Europe/London,United Kingdom
+"Santo Andre, Santa Catarina",-23.66389,-46.53833,801.0,America/Sao_Paulo,Brazil
+Managua,12.13282,-86.2504,108.0,America/Managua,Nicaragua
+Stockport,53.40979,-2.15761,59.0,Europe/London,United Kingdom
+"Pleasant Hill, California",37.94798,-122.0608,16.0,America/Los_Angeles,United States
+"Oceanside, New York",40.63871,-73.64013,3.0,America/New_York,United States
+"Jarinu, Sao Paulo",-23.10139,-46.72833,793.0,America/Sao_Paulo,Brazil
+"Turlock, California",37.49466,-120.84659,31.0,America/Los_Angeles,United States
+Inner Mongolia,35.0,105.0,1982.0,,China
+Tashkent,41.26465,69.21627,424.0,Asia/Tashkent,Uzbekistan
+"Malmo, Scania",55.60587,13.00073,10.0,Europe/Stockholm,Sweden
+"Hohhot, Inner Mongolia",40.81056,111.65222,1051.0,Asia/Shanghai,China
+"Olympia, Washington",47.04491,-122.90169,29.0,America/Los_Angeles,United States
+"Araraquara, Sao Paulo",-21.79444,-48.17556,677.0,America/Sao_Paulo,Brazil
+"Eyota, Minnesota",43.9883,-92.2285,378.0,America/Chicago,United States
+Dushanbe,38.53575,68.77905,767.0,Asia/Dushanbe,Tajikistan
+Shanxi,28.03167,110.95444,508.0,Asia/Shanghai,China
+Tottenham,51.60373,-0.06794,15.0,Europe/London,United Kingdom
+"Arcata, California",40.86652,-124.08284,7.0,America/Los_Angeles,United States
+"Yonkers, New York",40.9304,-73.89789,25.0,America/New_York,United States
+"Fairfield, Idaho",43.34657,-114.79173,1544.0,America/Boise,United States
+"Navirai, Mato Grosso do Sul",-23.065,-54.19056,366.0,America/Campo_Grande,Brazil
+"Frisco, Texas",33.15067,-96.82361,212.0,America/Chicago,United States
+"Coari, Amazonas",-4.085,-63.14139,42.0,America/Manaus,Brazil
+Pribram,49.68988,14.01043,510.0,Europe/Prague,Czechia
+"Ipatinga, Minas Gerais",-19.46833,-42.53667,229.0,America/Sao_Paulo,Brazil
+Nove Zamky,47.98544,18.16195,122.0,Europe/Bratislava,Slovakia
+"Sao Jose dos Campos, Sao Paulo",-23.17944,-45.88694,600.0,America/Sao_Paulo,Brazil
+"Sheridan, Colorado",44.79719,-106.95618,1141.0,America/Denver,United States
+"Little Rock, Arkansas",34.74648,-92.28959,102.0,America/Chicago,United States
+Rivera,-30.90534,-55.55076,194.0,America/Montevideo,Uruguay
+Krakow,50.06143,19.93658,219.0,Europe/Warsaw,Poland
+Gdansk,54.35227,18.64912,8.0,Europe/Warsaw,Poland
+"Barking, Essex",51.53333,0.08333,6.0,Europe/London,United Kingdom
+"North Platte, Nebraska",41.12389,-100.76542,854.0,America/Chicago,United States
+"New Hyde Park, New York",40.7351,-73.68791,32.0,America/New_York,United States
+"Forked River, New Jersey",39.83984,-74.19014,4.0,America/New_York,United States
+"Hamilton, Waikato",-37.78333,175.28333,39.0,Pacific/Auckland,New Zealand
+Aguascalientes,21.88262,-102.2843,1885.0,America/Mexico_City,Mexico
+"Utsunomiya, Tochigi",36.56667,139.88333,137.0,Asia/Tokyo,Japan
+Szczecin,53.42894,14.55302,149.0,Europe/Warsaw,Poland
+"Virginia Beach, Virginia",36.85293,-75.97799,3.0,America/New_York,United States
+"Sochi, Krasnodar Krai",43.59699,39.72477,28.0,Europe/Moscow,Russia
+"Yucaipa, California",34.03363,-117.04309,798.0,America/Los_Angeles,United States
+"Zhongshan, Guangdong",22.52306,113.37912,9.0,Asia/Shanghai,China
+"Pelotas, Rio Grande do Sul",-31.76997,-52.34101,15.0,America/Sao_Paulo,Brazil
+Bukhara,39.77026,64.43069,220.0,Asia/Samarkand,Uzbekistan
+"Nanakuli, Hawaii",21.39362,-158.1543,3.0,Pacific/Honolulu,United States
+Turku,60.45148,22.26869,22.0,Europe/Helsinki,Finland
+Gelsenkirchen,51.50508,7.09654,48.0,Europe/Berlin,Germany
+Luanda,-8.83682,13.23432,73.0,Africa/Luanda,Angola
+"Abington, Massachusetts",42.10482,-70.94532,32.0,America/New_York,United States
+"Acarau, Ceara",-2.88556,-40.12,17.0,America/Fortaleza,Brazil
+Venezia,45.75266,11.59068,225.0,Europe/Rome,Italy
+"Hoboken, New Jersey",40.74399,-74.03236,2.0,America/New_York,United States
+"Columbia, Maryland",39.24038,-76.83942,124.0,America/New_York,United States
+"Sydney, Australia",13.83333,-88.91667,694.0,America/El_Salvador,El Salvador
+"Chihuahua, Chihuahua",28.63528,-106.08889,1437.0,America/Chihuahua,Mexico
+"Ponte dell'Olio, Piacenza",44.86762,9.64433,216.0,Europe/Rome,Italy
+"Doncaster, South Yorkshire",,,,,
+"Tubarao, Santa Catarina",-28.46667,-49.00694,7.0,America/Sao_Paulo,Brazil
+"Pitangueiras, Sao Paulo",-21.00944,-48.22167,509.0,America/Sao_Paulo,Brazil
+"Itapemirim, Espirito Santo",-21.01111,-40.83389,9.0,America/Sao_Paulo,Brazil
+Cordoba,-31.40648,-64.18853,378.0,America/Argentina/Cordoba,Argentina
+Tychy,50.13717,18.96641,259.0,Europe/Warsaw,Poland
+Uniejow,51.97428,18.79308,116.0,Europe/Warsaw,Poland
+Bydgoszcz,53.1235,18.00762,37.0,Europe/Warsaw,Poland
+"Sao Jose, Santa Catarina",-27.61528,-48.6275,18.0,America/Sao_Paulo,Brazil
+"Santana, Amapa",-23.49032,-46.6387,763.0,America/Sao_Paulo,Brazil
+"Tepic, Nayarit",21.50733,-104.89332,950.0,America/Mazatlan,Mexico
+"Uberlandia, Minas Gerais",-18.91861,-48.27722,867.0,America/Sao_Paulo,Brazil
+"Guarulhos, Sao Paulo",-23.46278,-46.53333,774.0,America/Sao_Paulo,Brazil
+"Ribeirao Pires, Sao Paulo",-23.71056,-46.41333,760.0,America/Sao_Paulo,Brazil
+"Santos, Sao Paulo",-23.96083,-46.33361,12.0,America/Sao_Paulo,Brazil
+Elk,52.0,20.0,110.0,Europe/Warsaw,Poland
+"Sao Joao de Meriti, Rio de Janeiro",-22.80389,-43.37222,14.0,America/Sao_Paulo,Brazil
+"Bage, Rio Grande do Sul",-31.33139,-54.10694,206.0,America/Sao_Paulo,Brazil
+Lisbon,38.72509,-9.1498,68.0,Europe/Lisbon,Portugal
+"Pavlodar, Pavlodar",52.27601,76.96881,125.0,Asia/Almaty,Kazakhstan
+"Hayward, California",37.66882,-122.0808,34.0,America/Los_Angeles,United States
+"Bridgwater, Somerset",51.12837,-3.00356,15.0,Europe/London,United Kingdom
+"Murrieta, California",33.55391,-117.21392,334.0,America/Los_Angeles,United States
+"Ottawa, Ontario",45.41117,-75.69812,71.0,America/Toronto,Canada
+"Hillsborough, Illinois",39.16128,-89.4954,193.0,America/Chicago,United States
+"South Auckland, Auckland",-36.84853,174.76349,43.0,Pacific/Auckland,New Zealand
+Nykobing Falster,56.0,10.0,50.0,Europe/Copenhagen,Denmark
+"Lindon, Utah",40.34329,-111.72076,1415.0,America/Denver,United States
+"Baguio City, Benguet",16.41639,120.59306,1493.0,Asia/Manila,Philippines
+Petrozavodsk,61.78491,34.34691,73.0,Europe/Moscow,Russia
+"Chone, Manabi",-0.6985,-80.0925,102.0,America/Guayaquil,Ecuador
+"Kalispell, Montana",48.19579,-114.31291,901.0,America/Denver,United States
+"Rosarito Beach, Baja California",16.43333,-93.79528,615.0,America/Mexico_City,Mexico
+Trnava,48.37773,17.58603,147.0,Europe/Bratislava,Slovakia
+Aarhus,56.15674,10.21076,10.0,Europe/Copenhagen,Denmark
+"Mezzocorona, Trentino",46.21159,11.12253,219.0,Europe/Rome,Italy
+Vilnohirsk,48.48416,34.01708,178.0,Europe/Kyiv,Ukraine
+"Musashimurayama, Tokyo",35.74242,139.42635,99.0,Asia/Tokyo,Japan
+"Gudalajara, Jalisco",16.43033,-91.97499,1635.0,America/Mexico_City,Mexico
+Blaenavon,51.77402,-3.08537,334.0,Europe/London,United Kingdom
+"Sakurai, Nara",34.5,135.85,108.0,Asia/Tokyo,Japan
+"Higashihiroshima, Hiroshima",34.40861,132.73682,217.0,Asia/Tokyo,Japan
+"Pindare-Mirim, Maranhao",-3.60833,-45.34333,24.0,America/Fortaleza,Brazil
+Poznan,52.40692,16.92993,69.0,Europe/Warsaw,Poland
+"Rio Branco, Acre",-9.97472,-67.81,153.0,America/Rio_Branco,Brazil
+Helsingborg,56.04673,12.69437,13.0,Europe/Stockholm,Sweden
+"Cobleskill, New York",42.67785,-74.48542,281.0,America/New_York,United States
+"Bristol, Connecticut",41.67176,-72.94927,93.0,America/New_York,United States
+"Xenia, Ohio",39.68478,-83.92965,284.0,America/New_York,United States
+"Kelowna, British Columbia",49.88307,-119.48568,350.0,America/Vancouver,Canada
+"Huntington, New York",40.86815,-73.42568,23.0,America/New_York,United States
+"Harrah, Oklahoma",35.48951,-97.16364,337.0,America/Chicago,United States
+"Loveland, Ohio",39.26895,-84.26383,181.0,America/New_York,United States
+"Hillsboro, Illinois",39.16128,-89.4954,193.0,America/Chicago,United States
+"Eagle Creek, Oregon",45.35734,-122.35898,105.0,America/Los_Angeles,United States
+"Lehighton, Pennsylvania",40.8337,-75.7138,174.0,America/New_York,United States
+"Norfolk, Virginia",36.84681,-76.28522,2.0,America/New_York,United States
+"Frederick, Maryland",39.41427,-77.41054,87.0,America/New_York,United States
+"Evanston, Illinois",42.04114,-87.69006,187.0,America/Chicago,United States
+"Ellicott City, Maryland",39.26733,-76.79831,55.0,America/New_York,United States
+"Killbuck, Ohio",40.49506,-81.98459,245.0,America/New_York,United States
+"Tambov, Tambov Oblast",52.73632,41.44102,133.0,Europe/Moscow,Russia
+Caracas,10.48801,-66.87919,887.0,America/Caracas,Venezuela
+"Greeley, Colorado",40.42331,-104.70913,1425.0,America/Denver,United States
+Six-Fours-les-Plages,43.09174,5.82465,29.0,Europe/Paris,France
+"Crowsnest Pass, Alberta",49.60422,-114.5214,1688.0,America/Edmonton,Canada
+"Coventry, West Midlands",52.40656,-1.51217,89.0,Europe/London,United Kingdom
+"Porto de Moz, Para",-1.74833,-52.23833,20.0,America/Santarem,Brazil
+"Irmo, South Carolina",34.08598,-81.18315,108.0,America/New_York,United States
+Manchester,53.48095,-2.23743,51.0,Europe/London,United Kingdom
+"High Ridge, Missouri",38.45894,-90.53651,281.0,America/Chicago,United States
+Tilburg,51.55551,5.0913,16.0,Europe/Amsterdam,Netherlands
+"Webster City, Iowa",42.46942,-93.81605,317.0,America/Chicago,United States
+"Modesto, California",37.6391,-120.99688,28.0,America/Los_Angeles,United States
+"Machala, El Oro",-3.25886,-79.95876,16.0,America/Guayaquil,Ecuador
+"Dayton, Ohio",39.75895,-84.19161,225.0,America/New_York,United States
+Michigan,41.70754,-86.89503,191.0,America/Chicago,United States
+"Tucuma, Para",-6.7475,-51.16111,302.0,America/Belem,Brazil
+"Coral Springs, Florida",26.27119,-80.2706,3.0,America/New_York,United States
+"Matamata, Waikato",-37.8106,175.76237,67.0,Pacific/Auckland,New Zealand
+Ibaraki,34.81641,135.56828,18.0,Asia/Tokyo,Japan
+"Green Brook, New Jersey",40.60431,-74.48417,97.0,America/New_York,United States
+"Tacoma, Washington",47.25288,-122.44429,74.0,America/Los_Angeles,United States
+"Davie, Florida",26.06287,-80.2331,1.0,America/New_York,United States
+"East Chicago, Indiana",41.6392,-87.45476,180.0,America/Chicago,United States
+"Cairo, New York",42.29897,-73.99847,114.0,America/New_York,United States
+"Temple Hills, Maryland",38.814,-76.94553,82.0,America/New_York,United States
+"Wigan, Greater Manchester",53.54296,-2.63706,32.0,Europe/London,United Kingdom
+"Perrysburg, Ohio",41.557,-83.62716,193.0,America/New_York,United States
+"Paterson, New Jersey",40.91677,-74.17181,26.0,America/New_York,United States
+Bulawayo,-20.15,28.58333,1348.0,Africa/Harare,Zimbabwe
+"Altamonte Springs, Florida",28.66111,-81.36562,26.0,America/New_York,United States
+"Waterloo, Iowa",42.49276,-92.34296,261.0,America/Chicago,United States
+"Melrose Park, Illinois",41.90059,-87.85673,193.0,America/Chicago,United States
+"Portland, Maine",43.65737,-70.2589,19.0,America/New_York,United States
+"Leigh, Wigan",53.49642,-2.51973,32.0,Europe/London,United Kingdom
+Ishikawa,26.42333,127.82139,11.0,Asia/Tokyo,Japan
+"Vladikavkaz, North Ossetia",43.04101,44.66986,681.0,Europe/Moscow,Russia
+"Newton, Kansas",38.04668,-97.34504,441.0,America/Chicago,United States
+Podgorica,42.44124,19.26309,49.0,Europe/Podgorica,Montenegro
+Hebei,39.81521,115.93068,133.0,Asia/Shanghai,China
+"Fuyang, Anhui",32.9,115.81667,31.0,Asia/Shanghai,China
+Shimane,35.78334,139.79727,5.0,Asia/Tokyo,Japan
+"Lincoln, Nebraska",40.8,-96.66696,367.0,America/Chicago,United States
+Riga,56.946,24.10589,6.0,Europe/Riga,Latvia
+"Saskatoon, Saskatchewan",52.13238,-106.66892,484.0,America/Regina,Canada
+"Sudbury, Ontario",60.10867,-113.64258,292.0,,Canada
+"Fall River, Massachusetts",41.70149,-71.15505,33.0,America/New_York,United States
+"Isahaya, Nagasaki",32.84111,130.04306,104.0,Asia/Tokyo,Japan
+Klaipeda,55.7068,21.13912,6.0,Europe/Vilnius,Lithuania
+Auchi,7.06756,6.2636,188.0,Africa/Lagos,Nigeria
+"Cancun, Quintana Roo",21.17429,-86.84656,11.0,America/Cancun,Mexico
+"Leon, Guanajuato",21.12908,-101.67374,1806.0,America/Mexico_City,Mexico
+Poissy,48.92902,2.04952,31.0,Europe/Paris,France
+"Spring Valley, New York",41.11315,-74.04375,135.0,America/New_York,United States
+"Azumino, Nagano",36.28815,137.88705,568.0,Asia/Tokyo,Japan
+Sfax,34.74056,10.76028,8.0,Africa/Tunis,Tunisia
+"Sunzha, Ingushetia",43.32059,45.04903,326.0,Europe/Moscow,Russia
+"Guwahati, Assam",26.1844,91.7458,59.0,Asia/Kolkata,India
+"Arpoador, Rio de Janeiro",-22.7357,-41.96207,1.0,America/Sao_Paulo,Brazil
+"Buynaksk, Dagestan",42.81802,47.12684,447.0,Europe/Moscow,Russia
+Osh,40.52828,72.7985,988.0,Asia/Bishkek,Kyrgyzstan
+"Hazel Park, Michigan",42.46254,-83.10409,192.0,America/Detroit,United States
+Bristol,51.45523,-2.59665,21.0,Europe/London,United Kingdom
+Ovorkhangai,46.0,105.0,1387.0,,Mongolia
+"Timoteo, Minas Gerais",-19.58106,-42.64953,356.0,America/Sao_Paulo,Brazil
+Tel Aviv,32.08088,34.78057,15.0,Asia/Jerusalem,Israel
+"Cedar Falls, Iowa",42.52776,-92.44547,268.0,America/Chicago,United States
+"Gresham, Oregon",45.49818,-122.43148,97.0,America/Los_Angeles,United States
+"Rock Island, Illinois",41.50948,-90.57875,171.0,America/Chicago,United States
+"Morganfield, Kentucky",37.68338,-87.91669,133.0,America/Chicago,United States
+"Arrecifes, Buenos Aires",-34.06306,-60.10261,28.0,America/Argentina/Buenos_Aires,Argentina
+Doncaster,53.52285,-1.13116,19.0,Europe/London,United Kingdom
+"Lukachukai, Arizona",36.41695,-109.22871,1993.0,America/Denver,United States
+"Botkyrka, Stockholm",59.2,17.81667,36.0,Europe/Stockholm,Sweden
+"Oswego, Illinois",41.68281,-88.35146,195.0,America/Chicago,United States
+"Englewood, New Jersey",40.89288,-73.97264,14.0,America/New_York,United States
+"Windham, New Hampshire",42.80064,-71.30423,60.0,America/New_York,United States
+Cologne,50.93333,6.95,58.0,Europe/Berlin,Germany
+"Plymouth, Wisconsin",43.74861,-87.97704,257.0,America/Chicago,United States
+"Chico, California",39.72849,-121.83748,60.0,America/Los_Angeles,United States
+"Nottingham, Nottinghamshire",52.9536,-1.15047,46.0,Europe/London,United Kingdom
+"Staten Island, New York",40.56233,-74.13986,21.0,America/New_York,United States
+"Blumenort, Manitoba",49.60439,-96.68951,257.0,America/Winnipeg,Canada
+"Niskayuna, New York",42.7798,-73.84568,89.0,America/New_York,United States
+"East Meadow, New York",40.71399,-73.55902,22.0,America/New_York,United States
+Brasov,45.64861,25.60613,573.0,Europe/Bucharest,Romania
+Donetsk,48.023,37.80224,223.0,Europe/Kyiv,Ukraine
+"Magdeburg, Saxony-Anhalt",52.13129,11.63189,47.0,Europe/Berlin,Germany
+"Cape Coral, Florida",26.56285,-81.94953,1.0,America/New_York,United States
+"Governador Valadares, Minas Gerais",-18.85111,-41.94944,169.0,America/Sao_Paulo,Brazil
+Sarrebourg,48.73558,7.0572,264.0,Europe/Paris,France
+Epinay-sur-Seine,48.9535,2.31514,37.0,Europe/Paris,France
+"Kawasaki, Kanagawa",35.52056,139.71722,1.0,Asia/Tokyo,Japan
+"Bushmills, Antrim",55.20493,-6.51918,12.0,Europe/London,United Kingdom
+Heilongjiang,28.35068,103.97054,1001.0,Asia/Shanghai,China
+"Bayanbulag, Bayankhongor",46.80981,98.09006,2256.0,Asia/Ulaanbaatar,Mongolia
+Merthyr Tydfil,51.74794,-3.37779,186.0,Europe/London,United Kingdom
+"Waukesha, Wisconsin",43.01168,-88.23148,248.0,America/Chicago,United States
+Nizhny Novgorod,56.32867,44.00205,141.0,Europe/Moscow,Russia
+"Hove, East Sussex",50.83088,-0.1672,24.0,Europe/London,United Kingdom
+"Boucherville, Quebec",45.59104,-73.43605,16.0,America/Toronto,Canada
+Nancy,48.68439,6.18496,212.0,Europe/Paris,France
+"Telavi, Kakheti",41.91957,45.47002,699.0,Asia/Tbilisi,Georgia
+"Bayantsagaan, Bayankhongor",48.73167,100.76,1583.0,Asia/Ulaanbaatar,Mongolia
+"Knoxville, Tennessee",35.96064,-83.92074,276.0,America/New_York,United States
+"Sparks, Nevada",39.53491,-119.75269,1345.0,America/Los_Angeles,United States
+"Helsingborg, Skane",56.04673,12.69437,13.0,Europe/Stockholm,Sweden
+"Hartford, Connecticut",41.76371,-72.68509,18.0,America/New_York,United States
+Freiburg,47.9959,7.85222,278.0,Europe/Berlin,Germany
+"Bristol, Pennsylvania",40.10067,-74.85183,6.0,America/New_York,United States
+"Reinholds, Pennsylvania",40.26676,-76.1155,141.0,America/New_York,United States
+"Angola, New York",42.63839,-79.02782,209.0,America/New_York,United States
+"West Bridgewater, Massachusetts",42.01899,-71.00782,19.0,America/New_York,United States
+Coatbridge,55.86216,-4.02469,88.0,Europe/London,United Kingdom
+"Suwanee, Georgia",34.05149,-84.0713,305.0,America/New_York,United States
+Nottingham,52.9536,-1.15047,46.0,Europe/London,United Kingdom
+"Boys Ranch, Texas",35.53144,-102.25408,971.0,America/Chicago,United States
+Walsall,52.58528,-1.98396,129.0,Europe/London,United Kingdom
+"Lucknow, Uttar Pradesh",26.83928,80.92313,126.0,Asia/Kolkata,India
+"Reno, Nevada",39.52963,-119.8138,1373.0,America/Los_Angeles,United States
+"Manchester, New Hampshire",42.99564,-71.45479,80.0,America/New_York,United States
+"Bay Shore, New York",40.7251,-73.24539,5.0,America/New_York,United States
+"San Lorenzo, California",38.3004,-76.50745,30.0,America/New_York,United States
+Chiang Mai,18.79038,98.98468,313.0,Asia/Bangkok,Thailand
+"Balingen, Baden-Wurttemberg",48.27525,8.85464,512.0,Europe/Berlin,Germany
+"Yekaterinburg, Omsk",56.85733,60.61529,278.0,Asia/Yekaterinburg,Russia
+"Portsmouth, Hampshire",50.79899,-1.09125,6.0,Europe/London,United Kingdom
+"Little Ferry, New Jersey",40.85288,-74.04208,3.0,America/New_York,United States
+"Canton, Illinois",40.55809,-90.03512,197.0,America/Chicago,United States
+"Hesperia, California",34.42639,-117.30088,971.0,America/Los_Angeles,United States
+"Maracaibo, Zulia",10.64232,-71.61089,9999.0,America/Caracas,Venezuela
+"Zhengzhou, Henan",34.75778,113.64861,104.0,Asia/Shanghai,China
+Gdynia,54.51889,18.53188,14.0,Europe/Warsaw,Poland
+"Muriae, Minas Gerais",-21.13056,-42.36639,212.0,America/Sao_Paulo,Brazil
+"Sao Geraldo do Araguaia, Para",-6.40056,-48.555,131.0,America/Belem,Brazil
+"Jacksonville Beach, Florida",30.29469,-81.39314,3.0,America/New_York,United States
+Chandigarh,30.73629,76.7884,351.0,Asia/Kolkata,India
+"Muzaffarnagar, Uttar Pradesh",29.47091,77.70332,251.0,Asia/Kolkata,India
+"Wailua, Hawaii",22.07244,-159.37677,114.0,Pacific/Honolulu,United States
+"Guangnan, Yunnan",24.9391,102.91432,2005.0,Asia/Shanghai,China
+"Xilingol, Inner Mongolia",35.0,105.0,1982.0,,China
+"Bien Hoa, Dong Nai",10.94469,106.82432,6.0,Asia/Ho_Chi_Minh,Vietnam
+"Bajhang, Sudurpashchim Province",29.52666,81.09821,2103.0,Asia/Kathmandu,Nepal
+"Ilha Solteira, Sao Paulo",-20.43278,-51.3425,372.0,America/Sao_Paulo,Brazil
+Korday,43.03882,74.71287,624.0,Asia/Almaty,Kazakhstan
+"Whippany, New Jersey",40.82454,-74.4171,71.0,America/New_York,United States
+"Jakarta, Java",-6.21462,106.84513,16.0,Asia/Jakarta,Indonesia
+Kashkadarya,41.66667,63.83333,193.0,,Uzbekistan
+"Muscatine, Iowa",41.42447,-91.04321,177.0,America/Chicago,United States
+"Bronx, New York",40.93815,-73.83208,28.0,America/New_York,United States
+Spanish Town,17.99107,-76.95742,31.0,America/Jamaica,Jamaica
+"Taunton, Massachusetts",41.9001,-71.08977,5.0,America/New_York,United States
+"Niagara Falls, New York",43.0945,-79.05671,187.0,America/New_York,United States
+"Miguel Calmon, Bahia",-11.42889,-40.595,543.0,America/Bahia,Brazil
+"Auburn, Washington",47.30732,-122.22845,25.0,America/Los_Angeles,United States
+"Kashiwa, Chiba",35.86224,139.97733,24.0,Asia/Tokyo,Japan
+"Breda, North Brabant",51.58656,4.77596,9.0,Europe/Amsterdam,Netherlands
+Oss,51.765,5.51806,8.0,Europe/Amsterdam,Netherlands
+"Chichibu, Saitama",35.99028,139.07639,236.0,Asia/Tokyo,Japan
+"Fontana, California",34.09223,-117.43505,377.0,America/Los_Angeles,United States
+Tehran,35.69439,51.42151,1178.0,Asia/Tehran,Iran
+Isfahan,32.65246,51.67462,1578.0,Asia/Tehran,Iran
+"Bordentown, New Jersey",40.14622,-74.71183,16.0,America/New_York,United States
+"Ludlow, Massachusetts",42.16009,-72.47592,76.0,America/New_York,United States
+"North Brunswick, New Jersey",40.454,-74.482,39.0,America/New_York,United States
+"Deerfield Beach, Florida",26.31841,-80.09977,4.0,America/New_York,United States
+"Slidell, Lousiana",30.27519,-89.78117,1.0,America/Chicago,United States
+Arklow,52.79443,-6.14958,2.0,Europe/Dublin,Ireland
+"Maroubra, New South Wales",-33.95,151.23334,24.0,Australia/Sydney,Australia
+"Marshalltown, Iowa",42.04943,-92.90798,287.0,America/Chicago,United States
+"Gastonia, North Carolina",35.26208,-81.1873,245.0,America/New_York,United States
+"Gifu, Gifu",35.42291,136.76039,14.0,Asia/Tokyo,Japan
+Saitama,35.90807,139.65657,16.0,Asia/Tokyo,Japan
+"Pontianak, West Kalimantan",-0.03194,109.325,2.0,Asia/Pontianak,Indonesia
+"Hobart, Tasmania",-42.87936,147.3294,19.0,Australia/Hobart,Australia
+"Wasilla, Alaska",61.5809,-149.4415,106.0,America/Anchorage,United States
+Santiago de Cuba,20.02287,-75.82171,33.0,America/Havana,Cuba
+Bielsko Biala,52.0,20.0,110.0,Europe/Warsaw,Poland
+"Schenectady, New York",42.81424,-73.93957,74.0,America/New_York,United States
+Nowy Sacz,49.62177,20.69705,293.0,Europe/Warsaw,Poland
+Zurich,47.36667,8.55,429.0,Europe/Zurich,Switzerland
+"Armadale, West Lothian",55.88333,-3.7,187.0,Europe/London,United Kingdom
+"Bamberg, South Carolina",33.2971,-81.03482,51.0,America/New_York,United States
+"Corpus Christi, Texas",27.80058,-97.39638,2.0,America/Chicago,United States
+"Adrianopolis, Parana",-24.65722,-48.99111,168.0,America/Sao_Paulo,Brazil
+Paranaque,14.48156,121.01749,22.0,Asia/Manila,Philippines
+"Batumi, Adjara",41.64077,41.6306,8.0,Asia/Tbilisi,Georgia
+"Vanadzor, Lori",40.8074,44.49704,1368.0,Asia/Yerevan,Armenia
+"Ontario, California",34.06334,-117.65089,306.0,America/Los_Angeles,United States
+"Stoughton, Wisconsin",42.91695,-89.21789,267.0,America/Chicago,United States
+"Pekanbaru, Riau",0.51667,101.44167,19.0,Asia/Jakarta,Indonesia
+"Coatzacoalcos, Veracruz",18.14905,-94.4447,11.0,America/Mexico_City,Mexico
+"Murfreesboro, Tennessee",35.84562,-86.39027,186.0,America/Chicago,United States
+"Quixada, Ceara",-4.97139,-39.01528,186.0,America/Fortaleza,Brazil
+"Lathrop, California",37.8227,-121.27661,7.0,America/Los_Angeles,United States
+Tamuning,,,,,
+"Stoke-on-Trent, Staffordshire",53.00415,-2.18538,114.0,Europe/London,United Kingdom
+"Dores do Indaia, Minas Gerais",-19.46333,-45.60167,723.0,America/Sao_Paulo,Brazil
+"Dasmarinas, Cavite",14.32944,120.93667,82.0,Asia/Manila,Philippines
+"Fussa, Tokyo",35.73667,139.32361,117.0,Asia/Tokyo,Japan
+"Falls Church, Virginia",38.88233,-77.17109,100.0,America/New_York,United States
+"Victoria, British Columbia",48.4359,-123.35155,18.0,America/Vancouver,Canada
+"Lindenhurst, New York",40.68677,-73.37345,9.0,America/New_York,United States
+"Roseville, California",38.75212,-121.28801,50.0,America/Los_Angeles,United States
+"Cuyahoga Falls, Ohio",41.13394,-81.48456,312.0,America/New_York,United States
+"Moorehead, Minnesota",41.22755,-82.75741,234.0,America/New_York,United States
+"Beaumont, Texas",30.08605,-94.10185,5.0,America/Chicago,United States
+"Danville, Illinois",40.12448,-87.63002,183.0,America/Chicago,United States
+"Tsuruoka, Yamagata",38.72167,139.82167,13.0,Asia/Tokyo,Japan
+"Kumagaya, Saitama",36.13497,139.39005,32.0,Asia/Tokyo,Japan
+"Karatsu, Saga",33.4425,129.96973,7.0,Asia/Tokyo,Japan
+"East Brunswick, New Jersey",40.42788,-74.41598,40.0,America/New_York,United States
+"Medellin, Antioquia",6.245,-75.57151,1405.0,America/Bogota,Colombia
+"Katy, Texas",29.78579,-95.8244,42.0,America/Chicago,United States
+"Urussanga, Santa Catarina",-28.51778,-49.32083,49.0,America/Sao_Paulo,Brazil
+Aubervilliers,48.91667,2.38333,38.0,Europe/Paris,France
+Cracow,52.0,20.0,110.0,Europe/Warsaw,Poland
+"Waterford, Wisconsin",42.76307,-88.21426,236.0,America/Chicago,United States
+"Athens, Alabama",34.80243,-86.97219,220.0,America/Chicago,United States
+"Eagle River, Alaska",61.32139,-149.56778,98.0,America/Anchorage,United States
+Watford,51.65531,-0.39602,77.0,Europe/London,United Kingdom
+"Avignon, Provence-Alpes-Cote d'Azur",43.94834,4.80892,31.0,Europe/Paris,France
+"Nerima, Tokyo",35.7404,139.6524,42.0,Asia/Tokyo,Japan
+"Gaffney, South Carolina",35.07179,-81.64982,239.0,America/New_York,United States
+"Sado, Niigata",38.02496,138.35931,27.0,Asia/Tokyo,Japan
+Utah,39.06089,-84.89801,145.0,America/New_York,United States
+"Shakopee, Minnesota",44.79802,-93.5269,229.0,America/Chicago,United States
+"Boise, Idaho",43.6135,-116.20345,823.0,America/Boise,United States
+"Elk Grove, California",38.4088,-121.37162,14.0,America/Los_Angeles,United States
+New York,40.71427,-74.00597,10.0,America/New_York,United States
+"Akron, Ohio",41.08144,-81.51901,291.0,America/New_York,United States
+"Providence, Rhode Island",41.82399,-71.41283,2.0,America/New_York,United States
+"Bluefield, Virginia",37.26984,-81.22232,784.0,America/New_York,United States
+"Anaheim, California",33.83529,-117.9145,48.0,America/Los_Angeles,United States
+"Pensacola, Florida",30.42131,-87.21691,31.0,America/Chicago,United States
+"Zuidlaren, Drenthe",53.09417,6.68194,12.0,Europe/Amsterdam,Netherlands
+"Rostov-on-Don, Rostov Oblast",47.21997,39.70769,54.0,Europe/Moscow,Russia
+Aktobe,50.27969,57.20718,210.0,Asia/Aqtobe,Kazakhstan
+"Burlington, Ontario",43.38621,-79.83713,165.0,America/Toronto,Canada
+"Apache Junction, Arizona",33.41505,-111.54958,525.0,America/Phoenix,United States
+"Fort Myers, Florida",26.62168,-81.84059,3.0,America/New_York,United States
+Manama,26.22787,50.58565,12.0,Asia/Bahrain,Bahrain
+"Woodbury, New York",41.36454,-74.10598,147.0,America/New_York,United States
+"Norman, Oklahoma",35.22257,-97.43948,357.0,America/Chicago,United States
+"Bixby, Oklahoma",35.94204,-95.88332,183.0,America/Chicago,United States
+"Irvine, California",33.66946,-117.82311,17.0,America/Los_Angeles,United States
+"Ferrum, Virginia",36.92292,-80.01337,395.0,America/New_York,United States
+"Tugun, Queensland",-28.15,153.5,5.0,Australia/Brisbane,Australia
+"Launceston, Tasmania",-41.43876,147.13467,11.0,Australia/Hobart,Australia
+Karaganda,49.80187,73.10211,545.0,Asia/Almaty,Kazakhstan
+Offenbach,50.10061,8.76647,113.0,Europe/Berlin,Germany
+"St. Albert, Alberta",53.63344,-113.63533,663.0,America/Edmonton,Canada
+"Baltimore, Maryland",39.29038,-76.61219,10.0,America/New_York,United States
+"Kanoya, Kagoshima",31.38333,130.85,23.0,Asia/Tokyo,Japan
+"Ogose, Saitama",35.95889,139.29,172.0,Asia/Tokyo,Japan
+"Nogata, Fukuoka",33.74051,130.72263,26.0,Asia/Tokyo,Japan
+"Jiangmen, Guangdong",22.58333,113.08333,11.0,Asia/Shanghai,China
+"Meguro, Tokyo",35.6322,139.70174,29.0,Asia/Tokyo,Japan
+"Brick, New Jersey",40.05928,-74.13708,7.0,America/New_York,United States
+"San Miguel de Tucuman, Tucuman",-26.81601,-65.21051,440.0,America/Argentina/Tucuman,Argentina
+Oslo,59.91273,10.74609,26.0,Europe/Oslo,Norway
+Kabul,34.52813,69.17233,1798.0,Asia/Kabul,Afghanistan
+"Camp Springs, Maryland",38.804,-76.90664,81.0,America/New_York,United States
+Veliko Tarnovo,43.08124,25.62904,207.0,Europe/Sofia,Bulgaria
+"Palm Beach, Florida",26.70562,-80.03643,2.0,America/New_York,United States
+"Novi Sad, Vojvodina",45.25167,19.83694,79.0,Europe/Belgrade,Serbia
+"Beverwijk, North Holland",52.48333,4.65694,3.0,Europe/Amsterdam,Netherlands
+"Hammond, Indiana",41.58337,-87.50004,183.0,America/Chicago,United States
+St. Gallen,47.42391,9.37477,684.0,Europe/Zurich,Switzerland
+"Simpsonville, South Carolina",34.73706,-82.25428,262.0,America/New_York,United States
+"Pompano Beach, Florida",26.23786,-80.12477,4.0,America/New_York,United States
+"Haleiwa, Hawaii",21.59284,-158.1034,1.0,Pacific/Honolulu,United States
+"Pahrump, Nevada",36.20829,-115.98391,822.0,America/Los_Angeles,United States
+"Myaree, Western Australia",-32.04,115.81761,10.0,Australia/Perth,Australia
+"Rio Rancho, New Mexico",35.23338,-106.66447,1610.0,America/Denver,United States
+"South Bend, Indiana",41.68338,-86.25001,211.0,America/Indiana/Indianapolis,United States
+"Livonia, Michigan",42.36837,-83.35271,195.0,America/Detroit,United States
+"Iles de la Madeleine, Quebec",47.39277,-61.89629,73.0,America/Halifax,Canada
+Antrim,54.7175,-6.211,33.0,Europe/London,United Kingdom
+"Kirkcaldy, Fife",56.11683,-3.15999,39.0,Europe/London,United Kingdom
+"Provo, Utah",40.23384,-111.65853,1387.0,America/Denver,United States
+"Independence, Ohio",41.36866,-81.6379,262.0,America/New_York,United States
+"Derbent, Dagestan",42.06622,48.28759,13.0,Europe/Moscow,Russia
+"Mumbai, Maharashtra",19.07283,72.88261,8.0,Asia/Kolkata,India
+"Ebina, Kanagawa",35.38121,139.39651,20.0,Asia/Tokyo,Japan
+"Angels Camp, California",38.06826,-120.53965,420.0,America/Los_Angeles,United States
+"Prole, Iowa",41.40916,-93.72716,298.0,America/Chicago,United States
+"Belton, Texas",31.05601,-97.46445,155.0,America/Chicago,United States
+"Aracatuba, Sao Paulo",-21.20889,-50.43278,392.0,America/Sao_Paulo,Brazil
+Bamenda,5.9597,10.14597,1258.0,Africa/Douala,Cameroon
+"Detroit, Michigan",42.33143,-83.04575,183.0,America/Detroit,United States
+"Jaragua do Sul, Santa Catarina",-26.48611,-49.06667,27.0,America/Sao_Paulo,Brazil
+"Samukawa, Kanagawa",35.37278,139.39166,12.0,Asia/Tokyo,Japan
+"Shinjuku, Tokyo",35.69115,139.70854,47.0,Asia/Tokyo,Japan
+"Akita, Akita",39.71667,140.11667,14.0,Asia/Tokyo,Japan
+Chiba,35.6,140.11667,5.0,Asia/Tokyo,Japan
+"Miura, Kanagawa",35.14,139.61917,8.0,Asia/Tokyo,Japan
+"Carutapera, Maranhao",-1.20736,-46.0236,29.0,America/Fortaleza,Brazil
+"Binghamton, New York",42.09869,-75.91797,264.0,America/New_York,United States
+"Bonnyville, Alberta",54.26684,-110.73505,555.0,America/Edmonton,Canada
+"Covina, California",34.09001,-117.89034,170.0,America/Los_Angeles,United States
+"Naha, Okinawa",26.213,127.67851,1.0,Asia/Tokyo,Japan
+"Suginami, Tokyo",36.2013,140.28406,25.0,Asia/Tokyo,Japan
+"Inashiki, Ibaraki",35.95633,140.32356,5.0,Asia/Tokyo,Japan
+Kanagawa,37.58333,139.91667,182.0,Asia/Tokyo,Japan
+Prague,50.08804,14.42076,202.0,Europe/Prague,Czechia
+"Fairfield, California",38.24936,-122.03997,4.0,America/Los_Angeles,United States
+"Isen, Kagoshima",27.67609,128.93723,77.0,Asia/Tokyo,Japan
+"Van Nuys, California",34.18667,-118.44897,217.0,America/Los_Angeles,United States
+Phuket,7.95793,98.34089,101.0,Asia/Bangkok,Thailand
+Masvingo,-20.06373,30.82766,1091.0,Africa/Harare,Zimbabwe
+"Indaiatuba, Sao Paulo",-23.08842,-47.2119,630.0,America/Sao_Paulo,Brazil
+"Sao Carlos, Sao Paulo",-22.0175,-47.89083,838.0,America/Sao_Paulo,Brazil
+"Santo Andre, Sao Paulo",-23.66389,-46.53833,801.0,America/Sao_Paulo,Brazil
+"Toulousse, Haute-Gauronne",46.0,2.0,543.0,Europe/Paris,France
+"Brush Creek, Arkansas",36.41675,-94.78606,290.0,America/Chicago,United States
+"Farmington, Minnesota",44.64024,-93.14355,275.0,America/Chicago,United States
+Bayamon,,,,,
+"Almeirim, Para",-1.52333,-52.58167,6.0,America/Santarem,Brazil
+"Lincolnville, Maine",44.28119,-69.00865,6.0,America/New_York,United States
+"Boyle, Alberta",54.58348,-112.81871,635.0,America/Edmonton,Canada
+"Fort Bragg, North Carolina",35.139,-79.00603,104.0,America/New_York,United States
+"Redwood, California",29.81022,-97.91139,169.0,America/Chicago,United States
+"Millville, New Jersey",39.40206,-75.03934,12.0,America/New_York,United States
+"Hyvinkaa, Uusimaa",60.63333,24.86667,113.0,Europe/Helsinki,Finland
+"Mishawaka, Indiana",41.66199,-86.15862,220.0,America/Indiana/Indianapolis,United States
+"Curwensville, Phildelphia",40.97561,-78.52502,363.0,America/New_York,United States
+"Evansville, Indiana",37.97476,-87.55585,118.0,America/Chicago,United States
+Mie,32.96667,131.58333,142.0,Asia/Tokyo,Japan
+"Salford, Lancashire",53.48771,-2.29042,44.0,Europe/London,United Kingdom
+"Kildare, County Kildare",53.15611,-6.91444,100.0,Europe/Dublin,Ireland
+"St. Albans, Vermont",44.76196,-73.0611,225.0,America/New_York,United States
+"Elgin, Minnesota",44.13024,-92.25156,326.0,America/Chicago,United States
+Southampton,50.90395,-1.40428,19.0,Europe/London,United Kingdom
+Cuzco,-15.17738,-71.7602,4299.0,America/Lima,Peru
+"Oxnard, California",34.1975,-119.17705,16.0,America/Los_Angeles,United States
+"Radford, Virginia",37.13179,-80.57645,567.0,America/New_York,United States
+"Santa Maria, California",34.95303,-120.43572,67.0,America/Los_Angeles,United States
+"Odessa, Missouri",38.99917,-93.95356,285.0,America/Chicago,United States
+Umea,63.82842,20.25972,24.0,Europe/Stockholm,Sweden
+"Chattanooga, Tennessee",35.04563,-85.30968,206.0,America/New_York,United States
+"White Sands, New Mexico",32.38093,-106.47944,1292.0,America/Denver,United States
+"Oahu, Hawaii",20.70004,-155.9972,2.0,Pacific/Honolulu,United States
+"Rochester, Minnesota",44.02163,-92.4699,312.0,America/Chicago,United States
+"Myrtle Beach, South Carolina",33.68906,-78.88669,8.0,America/New_York,United States
+"Camp Hill, Alabama",32.80041,-85.65357,217.0,America/Chicago,United States
+"Pisgah, Alabama",34.68092,-85.84775,416.0,America/Chicago,United States
+"Tukwila, Washington",47.47399,-122.26096,44.0,America/Los_Angeles,United States
+"Kusatsu, Shiga",35.01667,135.96667,102.0,Asia/Tokyo,Japan
+Sao Paulo,-23.5475,-46.63611,769.0,America/Sao_Paulo,Brazil
+"Waimanalo, Hawaii",21.34614,-157.7238,7.0,Pacific/Honolulu,United States
+"Kizilyurt, Dagestan",43.20279,46.86594,50.0,Europe/Moscow,Russia
+"Hiep Hoa, Bac Giang",21.36667,105.98333,26.0,Asia/Ho_Chi_Minh,Vietnam
+"Palo Alto, California",37.44188,-122.14302,9.0,America/Los_Angeles,United States
+"Westwood, New Jersey",40.99121,-74.03264,22.0,America/New_York,United States
+"Pharr, Texas",26.1948,-98.18362,34.0,America/Chicago,United States
+"Soldotna, Alaska",60.48778,-151.05833,33.0,America/Anchorage,United States
+Volgograd,48.71378,44.4976,42.0,Europe/Volgograd,Russia
+"Caldwell, Idaho",43.66294,-116.68736,724.0,America/Boise,United States
+"Serrinha, Bahia",-11.66417,-39.0075,368.0,America/Bahia,Brazil
+"Jales, Sao Paulo",-20.26889,-50.54583,507.0,America/Sao_Paulo,Brazil
+"Joinville, Santa Catarina",-26.30444,-48.84556,9.0,America/Sao_Paulo,Brazil
+"Santa Luzia, Minas Gerais",-19.76972,-43.85139,760.0,America/Sao_Paulo,Brazil
+"Ceilandia, Federal District",-15.8091,-48.13096,1159.0,America/Sao_Paulo,Brazil
+"Taua, Ceara",-6.00306,-40.29278,399.0,America/Fortaleza,Brazil
+Retchisa,53.0,28.0,144.0,Europe/Minsk,Belarus
+Fribourg,46.80237,7.15128,610.0,Europe/Zurich,Switzerland
+"Pinhais, Parana",-25.44472,-49.1925,887.0,America/Sao_Paulo,Brazil
+"Vicosa, Minas Gerais",-20.75389,-42.88194,656.0,America/Sao_Paulo,Brazil
+"Fundacion, Barahona",18.28668,-71.18147,16.0,America/Santo_Domingo,Dominican Republic
+"Oas, Albay",13.2593,123.4963,33.0,Asia/Manila,Philippines
+"Homewood, Alabama",33.47177,-86.80082,203.0,America/Chicago,United States
+"Iwaki, Fukushima",37.05,140.88333,9.0,Asia/Tokyo,Japan
+"Handan, Hebei",36.60999,114.48764,61.0,Asia/Shanghai,China
+"Lancaster, Ohio",39.71368,-82.59933,268.0,America/New_York,United States
+"Madison, Wisconsin",43.07305,-89.40123,267.0,America/Chicago,United States
+"Mount Pleasant, Texas",33.15679,-94.96827,123.0,America/Chicago,United States
+"Coral Pass, Florida",41.33176,-74.35682,136.0,America/New_York,United States
+"Januaria, Minas Gerais",-15.47949,-44.3652,466.0,America/Sao_Paulo,Brazil
+"Kotamobagu, North Sulawesi",0.74194,124.31208,244.0,Asia/Makassar,Indonesia
+"Guangzhou, Guangdong",23.11667,113.25,15.0,Asia/Shanghai,China
+"Shenyang, Liaoning",41.79222,123.43278,53.0,Asia/Shanghai,China
+Ciego de Avila,21.8422,-78.76034,49.0,America/Havana,Cuba
+"Hidalgo del Parral, Chihuahua",26.92987,-105.66618,1722.0,America/Chihuahua,Mexico
+"Visconde de Maua, Rio de Janeiro",-22.33134,-44.53084,1177.0,America/Sao_Paulo,Brazil
+"Murmansk, Murmansk Oblast",68.96778,33.09922,75.0,Europe/Moscow,Russia
+Tiberias,32.79396,35.53152,39.0,Asia/Jerusalem,Israel
+"Chaoyang, Liaoning",41.57028,120.45861,162.0,Asia/Shanghai,China
+"Makaha, Hawaii",21.46627,-158.21037,7.0,Pacific/Honolulu,United States
+"Shikokuchuo, Ehime",33.9754,133.54895,41.0,Asia/Tokyo,Japan
+"Cheongju, Chungcheongbuk",36.63722,127.48972,49.0,Asia/Seoul,South Korea
+"Varennes, Quebec",46.81228,-71.21454,54.0,America/Toronto,Canada
+Havana,23.13302,-82.38304,41.0,America/Havana,Cuba
+Cape Verde,,,,,
+"Sasebo, Nagasaki",33.16834,129.72502,8.0,Asia/Tokyo,Japan
+"Chuncheon, Gangwon",37.87472,127.73417,92.0,Asia/Seoul,South Korea
+"Tsurugashima, Saitama",35.95996,139.40283,33.0,Asia/Tokyo,Japan
+"Nagaoka, Niigata",37.45,138.85,23.0,Asia/Tokyo,Japan
+"Kushiro, Hokkaido",42.975,144.37473,6.0,Asia/Tokyo,Japan
+"Valencia, Carabobo",10.16153,-68.00044,547.0,America/Caracas,Venezuela
+Osaka,34.69379,135.50107,4.0,Asia/Tokyo,Japan
+"Izumi, Osaka",34.48333,135.43333,24.0,Asia/Tokyo,Japan
+"Fujisawa, Kanagawa",35.34926,139.47665,12.0,Asia/Tokyo,Japan
+"Sagamihara, Kanagawa",35.56707,139.24167,237.0,Asia/Tokyo,Japan
+"Numazu, Shizuoka",35.1,138.86667,8.0,Asia/Tokyo,Japan
+"Woodlands, Texas",35.02888,-120.55239,106.0,America/Los_Angeles,United States
+"Bethlehem, Pennsylvania",40.62593,-75.37046,109.0,America/New_York,United States
+"Edgerton, Kansas",38.76473,-95.00802,305.0,America/Chicago,United States
+"Shiner, Texas",29.42913,-97.17054,109.0,America/Chicago,United States
+Lazdynai,54.66815,25.20684,117.0,Europe/Vilnius,Lithuania
+"Encantado, Rio Grande do Sul",-29.23611,-51.86972,73.0,America/Sao_Paulo,Brazil
+Chenaran,36.64546,59.12123,1176.0,Asia/Tehran,Iran
+"Danville, California",37.82159,-121.99996,109.0,America/Los_Angeles,United States
+Bratislava,48.14816,17.10674,157.0,Europe/Bratislava,Slovakia

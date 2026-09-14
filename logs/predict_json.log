@@ -1,0 +1,71 @@
+[step] Loading fight history
+[step] Reading upcoming UFC cards
+[step] Building fighter profiles (records, ratings, style, travel, odds)
+[step] Training the prediction model on every completed fight
+[step] Comparing with the betting market
+[step] Sizing stakes
+[step] Done
+
+=== UFC 331 - Van vs. Pantoja 2  (2026-09-19) ===
+                               bout            weight              pick  win_prob  market_prob           bet_on  price   edge  units
+    Joshua Van vs Alexandre Pantoja         Flyweight        Joshua Van    0.6118       0.5444       Joshua Van -133.0 0.0702    1.0
+  Arman Tsarukyan vs Mauricio Ruffy       Lightweight   Arman Tsarukyan    0.7520       0.7305                -    NaN    NaN    0.0
+     Patricio Freire vs Doo Ho Choi     Featherweight       Doo Ho Choi    0.7404       0.6901                -    NaN    NaN    0.0
+    Renato Carneiro vs Brian Ortega       Lightweight   Renato Carneiro    0.6882       0.6488                -    NaN    NaN    0.0
+Alonzo Menifield vs Iwo Baraniewski Light Heavyweight   Iwo Baraniewski    0.7025       0.6643                -    NaN    NaN    0.0
+      Gable Steveson vs Sean Sharaf       Heavyweight    Gable Steveson    0.9318       0.8992                -    NaN    NaN    0.0
+    Marlon Vera vs Charles Jourdain      Bantamweight  Charles Jourdain    0.7323       0.6689 Charles Jourdain -236.0 0.0427    1.5
+   Tai Tuivasa vs Robelis Despaigne       Heavyweight Robelis Despaigne    0.8223       0.8241                -    NaN    NaN    0.0
+Edmen Shahbazyan vs Brunno Ferreira      Middleweight  Edmen Shahbazyan    0.5938       0.5939                -    NaN    NaN    0.0
+  Giga Chikadze vs Joanderson Brito     Featherweight  Joanderson Brito    0.7988       0.7541                -    NaN    NaN    0.0
+     Casey O'Neill vs Eduarda Moura         Flyweight     Casey O'Neill    0.5953       0.6200                -    NaN    NaN    0.0
+          Ryan Gandra vs Osman Diaz Light Heavyweight       Ryan Gandra    0.8252       0.7849                -    NaN    NaN    0.0
+     Michael Aswell vs Joo Sang Yoo     Featherweight      Joo Sang Yoo    0.6932       0.6998                -    NaN    NaN    0.0
+
+=== UFC Fight Night 289 - Barcelos vs. Rosas Jr.  (2026-09-26) ===
+                                       bout            weight                 pick  win_prob  market_prob bet_on  price  edge  units
+           Raoni Barcelos vs Raul Rosas Jr.      Bantamweight       Raul Rosas Jr.    0.5605          NaN      -    NaN   NaN    0.0
+              Montel Jackson vs Ricky Simon      Bantamweight       Montel Jackson    0.6357          NaN      -    NaN   NaN    0.0
+                Norma Dumont vs Ailin Perez      Bantamweight          Ailin Perez    0.6846          NaN      -    NaN   NaN    0.0
+             Elves Brener vs Josiah Harrell       Lightweight         Elves Brener    0.5014          NaN      -    NaN   NaN    0.0
+      Yazmin Jauregui vs Vanessa Demopoulos       Strawweight      Yazmin Jauregui    0.8397          NaN      -    NaN   NaN    0.0
+       Rodolfo Bellato vs Christian Edwards Light Heavyweight      Rodolfo Bellato    0.6112          NaN      -    NaN   NaN    0.0
+            John Castaneda vs Heili Alateng      Bantamweight       John Castaneda    0.8167          NaN      -    NaN   NaN    0.0
+             Mickey Gall vs Sedriques Dumas      Middleweight      Sedriques Dumas    0.5450          NaN      -    NaN   NaN    0.0
+           Valesca Machado vs Melissa Amaya       Strawweight      Valesca Machado    0.5262          NaN      -    NaN   NaN    0.0
+Ilimbek Akylbek Uulu vs Mehemmedali Osmanli      Bantamweight Ilimbek Akylbek Uulu    0.5244          NaN      -    NaN   NaN    0.0
+           Robert Bryczek vs Rodolfo Vieira      Middleweight       Rodolfo Vieira    0.6839          NaN      -    NaN   NaN    0.0
+           Brady Hiestand vs Rinya Nakamura      Bantamweight       Rinya Nakamura    0.7518          NaN      -    NaN   NaN    0.0
+
+=== UFC 332 - Silva vs. Wang  (2026-10-03) ===
+                                   bout       weight                pick  win_prob  market_prob bet_on  price  edge  units
+             Natalia Silva vs Cong Wang    Flyweight           Cong Wang    0.5212          NaN      -    NaN   NaN    0.0
+  Deiveson Figueiredo vs Payton Talbott Bantamweight      Payton Talbott    0.8459       0.8208      -    NaN   NaN    0.0
+         King Green vs Esteban Ribovics  Lightweight          King Green    0.5761          NaN      -    NaN   NaN    0.0
+      Kalinn Williams vs Roberto Soldic Welterweight      Roberto Soldic    0.7093          NaN      -    NaN   NaN    0.0
+   Ateba Abega Gautier vs Roman Kopylov Middleweight Ateba Abega Gautier    0.6400          NaN      -    NaN   NaN    0.0
+        Imanol Rodriguez vs Alden Coria    Flyweight    Imanol Rodriguez    0.5226          NaN      -    NaN   NaN    0.0
+         Damian Pinas vs Andrey Pulyaev Middleweight        Damian Pinas    0.7699          NaN      -    NaN   NaN    0.0
+        Marcus McGhee vs Bernardo Sopai Bantamweight       Marcus McGhee    0.5243          NaN      -    NaN   NaN    0.0
+           Anthony Wint vs Lucas Armand  Heavyweight        Anthony Wint    0.6210          NaN      -    NaN   NaN    0.0
+           Johnny Walker vs Mick Parkin  Heavyweight       Johnny Walker    0.6984          NaN      -    NaN   NaN    0.0
+Rafael dos Anjos vs Alexander Hernandez  Lightweight Alexander Hernandez    0.6916          NaN      -    NaN   NaN    0.0
+      Marvin Vettori vs Ismail Naurdiev Middleweight     Ismail Naurdiev    0.6076          NaN      -    NaN   NaN    0.0
+              Court McGee vs Eric Nolan Welterweight          Eric Nolan    0.5711          NaN      -    NaN   NaN    0.0
+
+=== UFC Fight Night 290 - Allen vs. Duncan  (2026-10-10) ===
+                                   bout            weight                   pick  win_prob  market_prob bet_on  price  edge  units
+Brendan Allen vs Christian Leroy Duncan      Middleweight Christian Leroy Duncan    0.6579          NaN      -    NaN   NaN    0.0
+           Andre Fili vs Kai Kamaka III     Featherweight         Kai Kamaka III    0.6108          NaN      -    NaN   NaN    0.0
+         Lupita Godinez vs Ketlen Souza       Strawweight         Lupita Godinez    0.6552          NaN      -    NaN   NaN    0.0
+    Gerald Meerschaert vs Julius Walker Light Heavyweight          Julius Walker    0.5456          NaN      -    NaN   NaN    0.0
+          Matheus Camilo vs Jai Herbert       Lightweight         Matheus Camilo    0.7163          NaN      -    NaN   NaN    0.0
+   Malcolm Wellmaker vs Otari Tanzilovi      Bantamweight      Malcolm Wellmaker    0.5238          NaN      -    NaN   NaN    0.0
+   Darya Zheleznyakova vs Alice Pereira      Bantamweight          Alice Pereira    0.5780          NaN      -    NaN   NaN    0.0
+       Francisco Prado vs Ismael Bonfim       Lightweight        Francisco Prado    0.6043          NaN      -    NaN   NaN    0.0
+    Ernesta Kareckaite vs Melissa Gatto         Flyweight          Melissa Gatto    0.5562          NaN      -    NaN   NaN    0.0
+           Richard Harris vs Allen Frye       Heavyweight         Richard Harris    0.7537          NaN      -    NaN   NaN    0.0
+     Felipe Franco vs Alexander Poppeck Light Heavyweight          Felipe Franco    0.7719          NaN      -    NaN   NaN    0.0
+          Niko Price vs Leon Shahbazyan      Welterweight        Leon Shahbazyan    0.6925          NaN      -    NaN   NaN    0.0
+
+Staking (steady): bet when edge > 3%, 0.125 Kelly, max 1.5 units. 1 unit = 1% of bankroll.

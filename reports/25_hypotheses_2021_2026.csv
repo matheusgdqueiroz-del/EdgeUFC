@@ -1,0 +1,10 @@
+hypothesis,bets,roi,win_rate,implied,p_value,years_positive
+younger by 5+ years,1030,0.009,0.661,0.62,0.726,3/6
+main card slight underdog (37.5-45%),307,-0.0488,0.41,0.412,0.456,2/6
+big underdog (<=20%),305,-0.4428,0.092,0.159,0.0,0/6
+big favourite (>=80%),305,0.032,0.905,0.841,0.098,5/6
+bet AGAINST UFC debutant facing 3+ fight veteran,278,-0.0941,0.507,0.515,0.135,2/6
+bet AGAINST fighter who missed weight,163,0.0874,0.564,0.53,0.356,3/6
+bet AGAINST short-notice replacement,361,-0.0641,0.62,0.599,0.144,1/6
+home-country fighter vs foreigner,1338,-0.0923,0.472,0.485,0.003,1/6
+travelled 5000+ km less,1323,-0.0678,0.494,0.493,0.031,1/6
