@@ -20,8 +20,8 @@ K = (1, 1.5, 2, 3, 4, 5)
 STARTS = (100, 300, 500)
 
 
-def month_blocks(stage):
-    b = sim.scenario_bets(stage, "pin_est")
+def month_blocks(stage, margin=None):
+    b = sim.scenario_bets(stage, "pin_est", margin)
     b = b[b.date >= "2021-01-01"]
     cards = []
     for ev, g in b.groupby("event_id"):
@@ -37,10 +37,10 @@ def month_blocks(stage):
     return U, X, blocks
 
 
-def simulate(U, X, blocks, k, start, deposit=0.0, seed=SEED):
+def simulate(U, X, blocks, k, start, deposit=0.0, seed=SEED, months=MONTHS, max_stake=None, years=(1, 2, 3)):
     """Returns final bankroll, lowest bankroll, bankroll after years 1-3 and total deposited, one value per path."""
     rng = np.random.default_rng(seed)
-    pick = rng.integers(0, len(blocks), (N_PATHS, MONTHS))
+    pick = rng.integers(0, len(blocks), (N_PATHS, months))
     empty = len(U) - 1
     lens = np.array([[len(blocks[j]) for j in row] for row in pick])
     ends = np.cumsum(lens, 1)  # cards played by the end of each month
@@ -61,6 +61,8 @@ def simulate(U, X, blocks, k, start, deposit=0.0, seed=SEED):
         unit = np.where(B >= 100, k * np.floor(B / 100), k * B / 100)
         st = U[C[:, t]] * unit[:, None]
         st = np.where(st >= 1.0, st, 0.0)
+        if max_stake:
+            st = np.minimum(st, max_stake)
         tot = st.sum(1)
         st *= np.where(tot > B, np.maximum(B, 0) / np.maximum(tot, 1e-9), 1.0)[:, None]
         B = B + (st * X[C[:, t]]).sum(1)
@@ -68,37 +70,38 @@ def simulate(U, X, blocks, k, start, deposit=0.0, seed=SEED):
         hist[:, t + 1] = B
     B = B + dep_at[:, T]; deposited += dep_at[:, T]
     idx = np.arange(N_PATHS)
-    snaps = {y: hist[idx, ends[:, 12 * y - 1]] for y in (1, 2, 3)}
+    snaps = {y: hist[idx, ends[:, 12 * y - 1]] for y in years}
     return B, low, snaps, deposited
 
 
-rows = []
-for case, stage in CASES.items():
-    U, X, blocks = month_blocks(stage)
-    for start in STARTS:
-        for k in K:
-            B, low, snaps, dep = simulate(U, X, blocks, k, start)
-            y1 = snaps[1]
-            rows.append(dict(edge_case=case, start=start, unit_per_100=k, unit_pct=k,
-                             median_1y=round(np.median(y1)), median_2y=round(np.median(snaps[2])), median_3y=round(np.median(B)),
-                             bad_luck_3y_p10=round(np.percentile(B, 10)), good_luck_3y_p90=round(np.percentile(B, 90)),
-                             chance_down_after_1y=round((y1 < start).mean() * 100, 1), chance_down_after_3y=round((B < start).mean() * 100, 1),
-                             chance_ever_half=round((low <= start * 0.5).mean() * 100, 1), chance_ever_80pct_lost=round((low <= start * 0.2).mean() * 100, 1),
-                             chance_10x_3y=round((B >= 10 * start).mean() * 100, 1)))
-    print(case, "done", flush=True)
-R = pd.DataFrame(rows)
-R.to_csv(ROOT / "reports" / "51_bankroll_plans.csv", index=False)
+if __name__ == "__main__":
+    rows = []
+    for case, stage in CASES.items():
+        U, X, blocks = month_blocks(stage)
+        for start in STARTS:
+            for k in K:
+                B, low, snaps, dep = simulate(U, X, blocks, k, start)
+                y1 = snaps[1]
+                rows.append(dict(edge_case=case, start=start, unit_per_100=k, unit_pct=k,
+                                 median_1y=round(np.median(y1)), median_2y=round(np.median(snaps[2])), median_3y=round(np.median(B)),
+                                 bad_luck_3y_p10=round(np.percentile(B, 10)), good_luck_3y_p90=round(np.percentile(B, 90)),
+                                 chance_down_after_1y=round((y1 < start).mean() * 100, 1), chance_down_after_3y=round((B < start).mean() * 100, 1),
+                                 chance_ever_half=round((low <= start * 0.5).mean() * 100, 1), chance_ever_80pct_lost=round((low <= start * 0.2).mean() * 100, 1),
+                                 chance_10x_3y=round((B >= 10 * start).mean() * 100, 1)))
+        print(case, "done", flush=True)
+    R = pd.DataFrame(rows)
+    R.to_csv(ROOT / "reports" / "51_bankroll_plans.csv", index=False)
 
-# the same plans with a R$50 monthly top-up (start R$300)
-dep_rows = []
-for case, stage in CASES.items():
-    U, X, blocks = month_blocks(stage)
-    for k in (1, 2, 3):
-        B, low, snaps, dep = simulate(U, X, blocks, k, 300, deposit=50.0)
-        dep_rows.append(dict(edge_case=case, start=300, monthly_deposit=50, unit_per_100=k, total_deposited=round(np.median(dep)),
-                             median_3y=round(np.median(B)), bad_luck_3y_p10=round(np.percentile(B, 10)), good_luck_3y_p90=round(np.percentile(B, 90)),
-                             chance_below_deposits_3y=round((B < dep).mean() * 100, 1)))
-D = pd.DataFrame(dep_rows)
-D.to_csv(ROOT / "reports" / "51_bankroll_plans_deposits.csv", index=False)
-pd.set_option("display.width", 250); pd.set_option("display.max_columns", 30)
-print(R.to_string(index=False)); print(); print(D.to_string(index=False))
+    # the same plans with a R$50 monthly top-up (start R$300)
+    dep_rows = []
+    for case, stage in CASES.items():
+        U, X, blocks = month_blocks(stage)
+        for k in (1, 2, 3):
+            B, low, snaps, dep = simulate(U, X, blocks, k, 300, deposit=50.0)
+            dep_rows.append(dict(edge_case=case, start=300, monthly_deposit=50, unit_per_100=k, total_deposited=round(np.median(dep)),
+                                 median_3y=round(np.median(B)), bad_luck_3y_p10=round(np.percentile(B, 10)), good_luck_3y_p90=round(np.percentile(B, 90)),
+                                 chance_below_deposits_3y=round((B < dep).mean() * 100, 1)))
+    D = pd.DataFrame(dep_rows)
+    D.to_csv(ROOT / "reports" / "51_bankroll_plans_deposits.csv", index=False)
+    pd.set_option("display.width", 250); pd.set_option("display.max_columns", 30)
+    print(R.to_string(index=False)); print(); print(D.to_string(index=False))

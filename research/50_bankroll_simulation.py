@@ -57,10 +57,10 @@ def pinnacle_archive():
 
 
 # ------------------------------------------------------------------ bets in units for one scenario
-def scenario_bets(stage, price):
+def scenario_bets(stage, price, margin=None):
     p = E[f"p2_s{stage}"].values
     if price == "pin_est":
-        m = 1.045 if stage <= 3 else 1.035
+        m = margin or (1.045 if stage <= 3 else 1.035)
         da, db = 1 / (E[f"p_s{stage}"].values * m), 1 / ((1 - E[f"p_s{stage}"].values) * m)
     elif price == "avg":
         da, db = E[f"a_s{stage}_dec"].values, E[f"b_s{stage}_dec"].values
