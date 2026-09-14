@@ -54,8 +54,6 @@ def pinnacle_archive():
     return p[ok]
 
 
-PIN = pinnacle_archive()
-E["a_pinreal"], E["b_pinreal"] = PIN.a, PIN.b
 
 
 # ------------------------------------------------------------------ bets in units for one scenario
@@ -67,6 +65,9 @@ def scenario_bets(stage, price):
     elif price == "avg":
         da, db = E[f"a_s{stage}_dec"].values, E[f"b_s{stage}_dec"].values
     else:
+        if "a_pinreal" not in E:
+            PIN = pinnacle_archive()
+            E["a_pinreal"], E["b_pinreal"] = PIN.a, PIN.b
         da, db = E.a_pinreal.values, E.b_pinreal.values
     ev_a, ev_b = p * da - 1, (1 - p) * db - 1
     side_a = ev_a >= ev_b
@@ -169,113 +170,114 @@ def path_stats(tl, start, t0, t1):
     return out
 
 
-SCEN = [("Est. Pinnacle, mid-week (3 days before)", 6, "pin_est"), ("Est. Pinnacle, lines just opened (14 days before)", 0, "pin_est"),
-        ("Est. Pinnacle, fight day", 9, "pin_est"), ("Book average, mid-week", 6, "avg"), ("REAL Pinnacle closing odds (2013-2020 only)", 9, "pin_real")]
-ERAS = [("2013-01-01 to Sep 2026", pd.Timestamp("2013-01-01"), END + pd.Timedelta(days=1)),
-        ("2021-01-01 to Sep 2026", pd.Timestamp("2021-01-01"), END + pd.Timedelta(days=1))]
+if __name__ == "__main__":  # importable: research/51 reuses the bet builder and unit rules
+    SCEN = [("Est. Pinnacle, mid-week (3 days before)", 6, "pin_est"), ("Est. Pinnacle, lines just opened (14 days before)", 0, "pin_est"),
+            ("Est. Pinnacle, fight day", 9, "pin_est"), ("Book average, mid-week", 6, "avg"), ("REAL Pinnacle closing odds (2013-2020 only)", 9, "pin_real")]
+    ERAS = [("2013-01-01 to Sep 2026", pd.Timestamp("2013-01-01"), END + pd.Timedelta(days=1)),
+            ("2021-01-01 to Sep 2026", pd.Timestamp("2021-01-01"), END + pd.Timedelta(days=1))]
 
-rows, curves = [], {}
-for label, stage, price in SCEN:
-    ev = events_arrays(scenario_bets(stage, price))
-    for era, t0, t1 in ERAS:
-        if price == "pin_real" and t0.year >= 2021:
-            continue
-        tt1 = min(t1, pd.Timestamp("2021-01-01")) if price == "pin_real" else t1
-        for system in SYSTEMS:
-            variants = [(0.0, None)] + ([(1.0, None), (0.0, 500.0), (0.0, 2000.0)] if system == "user" else [(0.0, 500.0), (0.0, 2000.0)] if system == "aggressive" else [])
-            for min_stake, cap in variants:
-                tl, st = run(ev, system, LEAD[stage], t0, tt1, min_stake=min_stake, max_stake=cap)
-                ps = path_stats(tl, st["start"], t0, tt1)
-                tag = " (skip stakes < R$1)" if min_stake else (f" (max R${cap:,.0f} per bet)" if cap else "")
-                rows.append(dict(scenario=label, era=era if price != "pin_real" else "2013-01-01 to 2020-12-31", system=system + tag, start=st["start"],
-                                 final=round(st["final"], 2), multiple=round(st["final"] / st["start"], 2), ruined=st["ruined"], bets=st["bets"],
-                                 staked=round(st["staked"], 2), **ps))
-                if not min_stake and not cap:
-                    curves[(label, era, system)] = tl
+    rows, curves = [], {}
+    for label, stage, price in SCEN:
+        ev = events_arrays(scenario_bets(stage, price))
+        for era, t0, t1 in ERAS:
+            if price == "pin_real" and t0.year >= 2021:
+                continue
+            tt1 = min(t1, pd.Timestamp("2021-01-01")) if price == "pin_real" else t1
+            for system in SYSTEMS:
+                variants = [(0.0, None)] + ([(1.0, None), (0.0, 500.0), (0.0, 2000.0)] if system == "user" else [(0.0, 500.0), (0.0, 2000.0)] if system == "aggressive" else [])
+                for min_stake, cap in variants:
+                    tl, st = run(ev, system, LEAD[stage], t0, tt1, min_stake=min_stake, max_stake=cap)
+                    ps = path_stats(tl, st["start"], t0, tt1)
+                    tag = " (skip stakes < R$1)" if min_stake else (f" (max R${cap:,.0f} per bet)" if cap else "")
+                    rows.append(dict(scenario=label, era=era if price != "pin_real" else "2013-01-01 to 2020-12-31", system=system + tag, start=st["start"],
+                                     final=round(st["final"], 2), multiple=round(st["final"] / st["start"], 2), ruined=st["ruined"], bets=st["bets"],
+                                     staked=round(st["staked"], 2), **ps))
+                    if not min_stake and not cap:
+                        curves[(label, era, system)] = tl
 
-res = pd.DataFrame(rows)
-res.to_csv(R / "50_bankroll_simulation.csv", index=False)
-
-
-# ------------------------------------------------------------------ "start any week" windows
-def windows(ev, system, lead, era_t0, last=END, horizons=(("1 week", 7), ("1 month", 30), ("3 months", 91), ("1 year", 365))):
-    out = []
-    starts = pd.date_range(era_t0, last, freq="W-MON")
-    for hname, days in horizons:
-        finals = []
-        for s in starts:
-            e = s + pd.Timedelta(days=days)
-            if e > last + pd.Timedelta(days=1):
-                break
-            tl, st = run(ev, system, lead, s, e)
-            finals.append((st["final"] / st["start"] - 1, st["ruined"], st["bets"]))
-        f = np.array([x[0] for x in finals])
-        nb = np.array([x[2] for x in finals])
-        out.append(dict(horizon=hname, windows=len(f), profit_pct_of_windows=round((f > 0).mean() * 100, 1), loss_pct=round((f < 0).mean() * 100, 1),
-                        no_bets_pct=round((nb == 0).mean() * 100, 1), median_return_pct=round(np.median(f) * 100, 1),
-                        p10_return_pct=round(np.percentile(f, 10) * 100, 1), worst_return_pct=round(f.min() * 100, 1),
-                        best_return_pct=round(f.max() * 100, 1), ruined_windows=int(sum(x[1] for x in finals))))
-    return out
+    res = pd.DataFrame(rows)
+    res.to_csv(R / "50_bankroll_simulation.csv", index=False)
 
 
-wrows = []
-for label, stage, price in SCEN[:3] + SCEN[4:]:
-    ev = events_arrays(scenario_bets(stage, price))
-    for era, t0, _ in ERAS:
-        if price == "pin_real" and t0.year >= 2021:
-            continue
-        for system in ("user", "aggressive"):
-            evx = [e for e in ev if e[0] < pd.Timestamp("2021-01-01")] if price == "pin_real" else ev
-            for w in windows(evx, system, LEAD[stage], t0, last=pd.Timestamp("2020-12-31") if price == "pin_real" else END):
-                wrows.append(dict(scenario=label, starts_from=era, system=system, **w))
-W = pd.DataFrame(wrows)
-W.to_csv(R / "50_start_any_week.csv", index=False)
+    # ------------------------------------------------------------------ "start any week" windows
+    def windows(ev, system, lead, era_t0, last=END, horizons=(("1 week", 7), ("1 month", 30), ("3 months", 91), ("1 year", 365))):
+        out = []
+        starts = pd.date_range(era_t0, last, freq="W-MON")
+        for hname, days in horizons:
+            finals = []
+            for s in starts:
+                e = s + pd.Timedelta(days=days)
+                if e > last + pd.Timedelta(days=1):
+                    break
+                tl, st = run(ev, system, lead, s, e)
+                finals.append((st["final"] / st["start"] - 1, st["ruined"], st["bets"]))
+            f = np.array([x[0] for x in finals])
+            nb = np.array([x[2] for x in finals])
+            out.append(dict(horizon=hname, windows=len(f), profit_pct_of_windows=round((f > 0).mean() * 100, 1), loss_pct=round((f < 0).mean() * 100, 1),
+                            no_bets_pct=round((nb == 0).mean() * 100, 1), median_return_pct=round(np.median(f) * 100, 1),
+                            p10_return_pct=round(np.percentile(f, 10) * 100, 1), worst_return_pct=round(f.min() * 100, 1),
+                            best_return_pct=round(f.max() * 100, 1), ruined_windows=int(sum(x[1] for x in finals))))
+        return out
 
-# ------------------------------------------------------------------ charts
-import matplotlib
-matplotlib.use("Agg")
-import matplotlib.pyplot as plt
-import matplotlib.ticker as mt
-plt.rcParams["text.usetex"] = False
-plt.rcParams["axes.formatter.use_mathtext"] = False
-esc = lambda t: t.replace("$", r"\$")  # "R$1 ... R$100" would otherwise be read as math
 
-fig, axes = plt.subplots(1, 2, figsize=(14, 5.2))
-colors = {"Est. Pinnacle, lines just opened (14 days before)": "#1b5aa6", "Est. Pinnacle, mid-week (3 days before)": "#2a9d8f",
-          "Est. Pinnacle, fight day": "#b0372b", "REAL Pinnacle closing odds (2013-2020 only)": "#6a4c93"}
-for ax, (era, t0, t1) in zip(axes, ERAS):
-    for (label, e, system), tl in curves.items():
-        if e != era or system != "user" or label not in colors or tl.empty:
-            continue
-        s = pd.concat([pd.Series([100.0], index=[t0]), tl.groupby("date").bankroll.last()])
-        ax.plot(s.index, s.values, color=colors[label], lw=1.6, label=esc(label.replace("Est. ", "est. ")))
+    wrows = []
+    for label, stage, price in SCEN[:3] + SCEN[4:]:
+        ev = events_arrays(scenario_bets(stage, price))
+        for era, t0, _ in ERAS:
+            if price == "pin_real" and t0.year >= 2021:
+                continue
+            for system in ("user", "aggressive"):
+                evx = [e for e in ev if e[0] < pd.Timestamp("2021-01-01")] if price == "pin_real" else ev
+                for w in windows(evx, system, LEAD[stage], t0, last=pd.Timestamp("2020-12-31") if price == "pin_real" else END):
+                    wrows.append(dict(scenario=label, starts_from=era, system=system, **w))
+    W = pd.DataFrame(wrows)
+    W.to_csv(R / "50_start_any_week.csv", index=False)
+
+    # ------------------------------------------------------------------ charts
+    import matplotlib
+    matplotlib.use("Agg")
+    import matplotlib.pyplot as plt
+    import matplotlib.ticker as mt
+    plt.rcParams["text.usetex"] = False
+    plt.rcParams["axes.formatter.use_mathtext"] = False
+    esc = lambda t: t.replace("$", r"\$")  # "R$1 ... R$100" would otherwise be read as math
+
+    fig, axes = plt.subplots(1, 2, figsize=(14, 5.2))
+    colors = {"Est. Pinnacle, lines just opened (14 days before)": "#1b5aa6", "Est. Pinnacle, mid-week (3 days before)": "#2a9d8f",
+              "Est. Pinnacle, fight day": "#b0372b", "REAL Pinnacle closing odds (2013-2020 only)": "#6a4c93"}
+    for ax, (era, t0, t1) in zip(axes, ERAS):
+        for (label, e, system), tl in curves.items():
+            if e != era or system != "user" or label not in colors or tl.empty:
+                continue
+            s = pd.concat([pd.Series([100.0], index=[t0]), tl.groupby("date").bankroll.last()])
+            ax.plot(s.index, s.values, color=colors[label], lw=1.6, label=esc(label.replace("Est. ", "est. ")))
+        ax.set_yscale("log")
+        ax.yaxis.set_major_formatter(mt.FuncFormatter(lambda v, _: f"R${v:,.0f}"))
+        ax.axhline(100, color="#888", lw=0.8, ls=":")
+        ax.set_title(esc(f"Your system (R$100, unit = R$1 per R$100), starting {t0.date()}"))
+        ax.grid(alpha=.25, which="both")
+        ax.legend(fontsize=8, loc="upper left")
+    plt.tight_layout()
+    plt.savefig(R / "50_bankroll_curves.png", dpi=130)
+
+    fig, ax = plt.subplots(figsize=(14, 5.2))
+    t0 = pd.Timestamp("2021-01-01")
+    for system, col, start in (("user", "#2a9d8f", 100), ("aggressive", "#e76f51", 200), ("flat", "#888", 100)):
+        tl = curves[("Est. Pinnacle, mid-week (3 days before)", "2021-01-01 to Sep 2026", system)]
+        s = pd.concat([pd.Series([float(start)], index=[t0]), tl.groupby("date").bankroll.last()])
+        ax.plot(s.index, s.values, color=col, lw=1.6, label=esc({"user": "your system (R$100, +R$1 unit per R$100)", "aggressive": "aggressive (R$200, +R$10 unit per R$100)",
+                                                              "flat": "flat R$1 units (R$100)"}[system]))
     ax.set_yscale("log")
     ax.yaxis.set_major_formatter(mt.FuncFormatter(lambda v, _: f"R${v:,.0f}"))
-    ax.axhline(100, color="#888", lw=0.8, ls=":")
-    ax.set_title(esc(f"Your system (R$100, unit = R$1 per R$100), starting {t0.date()}"))
+    ax.set_title("Unit systems compared: est. Pinnacle mid-week prices, starting 2021-01-01")
     ax.grid(alpha=.25, which="both")
-    ax.legend(fontsize=8, loc="upper left")
-plt.tight_layout()
-plt.savefig(R / "50_bankroll_curves.png", dpi=130)
+    ax.legend(fontsize=9, loc="upper left")
+    plt.tight_layout()
+    plt.savefig(R / "50_unit_systems.png", dpi=130)
 
-fig, ax = plt.subplots(figsize=(14, 5.2))
-t0 = pd.Timestamp("2021-01-01")
-for system, col, start in (("user", "#2a9d8f", 100), ("aggressive", "#e76f51", 200), ("flat", "#888", 100)):
-    tl = curves[("Est. Pinnacle, mid-week (3 days before)", "2021-01-01 to Sep 2026", system)]
-    s = pd.concat([pd.Series([float(start)], index=[t0]), tl.groupby("date").bankroll.last()])
-    ax.plot(s.index, s.values, color=col, lw=1.6, label=esc({"user": "your system (R$100, +R$1 unit per R$100)", "aggressive": "aggressive (R$200, +R$10 unit per R$100)",
-                                                          "flat": "flat R$1 units (R$100)"}[system]))
-ax.set_yscale("log")
-ax.yaxis.set_major_formatter(mt.FuncFormatter(lambda v, _: f"R${v:,.0f}"))
-ax.set_title("Unit systems compared: est. Pinnacle mid-week prices, starting 2021-01-01")
-ax.grid(alpha=.25, which="both")
-ax.legend(fontsize=9, loc="upper left")
-plt.tight_layout()
-plt.savefig(R / "50_unit_systems.png", dpi=130)
-
-pd.set_option("display.width", 320); pd.set_option("display.max_columns", 40)
-cols = ["scenario", "era", "system", "start", "final", "multiple", "ruined", "bets", "min_bankroll", "max_dd_pct", "months_up_pct", "months_down_pct",
-        "worst_month_pct", "quarters_up_pct", "worst_quarter_pct", "years_up_pct", "worst_year_pct"]
-print(res[cols].to_string(index=False))
-print()
-print(W.to_string(index=False))
+    pd.set_option("display.width", 320); pd.set_option("display.max_columns", 40)
+    cols = ["scenario", "era", "system", "start", "final", "multiple", "ruined", "bets", "min_bankroll", "max_dd_pct", "months_up_pct", "months_down_pct",
+            "worst_month_pct", "quarters_up_pct", "worst_quarter_pct", "years_up_pct", "worst_year_pct"]
+    print(res[cols].to_string(index=False))
+    print()
+    print(W.to_string(index=False))

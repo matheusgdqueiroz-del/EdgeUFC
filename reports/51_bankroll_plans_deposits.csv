@@ -1,0 +1,10 @@
+edge_case,start,monthly_deposit,unit_per_100,total_deposited,median_3y,bad_luck_3y_p10,good_luck_3y_p90,chance_below_deposits_3y
+lines open,300,50,1,2050,4370,3294,5886,0.0
+lines open,300,50,2,2050,9950,5374,19093,0.0
+lines open,300,50,3,2050,22935,8586,64283,0.0
+3 days before,300,50,1,2050,2925,2294,3799,3.2
+3 days before,300,50,2,2050,4153,2490,7248,3.7
+3 days before,300,50,3,2050,5769,2601,14040,4.4
+fight day,300,50,1,2050,2370,1935,2960,17.7
+fight day,300,50,2,2050,2677,1789,4254,20.0
+fight day,300,50,3,2050,2957,1603,6080,22.6

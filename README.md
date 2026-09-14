@@ -28,7 +28,7 @@ two minutes after the window closes.
 ### First-time setup on a new computer
 
 ```bash
-git clone https://github.com/matheusgdqueiroz-del/UFCEdge.git
+git clone https://github.com/matheusgdqueiroz-del/EdgeUFC.git
 ```
 
 ```bash
@@ -48,6 +48,8 @@ Page caches are not in the repository either; the first "Update & predict" re-do
 
 `python research/50_bankroll_simulation.py` replays the engine with real money rules (start R$100, unit R$1 per R$100;
 or an aggressive R$200 / +R$10 per R$100 system) week by week. Results: `reports/50_*.csv` and `reports/50_*.png`.
+`python research/51_bankroll_plans.py` resamples 4,000 three-year futures from the 2021–2026 bets to compare starting
+amounts (R$100/300/500), unit sizes (R$1–5 per R$100) and monthly top-ups: `reports/51_bankroll_plans*.csv`.
 
 Command-line equivalent:
 
