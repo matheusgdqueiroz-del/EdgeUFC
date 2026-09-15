@@ -233,12 +233,7 @@ main { max-width: 1180px; margin: 0 auto; padding: 22px 20px 60px; }
       </div>
       <div class="card">
         <h2>Pinnacle odds feed</h2>
-        <p>Live Pinnacle moneylines come from The Odds API. Paste your API key once; it stays on this computer. Each update uses 1 of the free plan’s 500 monthly credits.</p>
-        <div class="field">
-          <input id="odds-key" type="password" autocomplete="off" spellcheck="false" placeholder="API key" aria-label="Odds API key">
-          <button class="btn" id="save-key">Save</button>
-        </div>
-        <p id="key-status" style="margin:10px 0 0"></p>
+        <p>Live Pinnacle moneylines are scraped directly from Pinnacle’s public API. No API key needed.</p>
       </div>
       <div class="card">
         <h2>Odds format</h2>
@@ -490,7 +485,7 @@ function renderSettings() {
   document.querySelectorAll("[data-staking]").forEach(b => b.setAttribute("aria-pressed", b.dataset.staking === s.staking));
   document.querySelectorAll("[data-days]").forEach(b => b.setAttribute("aria-pressed", +b.dataset.days === s.days));
   document.querySelectorAll("[data-odds]").forEach(b => b.setAttribute("aria-pressed", b.dataset.odds === (s.odds_format || "decimal")));
-  $("#key-status").textContent = s.odds_api_key_set ? `Key saved (…${s.odds_api_key_tail}). Run “Update & predict” to pull Pinnacle lines.` : "No key saved: Pinnacle prices are estimated from the other books.";
+  // Pinnacle odds are now scraped directly, no API key needed
 }
 
 const STEP_LABELS = [
@@ -570,12 +565,6 @@ document.addEventListener("change", e => {
 });
 $("#run-full").onclick = () => runJob("full");
 $("#run-quick").onclick = () => runJob("quick");
-$("#save-key").onclick = async () => {
-  const v = $("#odds-key").value.trim();
-  const r = await api("/api/settings", { odds_api_key: v });
-  if (r.error) { toast(r.error); return; }
-  S.settings = r; $("#odds-key").value = ""; renderSettings(); toast(v ? "Key saved" : "Key removed");
-};
 setInterval(() => fetch("/api/ping").catch(() => {}), 30000);
 refresh();
 </script>

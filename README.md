@@ -13,13 +13,12 @@ Double-click **UFC Edge** on the Desktop (or `UFC Edge.lnk` in this folder). The
   fights without a bet show the minimum odds that would make them one. Click the probability bar for the tale of
   the tape and the reasoning.
 - **Update & predict**: downloads new results, odds and news, then re-prices every card (8–12 minutes).
-- **Settings**: bankroll, currency, odds format (decimal / American), staking style (Steady / Growth), days ahead,
-  and the Pinnacle odds feed key (The Odds API, free plan: 500 credits a month, 1 per update).
+- **Settings**: bankroll, currency, odds format (decimal / American), staking style (Steady / Growth), days ahead.
 
 Prices are Pinnacle's own moneylines whenever Pinnacle lists the fight (`ufc/sources/pinnacle.py`); otherwise an estimate
 (consensus fair price with a Pinnacle-sized margin) labelled "est. Pinnacle". Every Pinnacle fetch is saved to
-`data/pinnacle/snapshots.csv`, so a real Pinnacle price history builds up from 14 Sep 2026. Past Pinnacle odds from
-The Odds API need a paid plan, so backtests use archived Pinnacle closes (2008–2020) and the calibrated estimate after that.
+`data/pinnacle/snapshots.csv`, so a real Pinnacle price history builds up from 14 Sep 2026. Backtests use
+archived Pinnacle closes (2008–2020) and the calibrated estimate after that.
 - **Track record**: the full walk-forward audit.
 
 The app is a small local server (`ufc/app.py`, standard library only) shown in an Edge app window; it stops by itself
@@ -40,8 +39,7 @@ python setup_data.py
 ```
 
 `setup_data.py` downloads the public datasets that are not stored in the repository (the UFCStats mirror is required).
-Then start the app with `pythonw -m ufc.app` from the project folder (or make a desktop shortcut to it), open
-Settings and paste the Odds API key again: it is stored only in `predictions/settings.json`, which git ignores.
+Then start the app with `pythonw -m ufc.app` from the project folder (or make a desktop shortcut to it).
 Page caches are not in the repository either; the first "Update & predict" re-downloads what it needs.
 
 ### Bankroll simulation

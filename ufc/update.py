@@ -62,10 +62,7 @@ def bfo(days_back=45):
 
 def pinnacle():
     from ufc.sources import pinnacle as pin
-    if not pin.api_key():
-        print("[update] Pinnacle odds skipped: no Odds API key in Settings", flush=True)
-        return
-    print(f"[update] Pinnacle lines: {len(pin.current())} MMA bouts", flush=True)
+    pin.current()
 
 
 def wikipedia():
@@ -105,7 +102,7 @@ def main():
     step("Sherdog records + upcoming cards", sherdog)
     step("home-town geocoding", home_towns)
     step("BestFightOdds lines", bfo)
-    step("Pinnacle odds (The Odds API)", pinnacle)
+    step("Pinnacle odds (direct scrape)", pinnacle)
     step("Wikipedia weigh-ins / replacements", wikipedia)
     step("FightMatrix ratings", fightmatrix)
 

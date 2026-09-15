@@ -14,7 +14,7 @@ PRED = ROOT / "predictions" / "latest.json"
 SETTINGS = ROOT / "predictions" / "settings.json"
 REPORT = ROOT / "reports" / "ufc_edge_audit.html"
 PORT = 8765
-DEFAULT_SETTINGS = {"bankroll": 1000, "currency": "$", "staking": "steady", "days": 30, "odds_format": "decimal", "odds_api_key": ""}
+DEFAULT_SETTINGS = {"bankroll": 1000, "currency": "$", "staking": "steady", "days": 30, "odds_format": "decimal"}
 
 state = {"last_ping": time.time(), "job": None}
 lock = threading.Lock()
@@ -28,9 +28,7 @@ def load_settings():
 
 
 def public_settings(s):
-    """Settings for the browser: never send the stored API key back, only whether one is set."""
-    k = s.get("odds_api_key") or ""
-    return {**{x: v for x, v in s.items() if x != "odds_api_key"}, "odds_api_key_set": bool(k), "odds_api_key_tail": k[-4:] if k else ""}
+    return dict(s)
 
 
 def python_exe():
@@ -142,11 +140,6 @@ class Handler(BaseHTTPRequestHandler):
                 s["days"] = b["days"]
             if b.get("odds_format") in ("decimal", "american"):
                 s["odds_format"] = b["odds_format"]
-            if "odds_api_key" in b:
-                k = str(b["odds_api_key"] or "").strip()
-                if k and not re.fullmatch(r"[A-Za-z0-9]{20,64}", k):
-                    return self._send(400, {"error": "That does not look like an Odds API key (letters and digits only)."})
-                s["odds_api_key"] = k
             SETTINGS.parent.mkdir(exist_ok=True)
             SETTINGS.write_text(json.dumps(s, indent=1), encoding="utf8")
             return self._send(200, public_settings(s))

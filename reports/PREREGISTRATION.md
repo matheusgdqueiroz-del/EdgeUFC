@@ -111,5 +111,5 @@ mean rating of ALL fights, including future ones (a single global constant). Fix
 input-independent), canary passes, DEV selection re-run (+0.0019 [+0.0002, +0.0036], still accepted), research/48 re-run.
 As-run outputs kept as reports/48_v2_final_as_run_prior_leak.*. Corrected re-used-period results: open v2 6.09 bets/event,
 ROI +14.3% [+10.5, +18.3], 6 of 6 years; stage 3 5.45, +8.5%; stage 6 5.74, +7.6%; close 4.81, +4.7% [+0.6, +8.9].
-Live pricing from now on: real Pinnacle moneylines via The Odds API (user's key, saved in the app), estimates only when
+Live pricing from now on: real Pinnacle moneylines scraped directly from Pinnacle's public API, estimates only when
 Pinnacle has no line. Every fetch is appended to data/pinnacle/snapshots.csv (timestamped forward Pinnacle history).

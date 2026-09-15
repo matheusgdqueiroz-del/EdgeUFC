@@ -1,4 +1,4 @@
-# secrets: the Odds API key is saved here by the app
+# user settings (bankroll, currency, etc.)
 predictions/settings.json
 
 __pycache__/
